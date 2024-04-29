@@ -9,10 +9,16 @@ type pdfProps = {
 
 export const PDF = ({ data }: pdfProps) => {
 
+    const generalStyles = StyleSheet.create({
+        pageStyles: {
+            marginTop: 30,
+            marginBottom: 20
+        }
+    })
+
 
     const headerStyles = StyleSheet.create({
         container: {
-            marginTop: 30,
             height: 100,
             width: '90%',
             alignSelf: 'center',
@@ -105,7 +111,7 @@ export const PDF = ({ data }: pdfProps) => {
         tableContainer: {
             width: '90%',
             alignSelf: 'center',
-            paddingBottom: 200
+            height:500
         },
         titleRow: {
             flexDirection: 'row',
@@ -114,11 +120,10 @@ export const PDF = ({ data }: pdfProps) => {
             borderBottomWidth: 1,
             borderRightWidth: 1
         },
-        dataContainer: {
-            marginBottom: 400
-        },
+
         row: {
             flexDirection: 'row',
+            flexWrap:'wrap',
             alignSelf: 'center',
             backgroundColor: 'rgb(229, 229, 229)',
         },
@@ -174,53 +179,54 @@ export const PDF = ({ data }: pdfProps) => {
 
     const blankFooter = StyleSheet.create({
         container: {
-            position: 'absolute',
-            bottom: 40,
+
             height: 90,
             width: '90%',
             alignSelf: 'center',
             borderWidth: 1,
             borderColor: 'black',
             flexDirection: 'row',
+            marginBottom: 20,
+
         },
         notesContainer: {
             width: '50%',
             borderRightWidth: 1,
             borderColor: 'black',
-            padding:5
+            padding: 5
         },
         weightContainer: {
             width: '20%',
             borderRightWidth: 1,
             borderColor: 'black',
-            padding:5,
-            gap:3
+            padding: 5,
+            gap: 3
         },
 
         weights: {
-            width:'100%',
-            flexDirection:'row',
-            justifyContent:'space-around',
+            width: '100%',
+            flexDirection: 'row',
+            justifyContent: 'space-around',
 
         },
         messageContainer: {
             width: '30%',
-            paddingLeft:9,
-            paddingTop:15
+            paddingLeft: 9,
+            paddingTop: 15
         },
-        text:{
-            fontSize:5.5,
+        text: {
+            fontSize: 6,
 
         },
-        message:{
-            fontSize:9
+        message: {
+            fontSize: 9
         }
     })
 
 
     return (
         <Document>
-            <Page >
+            <Page style={generalStyles.pageStyles}>
                 <View fixed style={headerStyles.container}>
                     <Image src={cala} style={headerStyles.image} />
                     <View style={headerStyles.dataHeaderContainer}>
@@ -294,32 +300,30 @@ export const PDF = ({ data }: pdfProps) => {
                         <Text style={productsData.retentionTitleCell}>Retención</Text>
                         <Text style={productsData.quantityTitleCell}>Descuento</Text>
                     </View>
-                    <View style={productsData.dataContainer}>
-                        {data.invoiceDetails.map((item: any, index: any) => {
-                            return ( // Asegurarse de usar return para devolver el View
-                                <View style={productsData.row} key={index}>
-                                    <Text style={productsData.conceptCell}>{item.item_description}</Text>
-                                    <Text style={productsData.quantityCell}>{item.quantity}</Text>
-                                    <Text style={productsData.quantityCell}>{item.unit_code}</Text>
-                                    <Text style={productsData.quantityCell}>{item.price_by_unit}</Text>
-                                    <Text style={productsData.quantityCell}>{item.tax_name} {item.tax_percent}</Text>
-                                    <Text style={productsData.retentionCell}>{item.retention_name} {item.retention_percent}</Text>
-                                    <Text style={productsData.quantityCell}>{item.discount}</Text>
-                                </View>
-                            );
-                        })}
-                    </View>
+                    {data.invoiceDetails.map((item: any, index: any) => {
+                        return ( // Asegurarse de usar return para devolver el View
+                            <View style={productsData.row} key={index}>
+                                <Text style={productsData.conceptCell}>{item.item_description}</Text>
+                                <Text style={productsData.quantityCell}>{item.quantity}</Text>
+                                <Text style={productsData.quantityCell}>{item.unit_code}</Text>
+                                <Text style={productsData.quantityCell}>{item.price_by_unit}</Text>
+                                <Text style={productsData.quantityCell}>{item.tax_name} {item.tax_percent}</Text>
+                                <Text style={productsData.retentionCell}>{item.retention_name} {item.retention_percent}</Text>
+                                <Text style={productsData.quantityCell}>{item.discount}</Text>
+                            </View>
+                        );
+                    })}
                 </View>
 
                 {/* Pie de pagina en blanco */}
-                <View style={blankFooter.container}>
+                <View fixed style={blankFooter.container}>
                     <View style={blankFooter.notesContainer}>
                         <Text style={blankFooter.text}>NOTAS:</Text>
                         <Text></Text>
                     </View>
                     <View style={blankFooter.weightContainer}>
                         <Text style={blankFooter.text}>PESOS:</Text>
-                       <br />
+                        <br />
                         <View style={blankFooter.weights}>
                             <Text style={blankFooter.text}>PESO BRUTO:</Text>
                             <Text style={blankFooter.text}>100</Text>
