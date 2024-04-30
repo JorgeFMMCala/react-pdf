@@ -9,10 +9,11 @@ type pdfProps = {
 
 export const PDF = ({ data }: pdfProps) => {
 
+
     const generalStyles = StyleSheet.create({
         pageStyles: {
             marginTop: 30,
-            marginBottom: 20
+
         }
     })
 
@@ -111,7 +112,6 @@ export const PDF = ({ data }: pdfProps) => {
         tableContainer: {
             width: '90%',
             alignSelf: 'center',
-            height:500
         },
         titleRow: {
             flexDirection: 'row',
@@ -123,9 +123,10 @@ export const PDF = ({ data }: pdfProps) => {
 
         row: {
             flexDirection: 'row',
-            flexWrap:'wrap',
+            flexWrap: 'wrap',
             alignSelf: 'center',
             backgroundColor: 'rgb(229, 229, 229)',
+            paddingVertical: 5
         },
         conceptTitleCell: {
             fontSize: 5.5,
@@ -186,7 +187,7 @@ export const PDF = ({ data }: pdfProps) => {
             borderWidth: 1,
             borderColor: 'black',
             flexDirection: 'row',
-            marginBottom: 20,
+
 
         },
         notesContainer: {
@@ -223,10 +224,22 @@ export const PDF = ({ data }: pdfProps) => {
         }
     })
 
+    const blankSpaceBottom = StyleSheet.create({
+        container: {
+            height: 100
+        }
+    })
+
+    const isLastPage = (pageNumber: number, numPages: number) => {
+        return pageNumber === numPages;
+    };
+
+    let finalPage = false;
+
 
     return (
         <Document>
-            <Page style={generalStyles.pageStyles}>
+            <Page style={generalStyles.pageStyles} >
                 <View fixed style={headerStyles.container}>
                     <Image src={cala} style={headerStyles.image} />
                     <View style={headerStyles.dataHeaderContainer}>
@@ -290,8 +303,8 @@ export const PDF = ({ data }: pdfProps) => {
                 </View>
 
                 {/* Tabla de Productos */}
-                <View style={productsData.tableContainer}>
-                    <View fixed style={productsData.titleRow} >
+                <View style={productsData.tableContainer} >
+                    <View fixed style={productsData.titleRow}>
                         <Text style={productsData.conceptTitleCell}>Concepto</Text>
                         <Text style={productsData.quantityTitleCell}>Cantidad</Text>
                         <Text style={productsData.quantityTitleCell}>Unidad</Text>
@@ -302,7 +315,7 @@ export const PDF = ({ data }: pdfProps) => {
                     </View>
                     {data.invoiceDetails.map((item: any, index: any) => {
                         return ( // Asegurarse de usar return para devolver el View
-                            <View style={productsData.row} key={index}>
+                            <View style={productsData.row} key={index} >
                                 <Text style={productsData.conceptCell}>{item.item_description}</Text>
                                 <Text style={productsData.quantityCell}>{item.quantity}</Text>
                                 <Text style={productsData.quantityCell}>{item.unit_code}</Text>
@@ -314,31 +327,43 @@ export const PDF = ({ data }: pdfProps) => {
                         );
                     })}
                 </View>
+                <Text render={({ pageNumber, totalPages }) => {
+                    const finalPage = pageNumber === totalPages;
+                    return (
+                        <>
+                            {finalPage ? (
+                                <Text>Hola</Text>
+                            ) : (
+                                <View style={blankFooter.container} >
+                                    <View style={blankFooter.notesContainer}>
+                                        <Text style={blankFooter.text}>NOTAS:</Text>
+                                        <Text></Text>
+                                    </View>
+                                    <View style={blankFooter.weightContainer}>
+                                        <Text style={blankFooter.text}>PESOS:</Text>
+                                        <br />
+                                        <View style={blankFooter.weights}>
+                                            <Text style={blankFooter.text}>PESO BRUTO:</Text>
+                                            <Text style={blankFooter.text}>100</Text>
+                                        </View>
+                                        <View style={blankFooter.weights}>
+                                            <Text style={blankFooter.text}>PESO NETO:</Text>
+                                            <Text style={blankFooter.text}>100</Text>
+                                        </View>
+                                    </View>
+                                    <View style={blankFooter.messageContainer}>
+                                        <Text style={blankFooter.message}>CONTINUE TO THE NEXT PAGE</Text>
+                                    </View>
+                                </View>
+                            )}
+                        </>
+                    );
+                }} fixed />
 
-                {/* Pie de pagina en blanco */}
-                <View fixed style={blankFooter.container}>
-                    <View style={blankFooter.notesContainer}>
-                        <Text style={blankFooter.text}>NOTAS:</Text>
-                        <Text></Text>
-                    </View>
-                    <View style={blankFooter.weightContainer}>
-                        <Text style={blankFooter.text}>PESOS:</Text>
-                        <br />
-                        <View style={blankFooter.weights}>
-                            <Text style={blankFooter.text}>PESO BRUTO:</Text>
-                            <Text style={blankFooter.text}>100</Text>
-                        </View>
-                        <View style={blankFooter.weights}>
-                            <Text style={blankFooter.text}>PESO NETO:</Text>
-                            <Text style={blankFooter.text}>100</Text>
-                        </View>
-                    </View>
-                    <View style={blankFooter.messageContainer}>
-                        <Text style={blankFooter.message}>CONTINUE TO THE NEXT PAGE</Text>
-                    </View>
+                <View fixed style={blankSpaceBottom.container}>
+
                 </View>
             </Page>
-
         </Document >
     );
 };
