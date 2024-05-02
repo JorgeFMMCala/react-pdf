@@ -1,5 +1,5 @@
 
-import { Document, Image, Page, StyleSheet, Text, View } from '@react-pdf/renderer';
+import { Document, Image, Page, StyleSheet, Text, View, } from '@react-pdf/renderer';
 import cala from '../assets/cala.png';
 
 
@@ -12,7 +12,8 @@ export const PDF = ({ data }: pdfProps) => {
 
     const generalStyles = StyleSheet.create({
         pageStyles: {
-            marginTop: 30,
+            paddingVertical: 30,
+            position: 'relative'
 
         }
     })
@@ -179,6 +180,15 @@ export const PDF = ({ data }: pdfProps) => {
     });
 
     const blankFooter = StyleSheet.create({
+
+        section: {
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            bottom: 30,
+            alignSelf: 'center'
+        },
+
         container: {
 
             height: 90,
@@ -190,6 +200,8 @@ export const PDF = ({ data }: pdfProps) => {
 
 
         },
+
+
         notesContainer: {
             width: '50%',
             borderRightWidth: 1,
@@ -224,17 +236,232 @@ export const PDF = ({ data }: pdfProps) => {
         }
     })
 
-    const blankSpaceBottom = StyleSheet.create({
+
+
+    const notes = StyleSheet.create({
         container: {
-            height: 100
+            width: '50%',
+            borderRightWidth: 1,
+            borderColor: 'black',
+            padding: 5
+        },
+
+        text: {
+            fontSize: 6,
         }
     })
 
-    const isLastPage = (pageNumber: number, numPages: number) => {
-        return pageNumber === numPages;
-    };
 
-    let finalPage = false;
+    const weights = StyleSheet.create({
+
+        container: {
+            width: '20%',
+            borderRightWidth: 1,
+            borderColor: 'black',
+            padding: 5,
+            gap: 3
+        },
+
+        weights: {
+            width: '100%',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+
+        },
+
+        text: {
+            fontSize: 6,
+        }
+    })
+
+    const totals = StyleSheet.create({
+
+
+
+
+        container: {
+            width: '30%',
+            padding: 4,
+            paddingTop: 15,
+            gap: 1,
+            flexDirection: 'column',
+            justifyContent: 'space-between'
+        },
+
+        totalField: {
+            width: '100%',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginBottom: 3
+        },
+
+
+
+        text: {
+            fontSize: 6,
+        }
+    })
+
+
+    const footerInLastPage = StyleSheet.create({
+
+        container: {
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            bottom: 30,
+            alignSelf: 'center'
+
+        },
+
+
+        thirdSections: {
+            height: 80,
+            width: '90%',
+            alignSelf: 'center',
+            borderWidth: 1,
+            borderColor: 'black',
+            flexDirection: 'row',
+        },
+
+
+
+
+
+    })
+
+
+
+
+    const bankAccountsData = StyleSheet.create({
+
+        container: {
+            width: '90%',
+            height: 55,
+            alignSelf: 'center',
+            borderWidth: 1,
+            borderColor: 'black',
+            flexDirection: 'column',
+        },
+
+        instructionsContainer: {
+            height: '25%',
+            width: '100%',
+            borderBottomWidth: 1,
+            borderColor: 'black',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            paddingLeft: 2
+        },
+
+        instructionsText: {
+            fontSize: 6,
+        },
+
+        bankAccountsContainer: {
+            height: '75%',
+            width: '100%',
+            flexDirection: 'row',
+
+        },
+
+        bankAccountContainerFirstAccount: {
+            width: '50%',
+            textAlign: 'center',
+            borderColor: 'black',
+            borderRightWidth: 1,
+            paddingTop: 2
+        },
+
+        bankAccountContainerSecondAccount: {
+            width: '50%',
+            textAlign: 'center',
+            paddingTop: 2
+        },
+
+        bankAccountTitle: {
+            fontSize: 6
+        },
+
+        bankAccountDataContainer: {
+            width: '100%',
+            flexDirection: 'row',
+            padding: 4,
+            gap: 3
+        },
+
+        bankAccountData: {
+            flexDirection: 'column',
+            gap: 3,
+            width: '50%'
+        },
+
+        bankAccountField: {
+            flexDirection: 'row',
+            justifyContent: 'space-between'
+        },
+
+        bankAccountConcept: {
+
+            fontSize: 5
+        },
+
+        bankAccountText: {
+            fontSize: 5
+        }
+    })
+
+    const satData = StyleSheet.create({
+
+        container: {
+            width: '90%',
+            height: 120,
+            borderWidth: 1,
+            borderColor: 'black',
+            alignSelf: 'center',
+            flexDirection: 'column',
+            paddingHorizontal: 10,
+            paddingVertical: 20,
+            gap: 5
+        },
+
+        digitalStamp: {
+            flexDirection: 'column',
+            height: '35%',
+            width: '100%'
+        },
+
+        digitalCertificationAndImage: {
+            flexDirection: 'row',
+            gap: 13,
+            width: '100%',
+            height: '65%'
+        },
+
+        digitalCertification: {
+            flexDirection: 'column',
+            width: '90%'
+
+        },
+
+        satTitle: {
+            fontSize: 6,
+            fontWeight: 'heavy'
+        },
+
+        satText: {
+            fontSize: 4
+        },
+        image: {
+            width: 55,
+            height: 55,
+        }
+
+
+
+
+    })
+
 
 
     return (
@@ -327,42 +554,169 @@ export const PDF = ({ data }: pdfProps) => {
                         );
                     })}
                 </View>
-                <Text render={({ pageNumber, totalPages }) => {
-                    const finalPage = pageNumber === totalPages;
-                    return (
-                        <>
-                            {finalPage ? (
-                                <Text>Hola</Text>
-                            ) : (
-                                <View style={blankFooter.container} >
-                                    <View style={blankFooter.notesContainer}>
-                                        <Text style={blankFooter.text}>NOTAS:</Text>
-                                        <Text></Text>
-                                    </View>
-                                    <View style={blankFooter.weightContainer}>
-                                        <Text style={blankFooter.text}>PESOS:</Text>
-                                        <br />
-                                        <View style={blankFooter.weights}>
-                                            <Text style={blankFooter.text}>PESO BRUTO:</Text>
-                                            <Text style={blankFooter.text}>100</Text>
+
+
+                {/* Pie de pagina en blanco */}
+                <View style={blankFooter.section} fixed>
+                    <View style={blankFooter.container}  >
+                        <View style={blankFooter.notesContainer}>
+                            <Text style={blankFooter.text}>NOTAS:</Text>
+                            <Text></Text>
+                        </View>
+                        <View style={blankFooter.weightContainer}>
+                            <Text style={blankFooter.text}>PESOS:</Text>
+                            <br />
+                            <View style={blankFooter.weights} >
+                                <Text style={blankFooter.text}>PESO BRUTO: ({data.dataTransportationDocument.weight_unit})</Text>
+                                <Text style={blankFooter.text}>100</Text>
+                            </View>
+                            <View style={blankFooter.weights}>
+                                <Text style={blankFooter.text}>PESO NETO:</Text>
+                                <Text style={blankFooter.text}>100</Text>
+                            </View>
+                        </View>
+                        <View style={blankFooter.messageContainer}>
+                            <Text style={blankFooter.message}>CONTINUE TO THE NEXT PAGE</Text>
+                        </View>
+                    </View>
+                </View>
+
+
+
+                {/* Pie de pagina final */}
+                <View style={footerInLastPage.container} break>
+                    {/* Cuentas de banco */}
+                    <View style={bankAccountsData.container}>
+                        <View style={bankAccountsData.instructionsContainer}>
+                            <Text style={bankAccountsData.instructionsText}>Por favor haz los pagos en las siguientes cuentas:</Text>
+                        </View>
+                        <View style={bankAccountsData.bankAccountsContainer}>
+                            <View style={bankAccountsData.bankAccountContainerFirstAccount}>
+                                <Text style={bankAccountsData.bankAccountTitle}>Cuenta Primaria</Text>
+                                <View style={bankAccountsData.bankAccountDataContainer}>
+                                    <View style={bankAccountsData.bankAccountData}>
+                                        <View style={bankAccountsData.bankAccountField}>
+                                            <Text style={bankAccountsData.bankAccountConcept}>Alias de cuenta</Text>
+                                            <Text style={bankAccountsData.bankAccountText}>{data.dataIssuingCompany.primary_account_alias}</Text>
                                         </View>
-                                        <View style={blankFooter.weights}>
-                                            <Text style={blankFooter.text}>PESO NETO:</Text>
-                                            <Text style={blankFooter.text}>100</Text>
+                                        <View style={bankAccountsData.bankAccountField}>
+                                            <Text style={bankAccountsData.bankAccountConcept}>Clave Interbancaria</Text>
+                                            <Text style={bankAccountsData.bankAccountText}>{data.dataIssuingCompany.primary_interbank_key}</Text>
+                                        </View>
+                                        <View style={bankAccountsData.bankAccountField}>
+                                            <Text style={bankAccountsData.bankAccountConcept}>Swift</Text>
+                                            <Text style={bankAccountsData.bankAccountText}>{data.dataIssuingCompany.primary_swift_code}</Text>
                                         </View>
                                     </View>
-                                    <View style={blankFooter.messageContainer}>
-                                        <Text style={blankFooter.message}>CONTINUE TO THE NEXT PAGE</Text>
+                                    <View style={bankAccountsData.bankAccountData}>
+                                        <View style={bankAccountsData.bankAccountField}>
+                                            <Text style={bankAccountsData.bankAccountConcept}>Nombre del Banco</Text>
+                                            <Text style={bankAccountsData.bankAccountText}>{data.dataIssuingCompany.primary_bank_name}</Text>
+                                        </View>
+                                        <View style={bankAccountsData.bankAccountField}>
+                                            <Text style={bankAccountsData.bankAccountConcept}>Cuenta</Text>
+                                            <Text style={bankAccountsData.bankAccountText}>{data.dataIssuingCompany.primary_account_number}</Text>
+                                        </View>
                                     </View>
                                 </View>
-                            )}
-                        </>
-                    );
-                }} fixed />
+                            </View>
+                            <View style={bankAccountsData.bankAccountContainerSecondAccount}>
+                                <Text style={bankAccountsData.bankAccountTitle}>Cuenta Secundaria</Text>
+                                <View style={bankAccountsData.bankAccountDataContainer}>
+                                    <View style={bankAccountsData.bankAccountData}>
+                                        <View style={bankAccountsData.bankAccountField}>
+                                            <Text style={bankAccountsData.bankAccountConcept}>Alias de cuenta</Text>
+                                            <Text style={bankAccountsData.bankAccountText}>{data.dataIssuingCompany.primary_account_alias}</Text>
+                                        </View>
+                                        <View style={bankAccountsData.bankAccountField}>
+                                            <Text style={bankAccountsData.bankAccountConcept}>Clave Interbancaria</Text>
+                                            <Text style={bankAccountsData.bankAccountText}>{data.dataIssuingCompany.primary_interbank_key}</Text>
+                                        </View>
+                                        <View style={bankAccountsData.bankAccountField}>
+                                            <Text style={bankAccountsData.bankAccountConcept}>Swift</Text>
+                                            <Text style={bankAccountsData.bankAccountText}>{data.dataIssuingCompany.primary_swift_code}</Text>
+                                        </View>
+                                    </View>
+                                    <View style={bankAccountsData.bankAccountData}>
+                                        <View style={bankAccountsData.bankAccountField}>
+                                            <Text style={bankAccountsData.bankAccountConcept}>Nombre del Banco</Text>
+                                            <Text style={bankAccountsData.bankAccountText}>{data.dataIssuingCompany.primary_bank_name}</Text>
+                                        </View>
+                                        <View style={bankAccountsData.bankAccountField}>
+                                            <Text style={bankAccountsData.bankAccountConcept}>Cuenta</Text>
+                                            <Text style={bankAccountsData.bankAccountText}>{data.dataIssuingCompany.primary_account_number}</Text>
+                                        </View>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                    </View>
 
-                <View fixed style={blankSpaceBottom.container}>
+                    {/* Datos del sat */}
+                    <View style={satData.container}>
+                        <View style={satData.digitalStamp}>
+                            <Text style={satData.satTitle} >DIGITAL STAMP:</Text>
+                            <Text style={satData.satText}> {data.dataInvoiceGeneral.seal_CFDI}</Text>
+                        </View>
+                        <View style={satData.digitalCertificationAndImage}>
+                            <Image src={cala} style={satData.image}></Image>
+                            <View style={satData.digitalCertification}>
+                                <Text style={satData.satTitle}>DIGITAL CERTIFICATION:</Text>
+                                <Text style={satData.satText}> {data.dataInvoiceGeneral.original_string_SAT}</Text>
+                            </View>
+                        </View>
+                    </View>
 
+                    {/* Pie de pagina en ultima pagina */}
+                    <View style={footerInLastPage.thirdSections} >
+                        <View style={notes.container}>
+                            <Text style={notes.text}>NOTAS:</Text>
+                            <Text></Text>
+                        </View>
+                        <View style={weights.container}>
+                            <Text style={weights.text}>PESOS:</Text>
+                            <br />
+                            <View style={weights.weights} >
+                                <Text style={weights.text}>PESO BRUTO: ({data.dataTransportationDocument.weight_unit})</Text>
+                                <Text style={weights.text}>100</Text>
+                            </View>
+                            <View style={weights.weights}>
+                                <Text style={weights.text}>PESO NETO:</Text>
+                                <Text style={weights.text}>100</Text>
+                            </View>
+                        </View>
+                        <View style={totals.container}>
+                            <View>
+                                <View style={totals.totalField}>
+                                    <Text style={totals.text}>IMPUESTOS:</Text>
+                                    <Text style={totals.text}>{data.dataInvoiceGeneral.tax_amount}</Text>
+                                </View>
+                                <View style={totals.totalField}>
+                                    <Text style={totals.text}>RETENCIONES:</Text>
+                                    <Text style={totals.text}>{data.dataInvoiceGeneral.retention_amount}</Text>
+                                </View>
+                                <View style={totals.totalField}>
+                                    <Text style={totals.text}>DESCUENTOS:</Text>
+                                    <Text style={totals.text}>{data.dataInvoiceGeneral.discount_amount}</Text>
+                                </View>
+                            </View>
+                            <View>
+                                <View style={totals.totalField}>
+                                    <Text style={blankFooter.text}>SUBTOTAL:</Text>
+                                    <Text style={blankFooter.text}>{data.dataInvoiceGeneral.subtotal_amount}</Text>
+                                </View>
+                                <View style={totals.totalField}>
+                                    <Text style={blankFooter.text}>TOTAL:</Text>
+                                    <Text style={blankFooter.text}>{data.dataInvoiceGeneral.total_amount}</Text>
+                                </View>
+                            </View>
+                        </View>
+                    </View>
                 </View>
+
+
+
+                {/* <View fixed style={blankSpaceBottom.container}></View> */}
             </Page>
         </Document >
     );
