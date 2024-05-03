@@ -3,11 +3,29 @@ import { Document, Image, Page, StyleSheet, Text, View, } from '@react-pdf/rende
 import cala from '../assets/cala.png';
 import { pdfStyles } from './PDFStyles';
 
+
+
+
+
 export const PDF = ({ data }: any) => {
 
     const { bankAccountsData, blankFooter, dataCustomer, footerInLastPage, generalStyles, headerStyles, notes, satData, totals,
-        weights,blackSpaceFooter,productsData
+        weights,blackSpaceFooter,productsData,shippingData
     } = pdfStyles();
+
+    const ShippingConcept = ({ title, data }:any) => {
+        return (
+            <View style={shippingData.subContainer}>
+                <View style={shippingData.titleContainer}>
+                    <Text style={shippingData.title}>{title}</Text>
+                </View>
+                <View style={shippingData.dataContainer}>
+                    <Text style={shippingData.data}>{data}</Text>
+                </View>
+            </View>
+        );
+    };
+    
 
     let pages:number;
 
@@ -23,7 +41,7 @@ export const PDF = ({ data }: any) => {
                 <View fixed style={headerStyles.container}>
                     <Image src={cala} style={headerStyles.image} />
                     <View style={headerStyles.dataHeaderContainer}>
-                        <View style={headerStyles.dataIssuingCompanyContainer}>
+                        <View style={headerStyles.dataIssuingCompanyContainer} >
                             <Text style={headerStyles.textHeaderStyles}>{data.dataIssuingCompany?.business_name || " "}</Text>
                             <Text style={headerStyles.textHeaderStyles}>{data.dataIssuingCompany?.street || " "}</Text>
                             <Text style={headerStyles.textHeaderStyles}>{data.dataIssuingCompany?.city_name || " "}, {data.dataIssuingCompany?.state_name || " "} {data.dataIssuingCompany?.postal_code || " "}, {data.dataIssuingCompany?.country_name || " "}</Text>
@@ -42,8 +60,8 @@ export const PDF = ({ data }: any) => {
                 </View>
 
                 <View fixed style={dataCustomer.container}>
-                    <View style={dataCustomer.subContainer}>
-                        <View style={dataCustomer.titleContainer}>
+                    <View style={dataCustomer.firstSubContainer}>
+                        <View style={dataCustomer.titleContainer} >
                             <Text style={dataCustomer.title}>FACTURADO A:</Text>
                         </View>
                         <View style={dataCustomer.dataContainer}>
@@ -61,7 +79,7 @@ export const PDF = ({ data }: any) => {
                             </View>
                         </View>
                     </View>
-                    <View style={dataCustomer.subContainer}>
+                    <View style={dataCustomer.secondSubContainer}>
                         <View style={dataCustomer.titleContainer}>
                             <Text style={dataCustomer.title}>ENVIADO A:</Text>
                         </View>
@@ -80,6 +98,14 @@ export const PDF = ({ data }: any) => {
                             </View>
                         </View>
                     </View>
+                </View>
+
+                <View style={shippingData.container}>
+                    <ShippingConcept title={'ORDEN DE COMPRA'} data={data.dataInvoiceGeneral.purchase_order}/>
+                    <ShippingConcept title={'VÍA DE TRANSPORTE'} data={data.dataInvoiceGeneral.purchase_order}/>
+                    <ShippingConcept title={'NÚMERO DE RASTREO'} data={data.dataInvoiceGeneral.purchase_order}/>
+                    <ShippingConcept title={'FECHA DE VENCIMIENTO'} data={data.dataInvoiceGeneral.purchase_order}/>
+                    
                 </View>
 
                 {/* Tabla de Productos */}

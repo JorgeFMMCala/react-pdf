@@ -39,7 +39,9 @@ import {  StyleSheet, } from '@react-pdf/renderer';
             width: '50%',
             height: '100%',
             flexDirection: 'column',
-            padding: 20
+            paddingHorizontal: 20,
+            paddingVertical:10,
+            gap:2
         },
 
         textHeaderStyles: {
@@ -57,22 +59,30 @@ import {  StyleSheet, } from '@react-pdf/renderer';
             borderColor: 'black',
             flexDirection: 'row'
         },
-        subContainer: {
+
+        firstSubContainer: {
             width: '50%',
             height: '100%',
             flexDirection: 'column',
             borderLeftWidth: 1,
+            borderRightWidth: .5,
+            borderColor: 'black',
+        },
+        secondSubContainer: {
+            width: '50%',
+            height: '100%',
+            flexDirection: 'column',
+            borderLeftWidth: .5,
             borderRightWidth: 1,
             borderColor: 'black',
         },
         titleContainer: {
             width: '100%',
             height: '20%',
+            justifyContent:'center',
             paddingLeft: 10,
-            paddingTop: 5,
             borderBottomWidth: 1,
             borderColor: 'black',
-
         },
 
         title: {
@@ -112,7 +122,6 @@ import {  StyleSheet, } from '@react-pdf/renderer';
             alignSelf: 'center',
             borderLeftWidth: 1,
             borderBottomWidth: 1,
-            borderRightWidth: 1
         },
 
         row: {
@@ -342,8 +351,8 @@ import {  StyleSheet, } from '@react-pdf/renderer';
         container: {
             width: '90%',
             height: 55,
-            alignSelf: 'center',
             borderWidth: 1,
+            alignSelf: 'center',
             borderColor: 'black',
             flexDirection: 'column',
         },
@@ -420,7 +429,8 @@ import {  StyleSheet, } from '@react-pdf/renderer';
         container: {
             width: '90%',
             height: 120,
-            borderWidth: 1,
+            borderLeftWidth: 1,
+            borderRightWidth:1,
             borderColor: 'black',
             alignSelf: 'center',
             flexDirection: 'column',
@@ -466,6 +476,51 @@ import {  StyleSheet, } from '@react-pdf/renderer';
 
     })
 
+    const shippingData=StyleSheet.create({
+        container:{
+            height: 50,
+            width: '90%',
+            alignSelf: 'center',
+            borderLeftWidth: 1,
+            borderBottomWidth: 1,
+            borderColor: 'black',
+            flexDirection: 'row'
+        },
+
+        subContainer:{
+            width:'25%',
+            height:'100%',
+            flexDirection:'column',
+            borderRightWidth:1,
+            borderColor: 'black',
+        },
+
+        titleContainer:{
+            height:'40%',
+            width:'100%',
+            alignItems:'center',
+            justifyContent:'center',
+            borderBottomWidth:1,
+            borderColor: 'black',
+        },
+
+        title:{
+            fontSize:7
+        },
+
+        dataContainer:{
+            height:'60%',
+            width:'100%',
+            alignItems:'center',
+            justifyContent:'center'
+        },
+
+        data:{
+            fontSize:6
+        }
+
+    })
+
 
     return {
         generalStyles,
@@ -479,7 +534,8 @@ import {  StyleSheet, } from '@react-pdf/renderer';
         bankAccountsData,
         satData,
         blackSpaceFooter,
-        productsData
+        productsData,
+        shippingData
 
 
     }
