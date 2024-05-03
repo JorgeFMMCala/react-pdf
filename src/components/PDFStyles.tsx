@@ -1,11 +1,11 @@
-import {  StyleSheet, } from '@react-pdf/renderer';
+import { StyleSheet, } from '@react-pdf/renderer';
 
 
- export const pdfStyles=()=>{
+export const pdfStyles = () => {
 
     const generalStyles = StyleSheet.create({
         pageStyles: {
-            paddingVertical: 30,
+            paddingVertical: 40,
             position: 'relative'
 
         }
@@ -40,13 +40,14 @@ import {  StyleSheet, } from '@react-pdf/renderer';
             height: '100%',
             flexDirection: 'column',
             paddingHorizontal: 20,
-            paddingVertical:10,
-            gap:2
+            paddingVertical: 10,
+            gap: 2
         },
 
         textHeaderStyles: {
             fontSize: 6,
             paddingVertical: 3,
+            fontWeight:700
         }
     })
 
@@ -79,7 +80,7 @@ import {  StyleSheet, } from '@react-pdf/renderer';
         titleContainer: {
             width: '100%',
             height: '20%',
-            justifyContent:'center',
+            justifyContent: 'center',
             paddingLeft: 10,
             borderBottomWidth: 1,
             borderColor: 'black',
@@ -181,12 +182,12 @@ import {  StyleSheet, } from '@react-pdf/renderer';
         },
     });
 
-    const blackSpaceFooter=StyleSheet.create({
-        container:{
-            height: 105,
+    const blackSpaceFooter = StyleSheet.create({
+        container: {
+            height: 115,
             width: '90%',
             alignSelf: 'center',
-            backgroundColor:'white',
+            backgroundColor: 'white',
         }
     })
 
@@ -198,7 +199,7 @@ import {  StyleSheet, } from '@react-pdf/renderer';
             position: 'absolute',
             left: 0,
             right: 0,
-            bottom: 30,
+            bottom: 50,
             alignSelf: 'center',
         },
 
@@ -322,7 +323,7 @@ import {  StyleSheet, } from '@react-pdf/renderer';
             position: 'absolute',
             left: 0,
             right: 0,
-            bottom: 30,
+            bottom: 50,
             alignSelf: 'center'
 
         },
@@ -430,7 +431,7 @@ import {  StyleSheet, } from '@react-pdf/renderer';
             width: '90%',
             height: 120,
             borderLeftWidth: 1,
-            borderRightWidth:1,
+            borderRightWidth: 1,
             borderColor: 'black',
             alignSelf: 'center',
             flexDirection: 'column',
@@ -476,9 +477,9 @@ import {  StyleSheet, } from '@react-pdf/renderer';
 
     })
 
-    const shippingData=StyleSheet.create({
-        container:{
-            height: 50,
+    const shippingData = StyleSheet.create({
+        container: {
+            height: 40,
             width: '90%',
             alignSelf: 'center',
             borderLeftWidth: 1,
@@ -487,38 +488,174 @@ import {  StyleSheet, } from '@react-pdf/renderer';
             flexDirection: 'row'
         },
 
-        subContainer:{
-            width:'25%',
-            height:'100%',
-            flexDirection:'column',
-            borderRightWidth:1,
+        subContainer: {
+            width: '25%',
+            height: '100%',
+            flexDirection: 'column',
+            borderRightWidth: 1,
             borderColor: 'black',
         },
 
-        titleContainer:{
-            height:'40%',
-            width:'100%',
-            alignItems:'center',
-            justifyContent:'center',
-            borderBottomWidth:1,
+        titleContainer: {
+            height: '40%',
+            width: '100%',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderBottomWidth: 1,
             borderColor: 'black',
+        },
+
+        title: {
+            fontSize: 7
+        },
+
+        dataContainer: {
+            height: '60%',
+            width: '100%',
+            alignItems: 'center',
+            justifyContent: 'center'
+        },
+
+        data: {
+            fontSize: 6
+        }
+
+    })
+
+
+    const paymentData = StyleSheet.create({
+
+        container: {
+
+            height: 40,
+            width: '90%',
+            alignSelf: 'center',
+            borderLeftWidth: 1,
+            borderBottomWidth: 1,
+            borderColor: 'black',
+            flexDirection: 'row'
+        },
+
+        subContainer: {
+
+            width: '33.39%',
+            height: '100%',
+            flexDirection: 'column',
+            borderRightWidth: 1,
+            borderColor: 'black',
+            padding: 5
+        },
+
+        conceptContainer: {
+            width: '100%',
+            height: '50%',
+            flexDirection: 'row',
+            justifyContent: 'space-between'
+        },
+
+        concept: {
+            fontSize: 5
+        },
+
+        data: {
+            fontSize: 5
+        }
+
+    })
+
+    const pageNumberAndTotalPages=StyleSheet.create({
+        text:{
+            position:'absolute',
+            bottom:20,
+            right:25,
+            fontSize:5
+        }
+    })
+
+    const transportationDocumentData= StyleSheet.create({
+
+        container:{
+            width:'90%',
+            height:120,
+            alignSelf: 'center',
+            borderLeftWidth: 1,
+            borderBottomWidth: 1,
+            borderColor: 'black',
+            flexDirection: 'column'
+
+        },
+
+        titleContainer:{
+
+            width: '100%',
+            height: '15%',
+            justifyContent: 'center',
+            alignItems:'center',
+
+            borderBottomWidth:1,
+            borderColor:'black'
         },
 
         title:{
             fontSize:7
         },
 
-        dataContainer:{
-            height:'60%',
-            width:'100%',
-            alignItems:'center',
-            justifyContent:'center'
+        firstRow:{
+            height:'35%',
+            borderBottomWidth: 1,
+            flexDirection:'row'
+
         },
 
-        data:{
-            fontSize:6
+        secondRow:{
+            height:'55%',
+            flexDirection:'row'
         }
+    })
 
+
+    const transportationDocumentSecondSection=StyleSheet.create({
+        container:{
+            width:'25%',
+            borderColor: 'black',
+            borderRightWidth:1,
+            flexDirection: 'column'
+        },
+
+        titleContainer:{
+            borderBottomWidth:1,
+            height:'20%',
+            justifyContent:'center',
+            alignItems:'center'
+
+        },
+
+        subContainer:{
+            flexDirection:'column',
+            gap:3,
+            padding:2,
+        },
+
+        field:{
+            flexDirection:'row',
+            justifyContent:'space-between'
+        }
+    })
+
+    const transportationDocumentFirstSection= StyleSheet.create({
+        container:{
+            height:'100%',
+            flexDirection:'column',
+            gap:3,
+            padding:2,
+            borderRightWidth:1,
+            borderColor:'black'
+        },
+
+        field:{
+            flexDirection:'row',
+            justifyContent:'space-between'
+        }
     })
 
 
@@ -535,10 +672,13 @@ import {  StyleSheet, } from '@react-pdf/renderer';
         satData,
         blackSpaceFooter,
         productsData,
-        shippingData
-
-
+        shippingData,
+        paymentData,
+        pageNumberAndTotalPages,
+        transportationDocumentData,
+        transportationDocumentSecondSection,
+        transportationDocumentFirstSection
     }
 
 
- }
+}

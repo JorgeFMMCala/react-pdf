@@ -9,11 +9,196 @@ import { pdfStyles } from './PDFStyles';
 
 export const PDF = ({ data }: any) => {
 
-    const { bankAccountsData, blankFooter, dataCustomer, footerInLastPage, generalStyles, headerStyles, notes, satData, totals,
-        weights,blackSpaceFooter,productsData,shippingData
+    const { bankAccountsData, blankFooter,
+        dataCustomer, footerInLastPage,
+        generalStyles, headerStyles,
+        notes, satData, totals,
+        weights, blackSpaceFooter,
+        productsData,
+        shippingData, paymentData,
+        pageNumberAndTotalPages,
+        transportationDocumentData,
+        transportationDocumentSecondSection,
+        transportationDocumentFirstSection
     } = pdfStyles();
 
-    const ShippingConcept = ({ title, data }:any) => {
+    const TransportationDocumentSecondSection = (
+        {
+            title,
+            concept1,
+            concept2,
+            concept3,
+            concept4,
+            concept5,
+            data1,
+            data2,
+            data3,
+            data4,
+            data5
+
+        }: any) => {
+
+        return (
+            <View style={transportationDocumentSecondSection.container}>
+                <View style={transportationDocumentSecondSection.titleContainer}>
+                    <Text>{title}</Text>
+                </View>
+                <View style={transportationDocumentSecondSection.subContainer}>
+                    <View style={transportationDocumentSecondSection.field}>
+                        <Text style={{fontSize:5}}>{concept1}</Text> <Text style={{fontSize:5}}>{data1}</Text>
+                    </View>
+                    <View style={transportationDocumentSecondSection.field}>
+                        <Text style={{fontSize:5}}>{concept2}</Text> <Text style={{fontSize:5}}>{data2}</Text>
+                    </View>
+                    <View style={transportationDocumentSecondSection.field}>
+                        <Text style={{fontSize:5}}>{concept3}</Text> <Text style={{fontSize:5}}>{data3}</Text>
+                    </View>
+                    <View style={transportationDocumentSecondSection.field}>
+                        <Text style={{fontSize:5}}>{concept4}</Text> <Text style={{fontSize:5}}>{data4}</Text>
+                    </View>
+                    <View style={transportationDocumentSecondSection.field}>
+                        <Text style={{fontSize:5}}>{concept5}</Text> <Text style={{fontSize:5}}>{data5}</Text>
+                    </View>
+                </View>
+            </View>
+        )
+    }
+
+    const TransportationDocumentFirstSection = (
+        {
+            concept1,
+            concept2,
+            concept3,
+            concept4,
+            data1,
+            data2,
+            data3,
+            data4,
+            width1,
+            width2
+        }: any) => {
+
+        return (
+            <View style={{width:width1, height:'100%'}}>
+                <View style={transportationDocumentFirstSection.container}>
+                    <View style={transportationDocumentFirstSection.field}>
+                        <Text style={{width:width2, fontSize:5}}>{concept1}</Text> <Text style={{fontSize:5}}>{data1}</Text>
+                    </View>
+                    <View style={transportationDocumentFirstSection.field}>
+                        <Text style={{width:width2, fontSize:5}}>{concept2}</Text> <Text style={{fontSize:5}}>{data2}</Text>
+                    </View>
+                    <View style={transportationDocumentFirstSection.field}>
+                        <Text style={{width:width2, fontSize:5}}>{concept3}</Text> <Text style={{fontSize:5}}>{data3}</Text>
+                    </View>
+                    <View style={transportationDocumentFirstSection.field}>
+                        <Text style={{width:width2, fontSize:5}}>{concept4}</Text> <Text style={{fontSize:5}}>{data4}</Text>
+                    </View>
+                </View>
+            </View>
+        )
+    }
+
+
+    const TransportationDocument = () => {
+
+        return (
+            <View style={transportationDocumentData.container} break>
+                <View style={transportationDocumentData.titleContainer}>
+                    <Text style={transportationDocumentData.title}>CARTA PORTE</Text>
+                </View>
+                <View style={transportationDocumentData.firstRow}>
+                    <TransportationDocumentFirstSection 
+                    concept1={'Permiso SCT:'}
+                    concept2={'Número de Permiso SCT:'}
+                    data1={data.dataTransportationDocument.permission_sct}
+                    data2={data.dataTransportationDocument.permission_number_sct}
+                    width1={'25%'}
+                    width2={'30%'}                    />
+                    <TransportationDocumentFirstSection 
+                    concept1={'Id ccp:'}
+                    concept2={'Número de Guía:'}
+                    concept3={'Descripción de Guía:'}
+                    concept4={'Peso Guía:'}
+                    data1={data.dataTransportationDocument.id_cpp}
+                    data2={data.dataTransportationDocument.identification_guide_number}
+                    data3={data.dataTransportationDocument.identification_guide_description}
+                    data4={data.dataTransportationDocument.identification_guide_weight}
+                    width1={'32%'}
+                    width2={'30%'}                    />
+                    <TransportationDocumentFirstSection 
+                    concept1={'Mercancía Total:'}
+                    concept2={'Peso bruto total:'}
+                    concept3={'Unidad de Peso:'}
+                    data1={data.dataTransportationDocument.total_merchandise}
+                    data2={data.dataTransportationDocument.gross_total_weight}
+                    data3={data.dataTransportationDocument.weight_unit}
+                    width1={'18%'}
+                    width2={'50%'}                    />
+                    <TransportationDocumentFirstSection 
+                    concept1={'Fecha de Carta Porte:'}
+                    data1={data.dataInvoiceGeneral.sales_invoice_date}
+                    width1={'25%'}
+                    width2={'30%'}                    />
+                </View>
+                <View style={transportationDocumentData.secondRow}>
+                    <TransportationDocumentSecondSection 
+                    title={'Información del transporte'}
+                    concept1={'Código de Transporte:'}
+                    concept2={'Distancia Total: '}
+                    concept3={'Fecha de salida: '}
+                    concept4={'Fecha de Llegada:'}
+                    concept5={'Peso de Transporte: '}
+                    data1={data.dataTransportationDocument.transportation_code}
+                    data2={data.dataTransportationDocument.total_distance}
+                    data3={data.dataTransportationDocument.departure_date}
+                    data4={data.dataTransportationDocument.arrival_date}
+                    data5={data.dataTransportationDocument.transportation_weight}
+                    />
+                    <TransportationDocumentSecondSection 
+                    title={'Información del vehículo'}
+                    concept1={'Configuración Vehicular: '}
+                    concept2={'Número de Placa: '}
+                    concept3={'Vin: '}
+                    concept4={'Modelo y Año: '}
+                    concept5={'Número de motor: '}
+                    data1={data.dataTransportationDocument.vehicle_config_code}
+                    data2={data.dataTransportationDocument.plate_number}
+                    data3={data.dataTransportationDocument.vin}
+                    data4={`${data.dataTransportationDocument.model_name} - ${data.dataTransportationDocument.model_year}`}
+                    data5={data.dataTransportationDocument.motor_number}
+                    />
+                    <TransportationDocumentSecondSection 
+                    title={'Información del transporte'}
+                    concept1={'Código de Transporte:'}
+                    concept2={'Distancia Total: '}
+                    concept3={'Fecha de salida: '}
+                    concept4={'Fecha de Llegada:'}
+                    concept5={'Peso de Transporte: '}
+                    data1={data.dataTransportationDocument.transportation_code}
+                    data2={data.dataTransportationDocument.total_distance}
+                    data3={data.dataTransportationDocument.departure_date}
+                    data4={data.dataTransportationDocument.arrival_date}
+                    data5={data.dataTransportationDocument.transportation_weight}
+                    />
+                    <TransportationDocumentSecondSection 
+                    title={'Información del transporte'}
+                    concept1={'Código de Transporte:'}
+                    concept2={'Distancia Total: '}
+                    concept3={'Fecha de salida: '}
+                    concept4={'Fecha de Llegada:'}
+                    concept5={'Peso de Transporte: '}
+                    data1={data.dataTransportationDocument.transportation_code}
+                    data2={data.dataTransportationDocument.total_distance}
+                    data3={data.dataTransportationDocument.departure_date}
+                    data4={data.dataTransportationDocument.arrival_date}
+                    data5={data.dataTransportationDocument.transportation_weight}
+                    />
+                </View>
+            </View>
+        )
+    }
+
+    const ShippingConcept = ({ title, data }: any) => {
         return (
             <View style={shippingData.subContainer}>
                 <View style={shippingData.titleContainer}>
@@ -25,18 +210,31 @@ export const PDF = ({ data }: any) => {
             </View>
         );
     };
-    
 
-    let pages:number;
+    const PaymentConcept = ({ title1, data1, title2, data2 }: any) => {
+        return (
+            <View style={paymentData.subContainer}>
+                <View style={paymentData.conceptContainer} >
+                    <Text style={paymentData.concept}>{title1}</Text> <Text style={paymentData.data}> {data1}</Text>
+                </View>
+                <View style={paymentData.conceptContainer}>
+                    <Text style={paymentData.concept}>{title2}</Text> <Text style={paymentData.data}> {data2}</Text>
+                </View>
+            </View>
+        );
+    };
+
+
+    let pages: number;
 
     return (
         <Document >
-            <Page style={generalStyles.pageStyles} >
+            <Page size={'A4'} style={generalStyles.pageStyles} >
 
-                <Text render={({ pageNumber,totalPages }) => {
-                    pages=totalPages;
+                <Text render={({ pageNumber, totalPages }) => {
+                    pages = totalPages;
                     return <Text></Text>;
-                }}fixed />
+                }} fixed />
 
                 <View fixed style={headerStyles.container}>
                     <Image src={cala} style={headerStyles.image} />
@@ -100,12 +298,28 @@ export const PDF = ({ data }: any) => {
                     </View>
                 </View>
 
-                <View style={shippingData.container}>
-                    <ShippingConcept title={'ORDEN DE COMPRA'} data={data.dataInvoiceGeneral.purchase_order}/>
-                    <ShippingConcept title={'VÍA DE TRANSPORTE'} data={data.dataInvoiceGeneral.purchase_order}/>
-                    <ShippingConcept title={'NÚMERO DE RASTREO'} data={data.dataInvoiceGeneral.purchase_order}/>
-                    <ShippingConcept title={'FECHA DE VENCIMIENTO'} data={data.dataInvoiceGeneral.purchase_order}/>
-                    
+                <View fixed style={shippingData.container}>
+                    <ShippingConcept title={'ORDEN DE COMPRA'} data={data.dataInvoiceGeneral.purchase_order} />
+                    <ShippingConcept title={'VÍA DE TRANSPORTE'} data={''} />
+                    <ShippingConcept title={'NÚMERO DE RASTREO'} data={data.dataShippingTracking.track_id} />
+                    <ShippingConcept title={'FECHA DE VENCIMIENTO'} data={data.dataInvoiceGeneral.payment_due_date} />
+                </View>
+
+                <View fixed style={paymentData.container}>
+                    <PaymentConcept
+                        title1={'Uso CFDI:'}
+                        data1={`${data.dataInvoiceGeneral.cfdi_code || ""} ${data.dataInvoiceGeneral.cfdi_description || ""}`}
+                    />
+                    <PaymentConcept
+                        title1={'MÉTODO DE PAGO:'}
+                        data1={`${data.dataInvoiceGeneral.payment_mode_code || ""} - ${data.dataInvoiceGeneral.payment_mode_description || ""}`}
+                        title2={'CONDICIONES DE PAGO:'}
+                        data2={data.dataInvoiceGeneral.payment_condition_name}
+                    />
+                    <PaymentConcept
+                        title1={'TIPO DE PAGO:'}
+                        data1={`${data.dataInvoiceGeneral.payment_method_code || ""} - ${data.dataInvoiceGeneral.payment_method_name || ""}`}
+                    />
                 </View>
 
                 {/* Tabla de Productos */}
@@ -133,6 +347,9 @@ export const PDF = ({ data }: any) => {
                         );
                     })}
                 </View>
+
+                <TransportationDocument />
+
 
                 <View fixed style={blackSpaceFooter.container}></View>
 
@@ -164,7 +381,7 @@ export const PDF = ({ data }: any) => {
                                 </View>
                             );
                         } else {
-                            return null; 
+                            return null;
                         }
                     }}
                     style={blankFooter.section}
@@ -301,6 +518,11 @@ export const PDF = ({ data }: any) => {
                         </View>
                     </View>
                 </View>
+
+                <Text style={pageNumberAndTotalPages.text} render={({ pageNumber, totalPages }) => {
+
+                    return <Text debug>{`Page ${pageNumber} / ${totalPages}`}</Text>;
+                }} fixed />
             </Page>
         </Document >
     );
