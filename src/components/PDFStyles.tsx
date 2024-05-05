@@ -592,7 +592,6 @@ export const pdfStyles = () => {
             justifyContent: 'center',
             alignItems:'center',
             borderRightWidth:1,
-            borderTopWidth:1,
             borderBottomWidth:1,
             borderColor:'black'
         },

@@ -24,6 +24,38 @@ export const PDF = ({ data }: any) => {
     } = pdfStyles();
 
 
+    const MerchandiseDetails = () => {
+
+        return (
+            <View style={transportationDocumentLocationsData.container}>
+                <View style={transportationDocumentLocationsData.titleContainer}>
+                    <Text style={transportationDocumentLocationsData.title}>DETALLE MERCANCIAS</Text>
+                </View>
+                <View style={transportationDocumentLocationsData.tableContainer} >
+                    <View fixed style={transportationDocumentLocationsData.titleRow}>
+                        <Text style={{ width: '20%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >CLAVE PRODUCTO SERVICIO</Text>
+                        <Text style={{ width: '30%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >DESCRIPCIÓN</Text>
+                        <Text style={{ width: '15%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >CANTIDAD</Text>
+                        <Text style={{ width: '20%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >CÓDIGO DE UNIDAD</Text>
+                        <Text style={{ width: '15%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >PESO EN KG</Text>
+                    </View>
+                    {data.dataMerchandiseDetails.map((item: any, index: any) => {
+                        return (
+                            <View style={transportationDocumentLocationsData.row} key={index} wrap={false}>
+                                <Text style={{ width: '20%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.product_service_key}</Text>
+                                <Text style={{ width: '30%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.description}</Text>
+                                <Text style={{ width: '15%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.quantity}</Text>
+                                <Text style={{ width: '20%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.unit_code}</Text>
+                                <Text style={{ width: '15%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.weight_in_kg}</Text>
+                            </View>
+                        );
+                    })}
+                </View>
+            </View>
+        )
+    }
+
+
     const TransportationDocumentLocations = () => {
 
         return (
@@ -33,36 +65,34 @@ export const PDF = ({ data }: any) => {
                 </View>
                 <View style={transportationDocumentLocationsData.tableContainer} >
                     <View fixed style={transportationDocumentLocationsData.titleRow}>
-                        <Text style={{ width: '5%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} ></Text>
-                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >RFC</Text>
-                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >PAIS</Text>
-                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >ESTADO</Text>
-                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >CIUDAD</Text>
-                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >DIRECCIÓN</Text>
-                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >CÓDIGO POSTAL</Text>
-                        <Text style={{ width: '12%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >FECHA</Text>
-                        <Text style={{ width: '11%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >DISTANCIA</Text>
+                        <Text style={{ width: '5%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} ></Text>
+                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >RFC</Text>
+                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >PAIS</Text>
+                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >ESTADO</Text>
+                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >CIUDAD</Text>
+                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >DIRECCIÓN</Text>
+                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >CÓDIGO POSTAL</Text>
+                        <Text style={{ width: '12%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >FECHA</Text>
+                        <Text style={{ width: '11%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >DISTANCIA</Text>
                     </View>
                     {data.dataTransportationDocumentLocations.map((item: any, index: any) => {
                         return (
                             <View style={transportationDocumentLocationsData.row} key={index} wrap={false}>
-                                <Text style={{ width: '5%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.location_type}</Text>
-                                <Text style={{ width: '10%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.rfc}</Text>
-                                <Text style={{ width: '10%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.country_name}</Text>
-                                <Text style={{ width: '14%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.state_name}</Text>
-                                <Text style={{ width: '14%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.city_name}</Text>
-                                <Text style={{ width: '14%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.street}</Text>
-                                <Text style={{ width: '10%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.postal_code}</Text>
-                                <Text style={{ width: '12%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.date_hour_departure_arrival}</Text>
-                                <Text style={{ width: '11%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.distance}</Text>
+                                <Text style={{ width: '5%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.location_type}</Text>
+                                <Text style={{ width: '10%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.rfc}</Text>
+                                <Text style={{ width: '10%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.country_name}</Text>
+                                <Text style={{ width: '14%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.state_name}</Text>
+                                <Text style={{ width: '14%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.city_name}</Text>
+                                <Text style={{ width: '14%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.street}</Text>
+                                <Text style={{ width: '10%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.postal_code}</Text>
+                                <Text style={{ width: '12%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.date_hour_departure_arrival}</Text>
+                                <Text style={{ width: '11%', fontSize: 5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >{item.distance}</Text>
                             </View>
                         );
                     })}
                 </View>
-
             </View>
         )
-
     }
 
     const TransportationDocumentSecondSection = (
@@ -240,6 +270,7 @@ export const PDF = ({ data }: any) => {
                     </View>
                 </View>
                 <TransportationDocumentLocations />
+                <MerchandiseDetails/>
             </View>
         )
     }
