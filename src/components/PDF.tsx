@@ -19,8 +19,51 @@ export const PDF = ({ data }: any) => {
         pageNumberAndTotalPages,
         transportationDocumentData,
         transportationDocumentSecondSection,
-        transportationDocumentFirstSection
+        transportationDocumentFirstSection,
+        transportationDocumentLocationsData
     } = pdfStyles();
+
+
+    const TransportationDocumentLocations = () => {
+
+        return (
+            <View style={transportationDocumentLocationsData.container}>
+                <View style={transportationDocumentLocationsData.titleContainer}>
+                    <Text style={transportationDocumentLocationsData.title}>ORIGEN / DESTINO</Text>
+                </View>
+                <View style={transportationDocumentLocationsData.tableContainer} >
+                    <View fixed style={transportationDocumentLocationsData.titleRow}>
+                        <Text style={{ width: '5%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} ></Text>
+                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >RFC</Text>
+                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >PAIS</Text>
+                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >ESTADO</Text>
+                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >CIUDAD</Text>
+                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >DIRECCIÓN</Text>
+                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >CÓDIGO POSTAL</Text>
+                        <Text style={{ width: '12%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >FECHA</Text>
+                        <Text style={{ width: '11%', fontSize: 5.5, borderRightWidth: 1, padding:4, borderBottomWidth:1}} >DISTANCIA</Text>
+                    </View>
+                    {data.dataTransportationDocumentLocations.map((item: any, index: any) => {
+                        return (
+                            <View style={transportationDocumentLocationsData.row} key={index} wrap={false}>
+                                <Text style={{ width: '5%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.location_type}</Text>
+                                <Text style={{ width: '10%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.rfc}</Text>
+                                <Text style={{ width: '10%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.country_name}</Text>
+                                <Text style={{ width: '14%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.state_name}</Text>
+                                <Text style={{ width: '14%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.city_name}</Text>
+                                <Text style={{ width: '14%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.street}</Text>
+                                <Text style={{ width: '10%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.postal_code}</Text>
+                                <Text style={{ width: '12%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.date_hour_departure_arrival}</Text>
+                                <Text style={{ width: '11%', fontSize: 5, borderRightWidth: 1, padding:4,borderBottomWidth:1}} >{item.distance}</Text>
+                            </View>
+                        );
+                    })}
+                </View>
+
+            </View>
+        )
+
+    }
 
     const TransportationDocumentSecondSection = (
         {
@@ -41,23 +84,23 @@ export const PDF = ({ data }: any) => {
         return (
             <View style={transportationDocumentSecondSection.container}>
                 <View style={transportationDocumentSecondSection.titleContainer}>
-                    <Text>{title}</Text>
+                    <Text style={{ fontSize: 6 }}>{title}</Text>
                 </View>
                 <View style={transportationDocumentSecondSection.subContainer}>
                     <View style={transportationDocumentSecondSection.field}>
-                        <Text style={{fontSize:5}}>{concept1}</Text> <Text style={{fontSize:5}}>{data1}</Text>
+                        <Text style={{ fontSize: 5 }}>{concept1}</Text> <Text style={{ fontSize: 5 }}>{data1}</Text>
                     </View>
                     <View style={transportationDocumentSecondSection.field}>
-                        <Text style={{fontSize:5}}>{concept2}</Text> <Text style={{fontSize:5}}>{data2}</Text>
+                        <Text style={{ fontSize: 5 }}>{concept2}</Text> <Text style={{ fontSize: 5 }}>{data2}</Text>
                     </View>
                     <View style={transportationDocumentSecondSection.field}>
-                        <Text style={{fontSize:5}}>{concept3}</Text> <Text style={{fontSize:5}}>{data3}</Text>
+                        <Text style={{ fontSize: 5 }}>{concept3}</Text> <Text style={{ fontSize: 5 }}>{data3}</Text>
                     </View>
                     <View style={transportationDocumentSecondSection.field}>
-                        <Text style={{fontSize:5}}>{concept4}</Text> <Text style={{fontSize:5}}>{data4}</Text>
+                        <Text style={{ fontSize: 5 }}>{concept4}</Text> <Text style={{ fontSize: 5 }}>{data4}</Text>
                     </View>
                     <View style={transportationDocumentSecondSection.field}>
-                        <Text style={{fontSize:5}}>{concept5}</Text> <Text style={{fontSize:5}}>{data5}</Text>
+                        <Text style={{ fontSize: 5 }}>{concept5}</Text> <Text style={{ fontSize: 5 }}>{data5}</Text>
                     </View>
                 </View>
             </View>
@@ -79,19 +122,19 @@ export const PDF = ({ data }: any) => {
         }: any) => {
 
         return (
-            <View style={{width:width1, height:'100%'}}>
+            <View style={{ width: width1, height: '100%' }}>
                 <View style={transportationDocumentFirstSection.container}>
                     <View style={transportationDocumentFirstSection.field}>
-                        <Text style={{width:width2, fontSize:5}}>{concept1}</Text> <Text style={{fontSize:5}}>{data1}</Text>
+                        <Text style={{ width: width2, fontSize: 5 }}>{concept1}</Text> <Text style={{ fontSize: 5 }}>{data1}</Text>
                     </View>
                     <View style={transportationDocumentFirstSection.field}>
-                        <Text style={{width:width2, fontSize:5}}>{concept2}</Text> <Text style={{fontSize:5}}>{data2}</Text>
+                        <Text style={{ width: width2, fontSize: 5 }}>{concept2}</Text> <Text style={{ fontSize: 5 }}>{data2}</Text>
                     </View>
                     <View style={transportationDocumentFirstSection.field}>
-                        <Text style={{width:width2, fontSize:5}}>{concept3}</Text> <Text style={{fontSize:5}}>{data3}</Text>
+                        <Text style={{ width: width2, fontSize: 5 }}>{concept3}</Text> <Text style={{ fontSize: 5 }}>{data3}</Text>
                     </View>
                     <View style={transportationDocumentFirstSection.field}>
-                        <Text style={{width:width2, fontSize:5}}>{concept4}</Text> <Text style={{fontSize:5}}>{data4}</Text>
+                        <Text style={{ width: width2, fontSize: 5 }}>{concept4}</Text> <Text style={{ fontSize: 5 }}>{data4}</Text>
                     </View>
                 </View>
             </View>
@@ -102,98 +145,101 @@ export const PDF = ({ data }: any) => {
     const TransportationDocument = () => {
 
         return (
-            <View style={transportationDocumentData.container} break>
-                <View style={transportationDocumentData.titleContainer}>
-                    <Text style={transportationDocumentData.title}>CARTA PORTE</Text>
+            <View break>
+                <View style={transportationDocumentData.container} >
+                    <View style={transportationDocumentData.titleContainer}>
+                        <Text style={transportationDocumentData.title}>CARTA PORTE</Text>
+                    </View>
+                    <View style={transportationDocumentData.firstRow}>
+                        <TransportationDocumentFirstSection
+                            concept1={'Permiso SCT:'}
+                            concept2={'Número de Permiso SCT:'}
+                            data1={data.dataTransportationDocument.permission_sct}
+                            data2={data.dataTransportationDocument.permission_number_sct}
+                            width1={'25%'}
+                            width2={'30%'} />
+                        <TransportationDocumentFirstSection
+                            concept1={'Id ccp:'}
+                            concept2={'Número de Guía:'}
+                            concept3={'Descripción de Guía:'}
+                            concept4={'Peso Guía:'}
+                            data1={data.dataTransportationDocument.id_cpp}
+                            data2={data.dataTransportationDocument.identification_guide_number}
+                            data3={data.dataTransportationDocument.identification_guide_description}
+                            data4={data.dataTransportationDocument.identification_guide_weight}
+                            width1={'32%'}
+                            width2={'30%'} />
+                        <TransportationDocumentFirstSection
+                            concept1={'Mercancía Total:'}
+                            concept2={'Peso bruto total:'}
+                            concept3={'Unidad de Peso:'}
+                            data1={data.dataTransportationDocument.total_merchandise}
+                            data2={data.dataTransportationDocument.gross_total_weight}
+                            data3={data.dataTransportationDocument.weight_unit}
+                            width1={'18%'}
+                            width2={'50%'} />
+                        <TransportationDocumentFirstSection
+                            concept1={'Fecha de Carta Porte:'}
+                            data1={data.dataInvoiceGeneral.sales_invoice_date}
+                            width1={'25%'}
+                            width2={'30%'} />
+                    </View>
+                    <View style={transportationDocumentData.secondRow}>
+                        <TransportationDocumentSecondSection
+                            title={'Información del transporte'}
+                            concept1={'Código de Transporte:'}
+                            concept2={'Distancia Total: '}
+                            concept3={'Fecha de salida: '}
+                            concept4={'Fecha de Llegada:'}
+                            concept5={'Peso de Transporte: '}
+                            data1={data.dataTransportationDocument.transportation_code}
+                            data2={data.dataTransportationDocument.total_distance}
+                            data3={data.dataTransportationDocument.departure_date}
+                            data4={data.dataTransportationDocument.arrival_date}
+                            data5={data.dataTransportationDocument.transportation_weight}
+                        />
+                        <TransportationDocumentSecondSection
+                            title={'Información del vehículo'}
+                            concept1={'Configuración Vehicular: '}
+                            concept2={'Número de Placa: '}
+                            concept3={'Vin: '}
+                            concept4={'Modelo y Año: '}
+                            concept5={'Número de motor: '}
+                            data1={data.dataTransportationDocument.vehicle_config_code}
+                            data2={data.dataTransportationDocument.plate_number}
+                            data3={data.dataTransportationDocument.vin}
+                            data4={`${data.dataTransportationDocument.model_name} - ${data.dataTransportationDocument.model_year}`}
+                            data5={data.dataTransportationDocument.motor_number}
+                        />
+                        <TransportationDocumentSecondSection
+                            title={'Información del transporte'}
+                            concept1={'Código de Transporte:'}
+                            concept2={'Distancia Total: '}
+                            concept3={'Fecha de salida: '}
+                            concept4={'Fecha de Llegada:'}
+                            concept5={'Peso de Transporte: '}
+                            data1={data.dataTransportationDocument.transportation_code}
+                            data2={data.dataTransportationDocument.total_distance}
+                            data3={data.dataTransportationDocument.departure_date}
+                            data4={data.dataTransportationDocument.arrival_date}
+                            data5={data.dataTransportationDocument.transportation_weight}
+                        />
+                        <TransportationDocumentSecondSection
+                            title={'Información del transporte'}
+                            concept1={'Código de Transporte:'}
+                            concept2={'Distancia Total: '}
+                            concept3={'Fecha de salida: '}
+                            concept4={'Fecha de Llegada:'}
+                            concept5={'Peso de Transporte: '}
+                            data1={data.dataTransportationDocument.transportation_code}
+                            data2={data.dataTransportationDocument.total_distance}
+                            data3={data.dataTransportationDocument.departure_date}
+                            data4={data.dataTransportationDocument.arrival_date}
+                            data5={data.dataTransportationDocument.transportation_weight}
+                        />
+                    </View>
                 </View>
-                <View style={transportationDocumentData.firstRow}>
-                    <TransportationDocumentFirstSection 
-                    concept1={'Permiso SCT:'}
-                    concept2={'Número de Permiso SCT:'}
-                    data1={data.dataTransportationDocument.permission_sct}
-                    data2={data.dataTransportationDocument.permission_number_sct}
-                    width1={'25%'}
-                    width2={'30%'}                    />
-                    <TransportationDocumentFirstSection 
-                    concept1={'Id ccp:'}
-                    concept2={'Número de Guía:'}
-                    concept3={'Descripción de Guía:'}
-                    concept4={'Peso Guía:'}
-                    data1={data.dataTransportationDocument.id_cpp}
-                    data2={data.dataTransportationDocument.identification_guide_number}
-                    data3={data.dataTransportationDocument.identification_guide_description}
-                    data4={data.dataTransportationDocument.identification_guide_weight}
-                    width1={'32%'}
-                    width2={'30%'}                    />
-                    <TransportationDocumentFirstSection 
-                    concept1={'Mercancía Total:'}
-                    concept2={'Peso bruto total:'}
-                    concept3={'Unidad de Peso:'}
-                    data1={data.dataTransportationDocument.total_merchandise}
-                    data2={data.dataTransportationDocument.gross_total_weight}
-                    data3={data.dataTransportationDocument.weight_unit}
-                    width1={'18%'}
-                    width2={'50%'}                    />
-                    <TransportationDocumentFirstSection 
-                    concept1={'Fecha de Carta Porte:'}
-                    data1={data.dataInvoiceGeneral.sales_invoice_date}
-                    width1={'25%'}
-                    width2={'30%'}                    />
-                </View>
-                <View style={transportationDocumentData.secondRow}>
-                    <TransportationDocumentSecondSection 
-                    title={'Información del transporte'}
-                    concept1={'Código de Transporte:'}
-                    concept2={'Distancia Total: '}
-                    concept3={'Fecha de salida: '}
-                    concept4={'Fecha de Llegada:'}
-                    concept5={'Peso de Transporte: '}
-                    data1={data.dataTransportationDocument.transportation_code}
-                    data2={data.dataTransportationDocument.total_distance}
-                    data3={data.dataTransportationDocument.departure_date}
-                    data4={data.dataTransportationDocument.arrival_date}
-                    data5={data.dataTransportationDocument.transportation_weight}
-                    />
-                    <TransportationDocumentSecondSection 
-                    title={'Información del vehículo'}
-                    concept1={'Configuración Vehicular: '}
-                    concept2={'Número de Placa: '}
-                    concept3={'Vin: '}
-                    concept4={'Modelo y Año: '}
-                    concept5={'Número de motor: '}
-                    data1={data.dataTransportationDocument.vehicle_config_code}
-                    data2={data.dataTransportationDocument.plate_number}
-                    data3={data.dataTransportationDocument.vin}
-                    data4={`${data.dataTransportationDocument.model_name} - ${data.dataTransportationDocument.model_year}`}
-                    data5={data.dataTransportationDocument.motor_number}
-                    />
-                    <TransportationDocumentSecondSection 
-                    title={'Información del transporte'}
-                    concept1={'Código de Transporte:'}
-                    concept2={'Distancia Total: '}
-                    concept3={'Fecha de salida: '}
-                    concept4={'Fecha de Llegada:'}
-                    concept5={'Peso de Transporte: '}
-                    data1={data.dataTransportationDocument.transportation_code}
-                    data2={data.dataTransportationDocument.total_distance}
-                    data3={data.dataTransportationDocument.departure_date}
-                    data4={data.dataTransportationDocument.arrival_date}
-                    data5={data.dataTransportationDocument.transportation_weight}
-                    />
-                    <TransportationDocumentSecondSection 
-                    title={'Información del transporte'}
-                    concept1={'Código de Transporte:'}
-                    concept2={'Distancia Total: '}
-                    concept3={'Fecha de salida: '}
-                    concept4={'Fecha de Llegada:'}
-                    concept5={'Peso de Transporte: '}
-                    data1={data.dataTransportationDocument.transportation_code}
-                    data2={data.dataTransportationDocument.total_distance}
-                    data3={data.dataTransportationDocument.departure_date}
-                    data4={data.dataTransportationDocument.arrival_date}
-                    data5={data.dataTransportationDocument.transportation_weight}
-                    />
-                </View>
+                <TransportationDocumentLocations />
             </View>
         )
     }

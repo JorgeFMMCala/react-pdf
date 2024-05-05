@@ -591,7 +591,8 @@ export const pdfStyles = () => {
             height: '15%',
             justifyContent: 'center',
             alignItems:'center',
-
+            borderRightWidth:1,
+            borderTopWidth:1,
             borderBottomWidth:1,
             borderColor:'black'
         },
@@ -627,7 +628,6 @@ export const pdfStyles = () => {
             height:'20%',
             justifyContent:'center',
             alignItems:'center'
-
         },
 
         subContainer:{
@@ -658,6 +658,47 @@ export const pdfStyles = () => {
         }
     })
 
+    const transportationDocumentLocationsData = StyleSheet.create({
+
+        container:{
+            width:'90%',
+            alignSelf:'center',
+            borderLeftWidth:1,
+            borderColor:'black'
+        },
+
+        titleContainer:{
+            width:'100%',
+            paddingVertical:2,
+            justifyContent:'center',
+            alignItems:'center',
+            borderBottomWidth:1,
+            borderRightWidth:1,
+            borderBottomColor:'black'
+        },
+
+        title:{
+            fontSize:7
+        },
+
+        tableContainer:{
+            width:'100%',
+            flexDirection:'column'
+        },
+
+        titleRow:{
+            flexDirection:'row',
+        },
+
+ 
+
+        row:{
+            flexDirection:'row',
+        },
+
+
+    })
+
 
     return {
         generalStyles,
@@ -677,7 +718,8 @@ export const pdfStyles = () => {
         pageNumberAndTotalPages,
         transportationDocumentData,
         transportationDocumentSecondSection,
-        transportationDocumentFirstSection
+        transportationDocumentFirstSection,
+        transportationDocumentLocationsData
     }
 
 
