@@ -1,4 +1,25 @@
-import { StyleSheet, } from '@react-pdf/renderer';
+import { StyleSheet, Font } from '@react-pdf/renderer';
+import RobotoMedium from "../assets/fonts/Roboto/Roboto-Medium.ttf";
+import RobotoBold from "../assets/fonts/Roboto/Roboto-Bold.ttf";
+import RobotoRegular from "../assets/fonts/Roboto/Roboto-Regular.ttf";
+
+Font.register({
+    family: 'Roboto',
+    fonts: [
+        {
+            src: RobotoRegular,
+            fontWeight: 400,
+        },
+        {
+            src: RobotoMedium,
+            fontWeight: 500,
+        },
+        {
+            src: RobotoBold,
+            fontWeight: 700,
+        }
+    ]
+})
 
 
 export const pdfStyles = () => {
@@ -14,7 +35,7 @@ export const pdfStyles = () => {
 
     const headerStyles = StyleSheet.create({
         container: {
-            height: 100,
+            height: 120,
             width: '90%',
             alignSelf: 'center',
             borderWidth: 1,
@@ -23,7 +44,7 @@ export const pdfStyles = () => {
         },
 
         image: {
-            width: '35%',
+            width: '30%',
             height: '100%',
             borderRightWidth: 1,
             borderRightColor: 'black'
@@ -44,16 +65,29 @@ export const pdfStyles = () => {
             gap: 2
         },
 
+        dataInvoiceGeneralSubcontainer: {
+            flexDirection: 'row',
+            justifyContent: 'space-between'
+        },
+
         textHeaderStyles: {
-            fontSize: 6,
+            fontSize: 7,
             paddingVertical: 3,
+            fontFamily: 'Roboto',
+
+        },
+
+        textHeaderStylesBold: {
+            fontSize: 7,
+            paddingVertical: 3,
+            fontFamily: 'Roboto',
             fontWeight:700
         }
     })
 
     const dataCustomer = StyleSheet.create({
         container: {
-            height: 80,
+            height: 90,
             width: '90%',
             alignSelf: 'center',
             borderBottomWidth: 1,
@@ -79,7 +113,7 @@ export const pdfStyles = () => {
         },
         titleContainer: {
             width: '100%',
-            height: '20%',
+            height: '25%',
             justifyContent: 'center',
             paddingLeft: 10,
             borderBottomWidth: 1,
@@ -87,8 +121,9 @@ export const pdfStyles = () => {
         },
 
         title: {
-            fontSize: 6,
-            fontWeight: 'bold'
+            fontSize: 7,
+            fontFamily:'Roboto',
+            fontWeight:700
         },
 
         dataContainer: {
@@ -99,16 +134,29 @@ export const pdfStyles = () => {
         firstContainer: {
             width: '45%',
             padding: 10,
+            gap: 3
 
         },
         secondContainer: {
             width: '55%',
             padding: 10,
-
+            gap: 3
         },
+
+        field:{
+            flexDirection:'row',
+            justifyContent:'space-between'
+        },
+
+        concept:{
+            fontSize: 6,
+            fontFamily:'Roboto',
+            fontWeight:700
+        },
+
         data: {
             fontSize: 6,
-            paddingVertical: 3
+            fontFamily:'Roboto'
         }
     })
 
@@ -123,38 +171,42 @@ export const pdfStyles = () => {
             alignSelf: 'center',
             borderLeftWidth: 1,
             borderBottomWidth: 1,
+            backgroundColor: 'rgb(229, 229, 229)',
         },
 
         row: {
             flexDirection: 'row',
             flexWrap: 'wrap',
             alignSelf: 'center',
-            backgroundColor: 'rgb(229, 229, 229)',
-            paddingVertical: 5
+            backgroundColor: 'rgb(245, 245, 245)',
+            paddingVertical: 2
         },
         conceptTitleCell: {
-            fontSize: 5.5,
+            fontSize: 6,
+            fontFamily:'Roboto',
             fontWeight: 'bold',
-            width: '26%', // Ancho de cada celda,
-            padding: 2,
+            width: '26%', 
+            padding: 3,
             paddingLeft: 10,
             borderRightWidth: 1,
             borderColor: 'black'
         },
         quantityTitleCell: {
-            fontSize: 5.5,
+            fontSize: 6,
+            fontFamily:'Roboto',
             fontWeight: 'bold',
-            width: '12%', // Ancho de cada celda,
-            padding: 2,
+            width: '12%', 
+            padding: 3,
             paddingLeft: 10,
             borderRightWidth: 1,
             borderColor: 'black'
         },
         retentionTitleCell: {
-            fontSize: 5.5,
+            fontSize: 6,
+            fontFamily:'Roboto',
             fontWeight: 'bold',
-            width: '14%', // Ancho de cada celda,
-            padding: 2,
+            width: '14%', 
+            padding: 3,
             paddingLeft: 10,
             borderRightWidth: 1,
             borderColor: 'black'
@@ -162,21 +214,21 @@ export const pdfStyles = () => {
         conceptCell: {
             fontSize: 5.5,
             fontWeight: 'bold',
-            width: '26%', // Ancho de cada celda,
+            width: '26%', 
             padding: 2,
             paddingLeft: 10
         },
         quantityCell: {
             fontSize: 5.5,
             fontWeight: 'bold',
-            width: '12%', // Ancho de cada celda,
+            width: '12%', 
             padding: 2,
             paddingLeft: 10
         },
         retentionCell: {
             fontSize: 5.5,
             fontWeight: 'bold',
-            width: '14%', // Ancho de cada celda,
+            width: '14%', 
             padding: 2,
             paddingLeft: 10
         },
@@ -233,7 +285,7 @@ export const pdfStyles = () => {
         weights: {
             width: '100%',
             flexDirection: 'row',
-            justifyContent: 'space-around',
+            justifyContent: 'space-between',
 
         },
         messageContainer: {
@@ -241,12 +293,21 @@ export const pdfStyles = () => {
             paddingLeft: 9,
             paddingTop: 15
         },
+
+        concept:{
+            fontSize: 6,
+
+            fontFamily:'Roboto',
+            fontWeight:700
+        },
         text: {
             fontSize: 6,
 
         },
         message: {
-            fontSize: 9
+            fontSize: 9,
+            fontFamily:'Roboto',
+            fontWeight:500
         }
     })
 
@@ -261,7 +322,7 @@ export const pdfStyles = () => {
         },
 
         text: {
-            fontSize: 6,
+            fontSize: 7,
         }
     })
 
@@ -309,7 +370,11 @@ export const pdfStyles = () => {
             marginBottom: 3
         },
 
-
+        concept:{
+            fontSize: 6,
+            fontFamily:'Roboto',
+            fontWeight:700
+        },
 
         text: {
             fontSize: 6,
@@ -370,6 +435,8 @@ export const pdfStyles = () => {
 
         instructionsText: {
             fontSize: 6,
+            fontFamily:'Roboto',
+            fontWeight:700
         },
 
         bankAccountsContainer: {
@@ -394,7 +461,9 @@ export const pdfStyles = () => {
         },
 
         bankAccountTitle: {
-            fontSize: 6
+            fontSize: 6,
+            fontFamily:'Roboto',
+            fontWeight:700
         },
 
         bankAccountDataContainer: {
@@ -416,8 +485,9 @@ export const pdfStyles = () => {
         },
 
         bankAccountConcept: {
-
-            fontSize: 5
+            fontSize: 5,
+            fontFamily:'Roboto',
+            fontWeight:700
         },
 
         bankAccountText: {
@@ -461,7 +531,8 @@ export const pdfStyles = () => {
 
         satTitle: {
             fontSize: 6,
-            fontWeight: 'heavy'
+            fontFamily:'Roboto',
+            fontWeight:700
         },
 
         satText: {
@@ -506,7 +577,9 @@ export const pdfStyles = () => {
         },
 
         title: {
-            fontSize: 7
+            fontSize: 7,
+            fontFamily:'Roboto',
+            fontWeight:700
         },
 
         dataContainer: {
@@ -554,29 +627,32 @@ export const pdfStyles = () => {
         },
 
         concept: {
-            fontSize: 5
+            fontSize: 5,
+            fontFamily:'Roboto',
+            fontWeight:700
         },
 
         data: {
+            fontSize: 5,
+            fontFamily:'Roboto',
+        }
+
+    })
+
+    const pageNumberAndTotalPages = StyleSheet.create({
+        text: {
+            position: 'absolute',
+            bottom: 20,
+            right: 25,
             fontSize: 5
         }
-
     })
 
-    const pageNumberAndTotalPages=StyleSheet.create({
-        text:{
-            position:'absolute',
-            bottom:20,
-            right:25,
-            fontSize:5
-        }
-    })
+    const transportationDocumentData = StyleSheet.create({
 
-    const transportationDocumentData= StyleSheet.create({
-
-        container:{
-            width:'90%',
-            height:120,
+        container: {
+            width: '90%',
+            height: 120,
             alignSelf: 'center',
             borderLeftWidth: 1,
             borderBottomWidth: 1,
@@ -585,114 +661,123 @@ export const pdfStyles = () => {
 
         },
 
-        titleContainer:{
+        titleContainer: {
 
             width: '100%',
             height: '15%',
             justifyContent: 'center',
-            alignItems:'center',
-            borderRightWidth:1,
-            borderBottomWidth:1,
-            borderColor:'black'
-        },
-
-        title:{
-            fontSize:7
-        },
-
-        firstRow:{
-            height:'35%',
+            alignItems: 'center',
+            borderRightWidth: 1,
             borderBottomWidth: 1,
-            flexDirection:'row'
+            borderColor: 'black'
+        },
+
+        title: {
+            fontSize: 7,
+            fontFamily:'Roboto',
+            fontWeight:700
+        },
+
+        firstRow: {
+            height: '35%',
+            borderBottomWidth: 1,
+            flexDirection: 'row'
 
         },
 
-        secondRow:{
-            height:'55%',
-            flexDirection:'row'
+        secondRow: {
+            height: '55%',
+            flexDirection: 'row'
         }
     })
 
 
-    const transportationDocumentSecondSection=StyleSheet.create({
-        container:{
-            width:'25%',
+    const transportationDocumentSecondSection = StyleSheet.create({
+        container: {
+            width: '25%',
             borderColor: 'black',
-            borderRightWidth:1,
+            borderRightWidth: 1,
             flexDirection: 'column'
         },
 
-        titleContainer:{
-            borderBottomWidth:1,
-            height:'20%',
-            justifyContent:'center',
-            alignItems:'center'
+        titleContainer: {
+            borderBottomWidth: 1,
+            height: '20%',
+            justifyContent: 'center',
+            alignItems: 'center'
         },
 
-        subContainer:{
-            flexDirection:'column',
-            gap:3,
-            padding:2,
+        subContainer: {
+            flexDirection: 'column',
+            gap: 3,
+            padding: 2,
         },
 
-        field:{
-            flexDirection:'row',
-            justifyContent:'space-between'
+        field: {
+            flexDirection: 'row',
+            justifyContent: 'space-between'
         }
     })
 
-    const transportationDocumentFirstSection= StyleSheet.create({
-        container:{
-            height:'100%',
-            flexDirection:'column',
-            gap:3,
-            padding:2,
-            borderRightWidth:1,
-            borderColor:'black'
+    const transportationDocumentFirstSection = StyleSheet.create({
+        container: {
+            height: '100%',
+            flexDirection: 'column',
+            gap: 3,
+            padding: 2,
+            borderRightWidth: 1,
+            borderColor: 'black'
         },
 
-        field:{
-            flexDirection:'row',
-            justifyContent:'space-between'
+        field: {
+            flexDirection: 'row',
+            justifyContent: 'space-between'
         }
     })
 
     const transportationDocumentLocationsData = StyleSheet.create({
 
-        container:{
-            width:'90%',
-            alignSelf:'center',
-            borderLeftWidth:1,
-            borderColor:'black'
+        container: {
+            width: '90%',
+            alignSelf: 'center',
+            borderLeftWidth: 1,
+            borderColor: 'black'
         },
 
-        titleContainer:{
-            width:'100%',
-            paddingVertical:2,
-            justifyContent:'center',
-            alignItems:'center',
-            borderBottomWidth:1,
-            borderRightWidth:1,
-            borderBottomColor:'black'
+        titleContainer: {
+            width: '100%',
+            paddingVertical: 2,
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderBottomWidth: 1,
+            borderRightWidth: 1,
+            borderBottomColor: 'black'
         },
 
-        title:{
-            fontSize:7
+        title: {
+            fontSize: 7,
+            fontFamily:'Roboto',
+            fontWeight:700
         },
 
-        tableContainer:{
-            width:'100%',
-            flexDirection:'column'
+        tableContainer: {
+            width: '100%',
+            flexDirection: 'column'
         },
 
-        titleRow:{
-            flexDirection:'row',
+        titleRow: {
+            flexDirection: 'row',
         },
 
- 
+        subtitle:{
+            fontSize: 5.5, 
+            borderRightWidth: 1, 
+            padding: 4, 
+            borderBottomWidth: 1 
+        },
 
-        row:{
-            flexDirection:'row',
+        row: {
+            flexDirection: 'row',
         },
 
 

@@ -33,11 +33,11 @@ export const PDF = ({ data }: any) => {
                 </View>
                 <View style={transportationDocumentLocationsData.tableContainer} >
                     <View fixed style={transportationDocumentLocationsData.titleRow}>
-                        <Text style={{ width: '20%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >CLAVE PRODUCTO SERVICIO</Text>
-                        <Text style={{ width: '30%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >DESCRIPCIÓN</Text>
-                        <Text style={{ width: '15%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >CANTIDAD</Text>
-                        <Text style={{ width: '20%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >CÓDIGO DE UNIDAD</Text>
-                        <Text style={{ width: '15%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >PESO EN KG</Text>
+                        <Text style={{ width: '20%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >CLAVE PRODUCTO SERVICIO</Text>
+                        <Text style={{ width: '30%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >DESCRIPCIÓN</Text>
+                        <Text style={{ width: '15%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >CANTIDAD</Text>
+                        <Text style={{ width: '20%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >CÓDIGO DE UNIDAD</Text>
+                        <Text style={{ width: '15%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >PESO EN KG</Text>
                     </View>
                     {data.dataMerchandiseDetails.map((item: any, index: any) => {
                         return (
@@ -65,15 +65,15 @@ export const PDF = ({ data }: any) => {
                 </View>
                 <View style={transportationDocumentLocationsData.tableContainer} >
                     <View fixed style={transportationDocumentLocationsData.titleRow}>
-                        <Text style={{ width: '5%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} ></Text>
-                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >RFC</Text>
-                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >PAIS</Text>
-                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >ESTADO</Text>
-                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >CIUDAD</Text>
-                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >DIRECCIÓN</Text>
-                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >CÓDIGO POSTAL</Text>
-                        <Text style={{ width: '12%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >FECHA</Text>
-                        <Text style={{ width: '11%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1 }} >DISTANCIA</Text>
+                        <Text style={{ width: '5%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} ></Text>
+                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >RFC</Text>
+                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >PAIS</Text>
+                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >ESTADO</Text>
+                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >CIUDAD</Text>
+                        <Text style={{ width: '14%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >DIRECCIÓN</Text>
+                        <Text style={{ width: '10%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >CÓDIGO POSTAL</Text>
+                        <Text style={{ width: '12%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >FECHA</Text>
+                        <Text style={{ width: '11%', fontSize: 5.5, borderRightWidth: 1, padding: 4, borderBottomWidth: 1, fontFamily: 'Roboto', fontWeight: 500 }} >DISTANCIA</Text>
                     </View>
                     {data.dataTransportationDocumentLocations.map((item: any, index: any) => {
                         return (
@@ -114,23 +114,30 @@ export const PDF = ({ data }: any) => {
         return (
             <View style={transportationDocumentSecondSection.container}>
                 <View style={transportationDocumentSecondSection.titleContainer}>
-                    <Text style={{ fontSize: 6 }}>{title}</Text>
+                    <Text style={{ fontSize: 6, fontFamily: 'Roboto', fontWeight: 500 }}>{title}</Text>
                 </View>
                 <View style={transportationDocumentSecondSection.subContainer}>
                     <View style={transportationDocumentSecondSection.field}>
-                        <Text style={{ fontSize: 5 }}>{concept1}</Text> <Text style={{ fontSize: 5 }}>{data1}</Text>
+                        <Text style={{ fontSize: 5, fontFamily: 'Roboto', fontWeight: 500 }}>{concept1}</Text>
+                        <Text style={{ fontSize: 5 }}>{data1}</Text>
                     </View>
                     <View style={transportationDocumentSecondSection.field}>
-                        <Text style={{ fontSize: 5 }}>{concept2}</Text> <Text style={{ fontSize: 5 }}>{data2}</Text>
+                        <Text style={{ fontSize: 5, fontFamily: 'Roboto', fontWeight: 500 }}>{concept2}</Text>
+                        <Text style={{ fontSize: 5 }}>{data2}</Text>
                     </View>
                     <View style={transportationDocumentSecondSection.field}>
-                        <Text style={{ fontSize: 5 }}>{concept3}</Text> <Text style={{ fontSize: 5 }}>{data3}</Text>
+                        <Text style={{ fontSize: 5, fontFamily: 'Roboto', fontWeight: 500 }}>{concept3}</Text>
+                        <View style={{ width: '50%', display: 'flex', textAlign:'right' }}>
+                            <Text style={{ fontSize: 5, }} >{data3}</Text>
+                        </View>
                     </View>
                     <View style={transportationDocumentSecondSection.field}>
-                        <Text style={{ fontSize: 5 }}>{concept4}</Text> <Text style={{ fontSize: 5 }}>{data4}</Text>
+                        <Text style={{ fontSize: 5, fontFamily: 'Roboto', fontWeight: 500 }}>{concept4}</Text>
+                        <Text style={{ fontSize: 5 }}>{data4}</Text>
                     </View>
                     <View style={transportationDocumentSecondSection.field}>
-                        <Text style={{ fontSize: 5 }}>{concept5}</Text> <Text style={{ fontSize: 5 }}>{data5}</Text>
+                        <Text style={{ fontSize: 5, fontFamily: 'Roboto', fontWeight: 500 }}>{concept5}</Text>
+                        <Text style={{ fontSize: 5 }}>{data5}</Text>
                     </View>
                 </View>
             </View>
@@ -155,16 +162,16 @@ export const PDF = ({ data }: any) => {
             <View style={{ width: width1, height: '100%' }}>
                 <View style={transportationDocumentFirstSection.container}>
                     <View style={transportationDocumentFirstSection.field}>
-                        <Text style={{ width: width2, fontSize: 5 }}>{concept1}</Text> <Text style={{ fontSize: 5 }}>{data1}</Text>
+                        <Text style={{ width: width2, fontSize: 5, fontFamily: 'Roboto', fontWeight: 500 }}>{concept1}</Text> <Text style={{ fontSize: 5 }}>{data1}</Text>
                     </View>
                     <View style={transportationDocumentFirstSection.field}>
-                        <Text style={{ width: width2, fontSize: 5 }}>{concept2}</Text> <Text style={{ fontSize: 5 }}>{data2}</Text>
+                        <Text style={{ width: width2, fontSize: 5, fontFamily: 'Roboto', fontWeight: 500 }}>{concept2}</Text> <Text style={{ fontSize: 5 }}>{data2}</Text>
                     </View>
                     <View style={transportationDocumentFirstSection.field}>
-                        <Text style={{ width: width2, fontSize: 5 }}>{concept3}</Text> <Text style={{ fontSize: 5 }}>{data3}</Text>
+                        <Text style={{ width: width2, fontSize: 5, fontFamily: 'Roboto', fontWeight: 500 }}>{concept3}</Text> <Text style={{ fontSize: 5 }}>{data3}</Text>
                     </View>
                     <View style={transportationDocumentFirstSection.field}>
-                        <Text style={{ width: width2, fontSize: 5 }}>{concept4}</Text> <Text style={{ fontSize: 5 }}>{data4}</Text>
+                        <Text style={{ width: width2, fontSize: 5, fontFamily: 'Roboto', fontWeight: 500 }}>{concept4}</Text> <Text style={{ fontSize: 5 }}>{data4}</Text>
                     </View>
                 </View>
             </View>
@@ -242,35 +249,31 @@ export const PDF = ({ data }: any) => {
                             data5={data.dataTransportationDocument.motor_number}
                         />
                         <TransportationDocumentSecondSection
-                            title={'Información del transporte'}
-                            concept1={'Código de Transporte:'}
-                            concept2={'Distancia Total: '}
-                            concept3={'Fecha de salida: '}
-                            concept4={'Fecha de Llegada:'}
-                            concept5={'Peso de Transporte: '}
-                            data1={data.dataTransportationDocument.transportation_code}
-                            data2={data.dataTransportationDocument.total_distance}
-                            data3={data.dataTransportationDocument.departure_date}
-                            data4={data.dataTransportationDocument.arrival_date}
-                            data5={data.dataTransportationDocument.transportation_weight}
+                            title={'Información del seguro del vehículo'}
+                            concept1={'Aseguradora:'}
+                            concept2={'Póliza del seguro: '}
+                            concept3={'Fecha de expiración de seguro: '}
+                            data1={data.dataTransportationDocument.insurance_company}
+                            data2={data.dataTransportationDocument.insurance_policy}
+                            data3={data.dataTransportationDocument.insurance_expiration_date}
                         />
                         <TransportationDocumentSecondSection
                             title={'Información del transporte'}
-                            concept1={'Código de Transporte:'}
-                            concept2={'Distancia Total: '}
-                            concept3={'Fecha de salida: '}
-                            concept4={'Fecha de Llegada:'}
-                            concept5={'Peso de Transporte: '}
-                            data1={data.dataTransportationDocument.transportation_code}
-                            data2={data.dataTransportationDocument.total_distance}
-                            data3={data.dataTransportationDocument.departure_date}
-                            data4={data.dataTransportationDocument.arrival_date}
-                            data5={data.dataTransportationDocument.transportation_weight}
+                            concept1={'Tipo de conductor:'}
+                            concept2={'RFC del conductor:'}
+                            concept3={'Nombre del conductor:'}
+                            concept4={'Licencia:'}
+                            concept5={'CURP:'}
+                            data1={`${data.dataTransportationDocument.driver_type_code || " "} - ${data.dataTransportationDocument.driver_type_name || " "}`}
+                            data2={data.dataTransportationDocument.driver_rfc}
+                            data3={data.dataTransportationDocument.driver_name}
+                            data4={data.dataTransportationDocument.driver_license}
+                            data5={data.dataTransportationDocument.driver_curp}
                         />
                     </View>
                 </View>
                 <TransportationDocumentLocations />
-                <MerchandiseDetails/>
+                <MerchandiseDetails />
             </View>
         )
     }
@@ -317,7 +320,7 @@ export const PDF = ({ data }: any) => {
                     <Image src={cala} style={headerStyles.image} />
                     <View style={headerStyles.dataHeaderContainer}>
                         <View style={headerStyles.dataIssuingCompanyContainer} >
-                            <Text style={headerStyles.textHeaderStyles}>{data.dataIssuingCompany?.business_name || " "}</Text>
+                            <Text style={headerStyles.textHeaderStylesBold}>{data.dataIssuingCompany?.business_name || " "}</Text>
                             <Text style={headerStyles.textHeaderStyles}>{data.dataIssuingCompany?.street || " "}</Text>
                             <Text style={headerStyles.textHeaderStyles}>{data.dataIssuingCompany?.city_name || " "}, {data.dataIssuingCompany?.state_name || " "} {data.dataIssuingCompany?.postal_code || " "}, {data.dataIssuingCompany?.country_name || " "}</Text>
                             <Text style={headerStyles.textHeaderStyles}>RFC: {data.dataIssuingCompany?.rfc || " "}</Text>
@@ -325,11 +328,23 @@ export const PDF = ({ data }: any) => {
                             <Text style={headerStyles.textHeaderStyles}>{data.dataIssuingCompany?.email || " "}</Text>
                             <Text style={headerStyles.textHeaderStyles}>{data.dataIssuingCompany?.phone_number || " "}</Text>
                         </View>
-                        <View style={headerStyles.dataIssuingCompanyContainer}>
-                            <Text style={headerStyles.textHeaderStyles}>Tipo de Documento: {data.dataInvoiceGeneral?.invoice_doc_type_name || " "}</Text>
-                            <Text style={headerStyles.textHeaderStyles}>Nùmero de Folio: {data.dataInvoiceGeneral?.sales_invoice_name || " "}</Text>
-                            <Text style={headerStyles.textHeaderStyles}>Nùmero Fiscal: {data.dataInvoiceGeneral?.uuid || " "}</Text>
-                            <Text style={headerStyles.textHeaderStyles}>FECHA Y HORA DE TIMBRADO: {data.dataInvoiceGeneral?.signing_date || " "}</Text>
+                        <View style={headerStyles.dataIssuingCompanyContainer} >
+                            <View style={headerStyles.dataInvoiceGeneralSubcontainer}>
+                                <Text style={headerStyles.textHeaderStylesBold}>TIPO DE DOCUMENTO:</Text>
+                                <Text style={headerStyles.textHeaderStylesBold}>{data.dataInvoiceGeneral?.invoice_doc_type_name || " "}</Text>
+                            </View>
+                            <View style={headerStyles.dataInvoiceGeneralSubcontainer}>
+                                <Text style={headerStyles.textHeaderStylesBold}>NÚMERO DE FOLIO:</Text>
+                                <Text style={headerStyles.textHeaderStyles}>{data.dataInvoiceGeneral?.sales_invoice_name || " "}</Text>
+                            </View>
+                            <View style={headerStyles.dataInvoiceGeneralSubcontainer}>
+                                <Text style={headerStyles.textHeaderStylesBold}>NÚMERO FISCAL:</Text>
+                                <Text style={headerStyles.textHeaderStyles}>{data.dataInvoiceGeneral?.uuid || " "}</Text>
+                            </View>
+                            <View style={{ flexDirection: 'column' }}>
+                                <Text style={headerStyles.textHeaderStylesBold}>FECHA Y HORA DE TIMBRADO:</Text>
+                                <Text style={headerStyles.textHeaderStyles}>{data.dataInvoiceGeneral?.signing_date || " "}</Text>
+                            </View>
                         </View>
                     </View>
                 </View>
@@ -347,10 +362,22 @@ export const PDF = ({ data }: any) => {
                                 <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.state_name} {data.dataInvoiceGeneral.postal_code}, {data.dataInvoiceGeneral.country_name}</Text>
                             </View>
                             <View style={dataCustomer.secondContainer}>
-                                <Text style={dataCustomer.data}>RFC:{data.dataInvoiceGeneral.company_rfc}</Text>
-                                <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.tax_regime_code} {data.dataInvoiceGeneral.tax_regime_description}</Text>
-                                <Text style={dataCustomer.data}>CORREO:{data.dataInvoiceGeneral.customer_email}</Text>
-                                <Text style={dataCustomer.data}>TEL:{data.dataInvoiceGeneral.customer_phone_number}</Text>
+                                <View style={dataCustomer.field}>
+                                    <Text style={dataCustomer.concept}>RFC:</Text>
+                                    <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.company_rfc}</Text>
+                                </View>
+                                <View style={dataCustomer.field}>
+                                    <Text style={dataCustomer.concept}>{data.dataInvoiceGeneral.tax_regime_code} </Text>
+                                    <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.tax_regime_description}</Text>
+                                </View>
+                                <View style={dataCustomer.field}>
+                                    <Text style={dataCustomer.concept}>CORREO:</Text>
+                                    <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.customer_email}</Text>
+                                </View>
+                                <View style={dataCustomer.field}>
+                                    <Text style={dataCustomer.concept}>TEL:</Text>
+                                    <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.customer_phone_number}</Text>
+                                </View>
                             </View>
                         </View>
                     </View>
@@ -366,10 +393,22 @@ export const PDF = ({ data }: any) => {
                                 <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.state_name} {data.dataInvoiceGeneral.postal_code}, {data.dataInvoiceGeneral.country_name}</Text>
                             </View>
                             <View style={dataCustomer.secondContainer}>
-                                <Text style={dataCustomer.data}>RFC:{data.dataInvoiceGeneral.company_rfc}</Text>
-                                <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.tax_regime_code} {data.dataInvoiceGeneral.tax_regime_description}</Text>
-                                <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.customer_email}</Text>
-                                <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.customer_phone_number}</Text>
+                                <View style={dataCustomer.field}>
+                                    <Text style={dataCustomer.concept}>RFC:</Text>
+                                    <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.company_rfc}</Text>
+                                </View>
+                                <View style={dataCustomer.field}>
+                                    <Text style={dataCustomer.concept}>{data.dataInvoiceGeneral.tax_regime_code} </Text>
+                                    <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.tax_regime_description}</Text>
+                                </View>
+                                <View style={dataCustomer.field}>
+                                    <Text style={dataCustomer.concept}>CORREO:</Text>
+                                    <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.customer_email}</Text>
+                                </View>
+                                <View style={dataCustomer.field}>
+                                    <Text style={dataCustomer.concept}>TEL:</Text>
+                                    <Text style={dataCustomer.data}>{data.dataInvoiceGeneral.customer_phone_number}</Text>
+                                </View>
                             </View>
                         </View>
                     </View>
@@ -402,13 +441,13 @@ export const PDF = ({ data }: any) => {
                 {/* Tabla de Productos */}
                 <View style={productsData.tableContainer} >
                     <View fixed style={productsData.titleRow}>
-                        <Text style={productsData.conceptTitleCell}>Concepto</Text>
-                        <Text style={productsData.quantityTitleCell}>Cantidad</Text>
-                        <Text style={productsData.quantityTitleCell}>Unidad</Text>
-                        <Text style={productsData.quantityTitleCell}>Precio</Text>
-                        <Text style={productsData.quantityTitleCell}>Impuesto</Text>
-                        <Text style={productsData.retentionTitleCell}>Retención</Text>
-                        <Text style={productsData.quantityTitleCell}>Descuento</Text>
+                        <Text style={productsData.conceptTitleCell}>CONCEPTO</Text>
+                        <Text style={productsData.quantityTitleCell}>CANTIDAD</Text>
+                        <Text style={productsData.quantityTitleCell}>UNIDAD</Text>
+                        <Text style={productsData.quantityTitleCell}>PRECIO</Text>
+                        <Text style={productsData.quantityTitleCell}>IMPUESTO</Text>
+                        <Text style={productsData.retentionTitleCell}>RETENCIÓN</Text>
+                        <Text style={productsData.quantityTitleCell}>DESCUENTO</Text>
                     </View>
                     {data.invoiceDetails.map((item: any, index: any) => {
                         return ( // Asegurarse de usar return para devolver el View
@@ -440,14 +479,13 @@ export const PDF = ({ data }: any) => {
                                         <Text style={blankFooter.text}>NOTAS:</Text>
                                         <Text></Text>
                                     </View>
-                                    <View style={blankFooter.weightContainer}>
+                                    <View style={blankFooter.weightContainer} >
                                         <Text style={blankFooter.text}>PESOS:</Text>
-                                        <Text>{"\n"}</Text>
-                                        <View style={blankFooter.weights}>
+                                        <View style={blankFooter.weights} >
                                             <Text style={blankFooter.text}>PESO BRUTO: ({data.dataTransportationDocument.weight_unit})</Text>
                                             <Text style={blankFooter.text}>100</Text>
                                         </View>
-                                        <View style={blankFooter.weights}>
+                                        <View style={blankFooter.weights} >
                                             <Text style={blankFooter.text}>PESO NETO:</Text>
                                             <Text style={blankFooter.text}>100</Text>
                                         </View>
@@ -570,25 +608,25 @@ export const PDF = ({ data }: any) => {
                         <View style={totals.container}>
                             <View>
                                 <View style={totals.totalField}>
-                                    <Text style={totals.text}>IMPUESTOS:</Text>
+                                    <Text style={totals.concept}>IMPUESTOS:</Text>
                                     <Text style={totals.text}>{data.dataInvoiceGeneral.tax_amount}</Text>
                                 </View>
                                 <View style={totals.totalField}>
-                                    <Text style={totals.text}>RETENCIONES:</Text>
+                                    <Text style={totals.concept}>RETENCIONES:</Text>
                                     <Text style={totals.text}>{data.dataInvoiceGeneral.retention_amount}</Text>
                                 </View>
                                 <View style={totals.totalField}>
-                                    <Text style={totals.text}>DESCUENTOS:</Text>
+                                    <Text style={totals.concept}>DESCUENTOS:</Text>
                                     <Text style={totals.text}>{data.dataInvoiceGeneral.discount_amount}</Text>
                                 </View>
                             </View>
                             <View>
                                 <View style={totals.totalField}>
-                                    <Text style={blankFooter.text}>SUBTOTAL:</Text>
+                                    <Text style={blankFooter.concept}>SUBTOTAL:</Text>
                                     <Text style={blankFooter.text}>{data.dataInvoiceGeneral.subtotal_amount}</Text>
                                 </View>
                                 <View style={totals.totalField}>
-                                    <Text style={blankFooter.text}>TOTAL:</Text>
+                                    <Text style={blankFooter.concept}>TOTAL:</Text>
                                     <Text style={blankFooter.text}>{data.dataInvoiceGeneral.total_amount}</Text>
                                 </View>
                             </View>
