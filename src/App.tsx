@@ -11,7 +11,7 @@ function App() {
 
 
   useEffect(() => {
-    GenericGetResource(`/salesinvoices/pdf/17`)
+    GenericGetResource(`/salesinvoices/pdf/16`)
       .then((response) => {
         setPdfData(response.data);
         console.log(response.data);
