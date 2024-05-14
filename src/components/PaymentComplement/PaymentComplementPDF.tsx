@@ -36,11 +36,11 @@ export const ComplementPaymentPDF = () => {
                 <View style={firstSection.container}>
                     <Image src={cala} style={firstSection.image}></Image>
                     <View style={firstSection.companyData} >
-                        <Text style={{fontSize:6,marginBottom:5}}>Empresa de Ejemplo SA de CV</Text>
+                        <Text style={{ fontSize: 8, marginBottom: 5 }}>Empresa de Ejemplo SA de CV</Text>
                         <Text style={firstSection.companyDataText}>Av Victoriano Huerta 2106</Text>
                         <Text style={firstSection.companyDataText}>Col Jalisco</Text>
                         <Text style={firstSection.companyDataText}>San Luis Rio Colorado , Sonora C.P. 83449 Mexico</Text>
-                        <Text style={{fontSize:6,marginBottom:5}}>RFC: AAA01001AAA</Text>
+                        <Text style={{ fontSize: 6, marginBottom: 5 }}>RFC: AAA01001AAA</Text>
                         <Text style={firstSection.companyDataText}>Lugar de expedición:</Text>
                         <Text style={firstSection.companyDataText}>C.P:83449 a Viernes 9 de Junio del 2017</Text>
                     </View>
@@ -54,18 +54,18 @@ export const ComplementPaymentPDF = () => {
                             </View>
                             <View style={firstSection.paymentDataSubSubContainer}>
                                 <View style={firstSection.seriesAndFolioContainer} >
-                                    <View style={{height:'50%',width:'100%', borderBottomWidth:1,justifyContent:'center', alignItems:'center'}} >
+                                    <View style={{ height: '50%', width: '100%', borderBottomWidth: 1, justifyContent: 'center', alignItems: 'center' }} >
                                         <Text style={{ fontSize: 7, }}>Serie y Folio:</Text>
                                     </View>
-                                    <View style={{height:'50%', justifyContent:'center'}}>
+                                    <View style={{ height: '50%', justifyContent: 'center' }}>
                                         <Text style={{ fontSize: 7 }}>CP2</Text>
                                     </View>
                                 </View>
                                 <View style={firstSection.DateAndTime}>
-                                    <View style={{height:'50%',width:'100%', borderBottomWidth:1,justifyContent:'center',alignItems:'center'}}>
+                                    <View style={{ height: '50%', width: '100%', borderBottomWidth: 1, justifyContent: 'center', alignItems: 'center' }}>
                                         <Text style={{ fontSize: 7 }}>Fecha y Hora</Text>
                                     </View>
-                                    <View style={{height:'50%', justifyContent:'center'}}>
+                                    <View style={{ height: '50%', justifyContent: 'center' }}>
                                         <Text style={{ fontSize: 7 }}>Viernes 9 de Junio del 2017</Text>
                                     </View>
                                 </View>
@@ -75,9 +75,45 @@ export const ComplementPaymentPDF = () => {
                 </View>
 
 
-                <View>
-
+                <View style={{width:'90%', alignSelf:'center',height:90, borderWidth:1}}>
+                    <View style={{width:'100%',height:'80%',}}>
+                        <View>
+                            <Text>Cliente</Text>
+                            <Text>Direccion</Text>
+                            <Text>Ciudad</Text>
+                            <Text>C.P:</Text>
+                        </View>
+                        <View>
+                            <Text>Factura UNO DOS TRES, S DE RL V</Text>
+                            <Text>AV. GPE. VICTORIA Y CALLE 17 1609 </Text>
+                            <Text>SAN LUIS RIO COLORADO, SONORA MEX</Text>
+                            <Text>83448</Text>
+                        </View>
+                        <View>
+                            <Text>Col. Residencia</Text>
+                            <Text>RFC: AAA01001AAA</Text>
+                        </View>
+                        <View>
+                            <View>
+                                <Text>No. Certificado:</Text>
+                            </View>
+                            <View>
+                                <Text>1234567898765432345</Text>
+                            </View>
+                        </View>
+                    </View>
+                    <View>
+                        <View>
+                            <Text>Régimen Fiscal</Text>
+                        </View>
+                        <View>
+                            <Text></Text>
+                        </View>
+                    </View>
                 </View>
+
+
+
                 <View>
 
                 </View>
