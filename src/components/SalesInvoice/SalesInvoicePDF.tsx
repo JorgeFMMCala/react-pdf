@@ -1,9 +1,11 @@
 
 import { Document, Image, Page, Text, View, } from '@react-pdf/renderer';
 import cala from '../assets/cala.png';
-import { pdfStyles } from './PDFStyles';
+import { pdfStyles } from './SalesInvoiceStyles';
 
-export const PDF = ({ data }: any) => {
+
+
+export const SalesInvoicePDF = ({ data }: any) => {
 
     const { bankAccountsData,
         blankFooter,
