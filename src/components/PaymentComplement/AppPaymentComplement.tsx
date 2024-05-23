@@ -11,7 +11,7 @@ export const AppPaymentComplement = () => {
 
 
     useEffect(() => {
-        GenericGetResource(`/receipts/pdf/17`)
+        GenericGetResource(`/receipts/pdf/2`)
             .then((response) => {
                 setPdfData(response);
                 setDataLoaded(true);
