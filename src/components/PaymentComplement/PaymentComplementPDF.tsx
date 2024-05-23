@@ -333,17 +333,17 @@ export const PaymentComplementPDF = () => {
                                             fontWeight: 700
                                         }}>Saldo Anterior</Text>
                                     </View>
-                                    <View style={{ borderRightWidth: 1, width: '12%', alignItems: 'center', justifyContent: 'center' }}>
-                                        <Text style={{
-                                            fontSize: 7,
-                                            fontWeight: 700
-                                        }}>Monto Pagado</Text>
-                                    </View>
-                                    <View style={{ width: '12%', alignItems: 'center', justifyContent: 'center' }}>
+                                    <View style={{borderRightWidth: 1, width: '12%', alignItems: 'center', justifyContent: 'center' }}>
                                         <Text style={{
                                             fontSize: 7,
                                             fontWeight: 700
                                         }}>Saldo Pendiente</Text>
+                                    </View>
+                                    <View style={{  width: '12%', alignItems: 'center', justifyContent: 'center' }}>
+                                        <Text style={{
+                                            fontSize: 7,
+                                            fontWeight: 700
+                                        }}>Monto Pagado</Text>
                                     </View>
                                 </View>
                                 {item?.relatedReceiptsDetails.map((item2: any, index2: any) => {
@@ -371,15 +371,15 @@ export const PaymentComplementPDF = () => {
                                                     fontSize: 7,
                                                 }}>{item2?.previous_amount}</Text>
                                             </View>
-                                            <View style={{ borderRightWidth: 1, width: '12%', alignItems: 'center', justifyContent: 'center' }}>
-                                                <Text style={{
-                                                    fontSize: 7,
-                                                }}>{item2?.payment_amount}</Text>
-                                            </View>
-                                            <View style={{ width: '12%', alignItems: 'center', justifyContent: 'center' }}>
+                                            <View style={{borderRightWidth: 1, width: '12%', alignItems: 'center', justifyContent: 'center' }}>
                                                 <Text style={{
                                                     fontSize: 7,
                                                 }}>{item2?.amount_outstanding}</Text>
+                                            </View>
+                                            <View style={{  width: '12%', alignItems: 'center', justifyContent: 'center' }}>
+                                                <Text style={{
+                                                    fontSize: 7,
+                                                }}>{item2?.payment_amount}</Text>
                                             </View>
                                         </View>
                                     );
