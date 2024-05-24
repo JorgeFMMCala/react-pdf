@@ -143,7 +143,7 @@ export const PaymentComplementPDF = () => {
                             }}>
                                 <View style={{
                                     height: '100%',
-                                    width: '30%',
+                                    width: '50%',
                                     flexDirection: 'column',
                                     alignItems: 'center',
                                     borderRightWidth: 1,
@@ -151,7 +151,7 @@ export const PaymentComplementPDF = () => {
                                     justifyContent: 'space-around'
                                 }} >
                                     <View style={{ height: '50%', width: '100%', borderBottomWidth: 1, justifyContent: 'center', alignItems: 'center' }} >
-                                        <Text style={{ fontSize: 7, fontWeight: 700 }}>Serie y Folio:</Text>
+                                        <Text style={{ fontSize: 7, fontWeight: 700 }}>Número de Pago:</Text>
                                     </View>
                                     <View style={{ height: '50%', justifyContent: 'center' }}>
                                         <Text style={{ fontSize: 7, fontWeight: 500 }}></Text>
@@ -159,7 +159,7 @@ export const PaymentComplementPDF = () => {
                                 </View>
                                 <View style={{
                                     height: '100%',
-                                    width: '70%',
+                                    width: '50%',
                                     flexDirection: 'column',
                                     alignItems: 'center',
                                     justifyContent: 'space-around'
@@ -177,7 +177,7 @@ export const PaymentComplementPDF = () => {
                 </View>
 
                 {/* Primera seccion */}
-                <View fixed style={{ width: '90%', alignSelf: 'center', minHeight: 80,maxHeight: 80,  borderWidth: 1 }}>
+                <View fixed style={{ width: '90%', alignSelf: 'center', minHeight: 80, maxHeight: 80, borderWidth: 1 }}>
                     <View style={{ width: '100%', height: '80%', flexDirection: 'row' }}>
                         <View style={{ width: '15%', textAlign: 'center', justifyContent: 'space-around' }} >
                             <Text style={{ fontSize: 7, fontWeight: 700 }}>Cliente</Text>
@@ -191,17 +191,9 @@ export const PaymentComplementPDF = () => {
                             <Text style={{ fontSize: 7 }}>{data.dataCustomerLocation?.city_name || " "} - {data.dataCustomerLocation?.state_name || " "}</Text>
                             <Text style={{ fontSize: 7 }}>{data.dataCustomerLocation?.postal_code || " "}</Text>
                         </View>
-                        <View style={{ width: '25%', justifyContent: 'flex-end', alignItems: 'center', gap: 5, paddingBottom: 5 }} >
+                        <View style={{ width: '50%', justifyContent: 'center', alignItems: 'center', gap: 5, }} >
                             <Text style={{ fontSize: 7, fontWeight: 700 }}>Col. Residencia</Text>
                             <Text style={{ fontSize: 7, fontWeight: 700 }}>RFC: {data.dataReceiptHeader?.customer_rfc || " "}</Text>
-                        </View>
-                        <View style={{ flexDirection: 'column', width: '25%', borderLeftWidth: 1 }}>
-                            <View style={{ height: '25%', justifyContent: 'center', alignItems: 'center', borderBottomWidth: 1 }}>
-                                <Text style={{ fontSize: 7, fontWeight: 700 }}>No. Certificado:</Text>
-                            </View>
-                            <View style={{ height: '75%', justifyContent: 'center', alignItems: 'center' }}>
-                                <Text style={{ fontSize: 7 }}></Text>
-                            </View>
                         </View>
                     </View>
                     <View style={{ height: '20%', borderTopWidth: 1, borderColor: 'black', flexDirection: 'row' }}>
@@ -216,7 +208,7 @@ export const PaymentComplementPDF = () => {
 
                 {/* Segunda Seccion */}
                 <View fixed style={{ width: '90%', alignSelf: 'center', minHeight: 70, maxHeight: 70, borderWidth: 1, flexDirection: 'row', }}>
-                    <View style={{ width: '55%', height: '100%', flexDirection: 'column', borderRightWidth: 1, }}>
+                    <View style={{ width: '50%', height: '100%', flexDirection: 'column', borderRightWidth: 1, }}>
                         <View style={{ height: '25%', justifyContent: 'center', borderBottomWidth: 1, paddingLeft: 3 }}>
                             <Text style={{ fontSize: 7, fontWeight: 700 }}>Datos del Receptor (Cliente)</Text>
                         </View>
@@ -226,7 +218,7 @@ export const PaymentComplementPDF = () => {
                             <Text style={{ fontSize: 7 }}>Cuenta Banco Emisor: {data.dataReceiptHeader?.customer_account_number || " "}</Text>
                         </View>
                     </View>
-                    <View style={{ width: '45%', height: '100%', flexDirection: 'column', }}>
+                    <View style={{ width: '50%', height: '100%', flexDirection: 'column', }}>
                         <View style={{ height: '25%', justifyContent: 'center', borderBottomWidth: 1, paddingLeft: 3 }}>
                             <Text style={{ fontSize: 7, fontWeight: 700 }}>Datos del Emisor</Text>
                         </View>
@@ -242,7 +234,7 @@ export const PaymentComplementPDF = () => {
                 {data.dataReceiptsDetails.map((item: any, index: any) => {
                     return (
                         <>
-                            <View key={index} wrap={false} style={{ width: '90%', alignSelf: 'center', minHeight: 40, maxHeight: 40, borderWidth: 1, flexDirection: 'row', }}>
+                            <View key={index} style={{ width: '90%', alignSelf: 'center', minHeight: 40, maxHeight: 40, borderWidth: 1, flexDirection: 'row', }}>
                                 <View style={{ height: '100%', flexDirection: 'column', borderRightWidth: 1, width: '14.2%' }}>
                                     <View style={{ height: '66%', justifyContent: 'center', alignItems: 'center', borderBottomWidth: 1 }}>
                                         <Text style={{ fontSize: 7, fontWeight: 700 }}>Fecha de pago</Text>
@@ -334,65 +326,68 @@ export const PaymentComplementPDF = () => {
                                             fontWeight: 700
                                         }}>Saldo Anterior</Text>
                                     </View>
-                                    <View style={{borderRightWidth: 1, width: '12%', alignItems: 'center', justifyContent: 'center' }}>
+                                    <View style={{ borderRightWidth: 1, width: '12%', alignItems: 'center', justifyContent: 'center' }}>
                                         <Text style={{
                                             fontSize: 7,
                                             fontWeight: 700
                                         }}>Saldo Pendiente</Text>
                                     </View>
-                                    <View style={{  width: '12%', alignItems: 'center', justifyContent: 'center' }}>
+                                    <View style={{ width: '12%', alignItems: 'center', justifyContent: 'center' }}>
                                         <Text style={{
                                             fontSize: 7,
                                             fontWeight: 700
                                         }}>Monto Pagado</Text>
                                     </View>
                                 </View>
-                                {item?.relatedReceiptsDetails.map((item2: any, index2: any) => {
-                                    return (
-                                        <View key={index2} wrap={false} style={{
-                                            width: '90%', alignSelf: 'center', minHeight: 14, maxHeight: 14, borderLeftWidth: 1, borderRightWidth: 1, borderBottomWidth: 1, flexDirection: 'row',
-                                        }}>
-                                            <View style={{ borderRightWidth: 1, width: '30%', alignItems: 'center', justifyContent: 'center' }}>
-                                                <Text style={{
-                                                    fontSize: 7,
-                                                }}>{item2?.uuid_related}</Text>
+                                <View wrap={false}>
+                                    {item?.relatedReceiptsDetails.map((item2: any, index2: any) => {
+                                        return (
+                                            <View key={index2}  style={{
+                                                width: '90%', alignSelf: 'center', minHeight: 14, maxHeight: 14, borderLeftWidth: 1, borderRightWidth: 1, borderBottomWidth: 1, flexDirection: 'row',
+                                            }}>
+                                                <View style={{ borderRightWidth: 1, width: '30%', alignItems: 'center', justifyContent: 'center' }}>
+                                                    <Text style={{
+                                                        fontSize: 7,
+                                                    }}>{item2?.uuid_related}</Text>
+                                                </View>
+                                                <View style={{ borderRightWidth: 1, width: '20%', alignItems: 'center', justifyContent: 'center' }}>
+                                                    <Text style={{
+                                                        fontSize: 7,
+                                                    }}>{item2?.total_tax_amount}</Text>
+                                                </View>
+                                                <View style={{ borderRightWidth: 1, width: '20%', alignItems: 'center', justifyContent: 'center' }}>
+                                                    <Text style={{
+                                                        fontSize: 7,
+                                                    }}>{item2?.total_retention_amount}</Text>
+                                                </View>
+                                                <View style={{ borderRightWidth: 1, width: '12%', alignItems: 'center', justifyContent: 'center' }}>
+                                                    <Text style={{
+                                                        fontSize: 7,
+                                                    }}>{item2?.previous_amount}</Text>
+                                                </View>
+                                                <View style={{ borderRightWidth: 1, width: '12%', alignItems: 'center', justifyContent: 'center' }}>
+                                                    <Text style={{
+                                                        fontSize: 7,
+                                                    }}>{item2?.amount_outstanding}</Text>
+                                                </View>
+                                                <View style={{ width: '12%', alignItems: 'center', justifyContent: 'center' }}>
+                                                    <Text style={{
+                                                        fontSize: 7,
+                                                    }}>{item2?.payment_amount}</Text>
+                                                </View>
                                             </View>
-                                            <View style={{ borderRightWidth: 1, width: '20%', alignItems: 'center', justifyContent: 'center' }}>
-                                                <Text style={{
-                                                    fontSize: 7,
-                                                }}>{item2?.total_tax_amount}</Text>
-                                            </View>
-                                            <View style={{ borderRightWidth: 1, width: '20%', alignItems: 'center', justifyContent: 'center' }}>
-                                                <Text style={{
-                                                    fontSize: 7,
-                                                }}>{item2?.total_retention_amount}</Text>
-                                            </View>
-                                            <View style={{ borderRightWidth: 1, width: '12%', alignItems: 'center', justifyContent: 'center' }}>
-                                                <Text style={{
-                                                    fontSize: 7,
-                                                }}>{item2?.previous_amount}</Text>
-                                            </View>
-                                            <View style={{borderRightWidth: 1, width: '12%', alignItems: 'center', justifyContent: 'center' }}>
-                                                <Text style={{
-                                                    fontSize: 7,
-                                                }}>{item2?.amount_outstanding}</Text>
-                                            </View>
-                                            <View style={{  width: '12%', alignItems: 'center', justifyContent: 'center' }}>
-                                                <Text style={{
-                                                    fontSize: 7,
-                                                }}>{item2?.payment_amount}</Text>
-                                            </View>
-                                        </View>
-                                    );
-                                })}
+                                        );
+                                    })}
+                                </View>
+
                             </View>
                         </>
                     )
                 })}
 
-                <View fixed debug  style={{
-                    minHeight: 260,
-                    maxHeight: 260,
+                <View fixed style={{
+                    minHeight: 250,
+                    maxHeight: 250,
                     width: '90%',
                     alignSelf: 'center',
                     backgroundColor: 'white',
@@ -408,35 +403,29 @@ export const PaymentComplementPDF = () => {
                     gap: 10
                 }}>
                     {/* Quinta Seccion */}
-                    <View style={{ width: '90%', alignSelf: 'center', minHeight: 42,  maxHeight: 42, borderWidth: 1, flexDirection: 'row' }}>
+                    <View style={{ width: '90%', alignSelf: 'center', minHeight: 28, maxHeight: 28, borderWidth: 1, flexDirection: 'row' }}>
 
                         <View style={{ width: '50%', flexDirection: 'column', }}>
-                            <View style={{ alignItems: 'center', justifyContent: 'center', borderBottomWidth: 1, height: '33%' }}>
+                            <View style={{ alignItems: 'center', justifyContent: 'center', borderBottomWidth: 1, height: '50%%' }}>
                                 <Text style={{ fontSize: 7, fontWeight: 700 }}>Forma de pago</Text>
                             </View>
-                            <View style={{ alignItems: 'center', justifyContent: 'center', borderBottomWidth: 1, borderRightWidth: 1, height: '33%' }}>
-                                <Text style={{ fontSize: 7 }}>{data.dataReceiptHeader?.payment_method_code || " "}</Text>
-                            </View>
-                            <View style={{ alignItems: 'center', justifyContent: 'center', height: '33%', borderRightWidth: 1 }}>
-                                <Text style={{ fontSize: 7 }}>{data.dataReceiptHeader?.payment_method_description || " "}</Text>
+                            <View style={{ alignItems: 'center', justifyContent: 'center', borderRightWidth: 1, height: '50%%' }}>
+                                <Text style={{ fontSize: 7 }}>{data.dataReceiptHeader?.payment_method_code || " "} - {data.dataReceiptHeader?.payment_method_description || " "}</Text>
                             </View>
                         </View>
                         <View style={{ width: '50%', flexDirection: 'column', }}>
-                            <View style={{ alignItems: 'center', justifyContent: 'center', borderBottomWidth: 1, height: '33%' }}>
+                            <View style={{ alignItems: 'center', justifyContent: 'center', borderBottomWidth: 1, height: '50%%' }}>
                                 <Text style={{ fontSize: 7, fontWeight: 700 }}>Total del pago</Text>
                             </View>
-                            <View style={{ alignItems: 'center', justifyContent: 'center', borderBottomWidth: 1, height: '33%' }}>
-                                <Text style={{ fontSize: 7 }}>{data.dataReceiptHeader?.total_amount || " "}</Text>
-                            </View>
-                            <View style={{ alignItems: 'center', justifyContent: 'center', height: '33%' }}>
-                                <Text style={{ fontSize: 7 }}> {data.dataReceiptHeader?.currency_description || " "}</Text>
+                            <View style={{ alignItems: 'center', justifyContent: 'center', height: '50%%' }}>
+                                <Text style={{ fontSize: 7 }}>{data.dataReceiptHeader?.total_amount || " "} {data.dataReceiptHeader?.currency_description || " "}</Text>
                             </View>
                         </View>
                     </View>
 
 
                     {/* Sexta Seccion */}
-                    <View style={{ minWidth: '90%',maxWidth: '90%', alignSelf: 'center', flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <View style={{ minWidth: '90%', maxWidth: '90%', alignSelf: 'center', flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View style={{ width: '83%', borderWidth: 1, height: 175 }}>
                             <View style={{ width: '100%', height: '20%', borderBottomWidth: 1, flexDirection: 'row' }}>
                                 <View style={{ height: '100%', width: '10%', borderRightWidth: 1, alignItems: 'center', justifyContent: 'center' }} >
