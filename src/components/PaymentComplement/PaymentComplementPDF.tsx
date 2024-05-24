@@ -76,7 +76,8 @@ export const PaymentComplementPDF = () => {
 
                 <View fixed style={{
                     width: '90%',
-                    height: 115,
+                    minHeight: 115,
+                    maxHeight: 115,
                     flexDirection: 'row',
                     gap: 10,
                     alignSelf: 'center',
@@ -176,7 +177,7 @@ export const PaymentComplementPDF = () => {
                 </View>
 
                 {/* Primera seccion */}
-                <View fixed style={{ width: '90%', alignSelf: 'center', height: 80, borderWidth: 1 }}>
+                <View fixed style={{ width: '90%', alignSelf: 'center', minHeight: 80,maxHeight: 80,  borderWidth: 1 }}>
                     <View style={{ width: '100%', height: '80%', flexDirection: 'row' }}>
                         <View style={{ width: '15%', textAlign: 'center', justifyContent: 'space-around' }} >
                             <Text style={{ fontSize: 7, fontWeight: 700 }}>Cliente</Text>
@@ -214,7 +215,7 @@ export const PaymentComplementPDF = () => {
                 </View>
 
                 {/* Segunda Seccion */}
-                <View fixed style={{ width: '90%', alignSelf: 'center', height: 70, borderWidth: 1, flexDirection: 'row' }}>
+                <View fixed style={{ width: '90%', alignSelf: 'center', minHeight: 70, maxHeight: 70, borderWidth: 1, flexDirection: 'row', }}>
                     <View style={{ width: '55%', height: '100%', flexDirection: 'column', borderRightWidth: 1, }}>
                         <View style={{ height: '25%', justifyContent: 'center', borderBottomWidth: 1, paddingLeft: 3 }}>
                             <Text style={{ fontSize: 7, fontWeight: 700 }}>Datos del Receptor (Cliente)</Text>
@@ -241,7 +242,7 @@ export const PaymentComplementPDF = () => {
                 {data.dataReceiptsDetails.map((item: any, index: any) => {
                     return (
                         <>
-                            <View key={index} style={{ width: '90%', alignSelf: 'center', height: 40, borderWidth: 1, flexDirection: 'row', }}>
+                            <View key={index} wrap={false} style={{ width: '90%', alignSelf: 'center', minHeight: 40, maxHeight: 40, borderWidth: 1, flexDirection: 'row', }}>
                                 <View style={{ height: '100%', flexDirection: 'column', borderRightWidth: 1, width: '14.2%' }}>
                                     <View style={{ height: '66%', justifyContent: 'center', alignItems: 'center', borderBottomWidth: 1 }}>
                                         <Text style={{ fontSize: 7, fontWeight: 700 }}>Fecha de pago</Text>
@@ -307,7 +308,7 @@ export const PaymentComplementPDF = () => {
                             </View>
                             <View>
                                 <View style={{
-                                    width: '90%', alignSelf: 'center', height: 14, borderWidth: 1, flexDirection: 'row',
+                                    width: '90%', alignSelf: 'center', minHeight: 14, maxHeight: 14, borderWidth: 1, flexDirection: 'row',
                                 }}>
                                     <View style={{ borderRightWidth: 1, width: '30%', alignItems: 'center', justifyContent: 'center' }}>
                                         <Text style={{
@@ -349,7 +350,7 @@ export const PaymentComplementPDF = () => {
                                 {item?.relatedReceiptsDetails.map((item2: any, index2: any) => {
                                     return (
                                         <View key={index2} wrap={false} style={{
-                                            width: '90%', alignSelf: 'center', height: 14, borderLeftWidth: 1, borderRightWidth: 1, borderBottomWidth: 1, flexDirection: 'row',
+                                            width: '90%', alignSelf: 'center', minHeight: 14, maxHeight: 14, borderLeftWidth: 1, borderRightWidth: 1, borderBottomWidth: 1, flexDirection: 'row',
                                         }}>
                                             <View style={{ borderRightWidth: 1, width: '30%', alignItems: 'center', justifyContent: 'center' }}>
                                                 <Text style={{
@@ -389,11 +390,9 @@ export const PaymentComplementPDF = () => {
                     )
                 })}
 
-
-
-
-                <View fixed style={{
-                    height: 400,
+                <View fixed debug  style={{
+                    minHeight: 260,
+                    maxHeight: 260,
                     width: '90%',
                     alignSelf: 'center',
                     backgroundColor: 'white',
@@ -409,7 +408,7 @@ export const PaymentComplementPDF = () => {
                     gap: 10
                 }}>
                     {/* Quinta Seccion */}
-                    <View style={{ width: '90%', alignSelf: 'center', height: 42, borderWidth: 1, flexDirection: 'row' }}>
+                    <View style={{ width: '90%', alignSelf: 'center', minHeight: 42,  maxHeight: 42, borderWidth: 1, flexDirection: 'row' }}>
 
                         <View style={{ width: '50%', flexDirection: 'column', }}>
                             <View style={{ alignItems: 'center', justifyContent: 'center', borderBottomWidth: 1, height: '33%' }}>
@@ -437,7 +436,7 @@ export const PaymentComplementPDF = () => {
 
 
                     {/* Sexta Seccion */}
-                    <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <View style={{ minWidth: '90%',maxWidth: '90%', alignSelf: 'center', flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View style={{ width: '83%', borderWidth: 1, height: 175 }}>
                             <View style={{ width: '100%', height: '20%', borderBottomWidth: 1, flexDirection: 'row' }}>
                                 <View style={{ height: '100%', width: '10%', borderRightWidth: 1, alignItems: 'center', justifyContent: 'center' }} >
