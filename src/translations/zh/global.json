@@ -1,0 +1,1400 @@
+{
+    "screens": "------------------------------------------",
+    "login": {
+        "email": "电子邮件",
+        "password": "密码",
+        "login": "登录",
+        "recovery": "恢复账户",
+        "errors": {
+            "no_schema": "未找到与用户相关的公司",
+            "incorrect-fields": "不正确的字段",
+            "ERR_NETWORK": "错误网络"
+        }
+    },
+    "profile": {
+        "title": "简介",
+        "name": "名称",
+        "email": "电子邮件",
+        "choose-language": "语言",
+        "change-photo": "编辑照片"
+    },
+    "userCompanies": {
+        "title-view": "公司名称",
+        "fields": {
+            "delete": "您想删除这家公司吗？",
+            "duplicate": "重复公司"
+        }
+    },
+    "home": {
+        "title": "首页"
+    },
+    "users": {
+        "title": "用户",
+        "title-view": "用户",
+        "fields": {
+            "user_name": "名称",
+            "user_email": "电子邮件地址",
+            "password": "密码",
+            "user_phone": "电话",
+            "group_name": "组别",
+            "language": "语言"
+        },
+        "tabs": {
+            "view": "查看",
+            "permissions": "许可证",
+            "companies": "公司",
+            "bank_accounts": "银行账户"
+        },
+        "snackbar": {
+            "add": "成功添加用户",
+            "update": "用户成功更新",
+            "delete": "用户已成功删除"
+        },
+        "dialog": {
+            "delete": "您想删除该用户吗"
+        }
+    },
+    "customers": {
+        "title": "客户",
+        "title-view": "客户",
+        "fields": {
+            "business_name": "公司名称",
+            "comercial_name": "商品名称",
+            "customer_rfc": "RFC (联邦纳税人登记册)",
+            "customer_email": "电子邮件地址",
+            "customer_phone_number": "手机",
+            "customer_web": "网站",
+            "group_by": "客户群",
+            "group_salesorders_by": "按以下方式对销售订单进行分组",
+            "group_backorders_by": "分组延期付款",
+            "group_shippingdocuments_by": "按以下方式对运输文件进行分组",
+            "group_invoices_by": "分组发票",
+            "language": "语言",
+            "primary_bank_account": "主要银行账户"
+        },
+        "tabs": {
+            "locations": "地点",
+            "items": "文章",
+            "taxes": "经济数据",
+            "files": "档案",
+            "bankaccounts": "银行账户"
+        },
+        "dialog": {
+            "delete": "您想删除此客户端吗？",
+            "no_fiscal": "添加纳税地址",
+            "no_locations": "添加一个位置",
+            "last_location": "最后位置"
+        }
+    },
+    "customerlocations": {
+        "title-view": "地点",
+        "fields": {
+            "Address": "地址",
+            "country": "国家",
+            "state": "国家",
+            "city_name": "城市",
+            "postal_code": "邮编",
+            "street": "街道",
+            "contact_name": "联系人姓名",
+            "phone_number": "电话",
+            "email": "电子邮件地址",
+            "fiscal_address": "财政地址",
+            "delivery_address": "送货地址",
+            "default_delivery_address": "默认送货地址"
+        },
+        "dialog": {
+            "delete": "您想删除此位置吗？"
+        },
+        "tabs": {
+            "general": "一般情况",
+            "invoicing": "发票"
+        }
+    },
+    "item-types": {
+        "title": "物品类型",
+        "title-view": "文章类型",
+        "fields": {
+            "item_type_code": "代码",
+            "item_type_name": "名称",
+            "item_type_description": "说明",
+            "sale": "销售",
+            "purchase": "购买",
+            "stock_management": "库存管理"
+        },
+        "dialog": {
+            "delete": "您想删除此类文章吗？"
+        }
+    },
+    "item-families": {
+        "title": "条款家庭",
+        "title-view": "文章家族",
+        "fields": {
+            "item_family_code": "代码",
+            "item_family_name": "名称",
+            "item_family_description": "说明"
+        },
+        "dialog": {
+            "delete": "您想删除这篇文章吗？"
+        }
+    },
+    "items": {
+        "title": "文章",
+        "title-view": "文章",
+        "fields": {
+            "item_code": "代码",
+            "item_description": "说明",
+            "default_item_price": "默认价格",
+            "item_type_name": "文章类型",
+            "item_family_name": "文章家族",
+            "status_name": "国家",
+            "unit_id": "单位",
+            "tax_object": "征税目的",
+            "retention": "保留",
+            "tax": "税收",
+            "tarifffractions": "关税项目",
+            "weight": "重量"
+        },
+        "dialog": {
+            "delete": "您想删除这篇文章吗？"
+        },
+        "tabs": {
+            "sales": "销售",
+            "customers": "客户",
+            "files": "档案",
+            "warehouses": "仓库"
+        }
+    },
+    "suppliers": {
+        "title": "供应商",
+        "title-view": "供应商",
+        "fields": {
+            "business_name": "公司名称",
+            "comercial_name": "商品名称",
+            "supplier_rfc": "RFC (联邦纳税人登记册)",
+            "supplier_email": "电子邮件地址",
+            "supplier_phone_number": "电话",
+            "supplier_web": "网站",
+            "schema_name": "计划"
+        },
+        "tabs": {
+            "locations": "地点",
+            "items": "文章",
+            "files": "档案"
+        },
+        "dialog": {
+            "delete": "您想移除该提供商吗？"
+        }
+    },
+    "supplierlocations": {
+        "title-view": "地点",
+        "fields": {
+            "Address": "地址",
+            "country": "国家",
+            "state": "国家",
+            "city_name": "城市",
+            "postal_code": "邮编",
+            "street": "街道",
+            "contact_name": "联系人姓名",
+            "phone_number": "电话",
+            "email": "电子邮件地址",
+            "rfc": "RFC (联邦纳税人登记册)",
+            "main_location": "主要地址",
+            "invoice_address": "账单地址",
+            "delivery_address": "送货地址"
+        },
+        "dialog": {
+            "delete": "您想删除此位置吗？"
+        }
+    },
+    "warehouses": {
+        "title": "仓库",
+        "title-view": "仓库",
+        "fields": {
+            "warehouse_description": "说明",
+            "warehouse_code": "代码",
+            "stock": "库存",
+            "country": "国家",
+            "state": "国家",
+            "city_name": "城市",
+            "postal_code": "邮编",
+            "street": "街道"
+        },
+        "dialog": {
+            "delete": "您想删除这个仓库吗？"
+        },
+        "tabs": {
+            "items": "文章"
+        }
+    },
+    "customeritems": {
+        "relation": "文章 - 客户关系",
+        "fields": {
+            "business_name": "公司名称",
+            "item_code": "代码",
+            "item_description": "说明",
+            "item_price": "价格",
+            "customer_reference": "名称",
+            "customer_reference_description": "说明"
+        },
+        "dialog": {
+            "delete": "您想删除这位客户吗？"
+        }
+    },
+    "itemscustomer": {
+        "relation": "客户与文章的关系"
+    },
+    "warehouseitems": {
+        "relation": "文章 - 仓库关系",
+        "fields": {
+            "stock": "库存"
+        }
+    },
+    "itemwarehouses": {
+        "relation": "仓库与物品的关系"
+    },
+    "countries": {
+        "title": "国家",
+        "title-view": "国家",
+        "fields": {
+            "country_code": "代码",
+            "country_name": "名称"
+        },
+        "dialog": {
+            "delete": "你想消灭这个国家吗？"
+        }
+    },
+    "states": {
+        "title": "国家",
+        "title-view": "国家",
+        "fields": {
+            "state_code": "代码",
+            "state_name": "名称",
+            "country_code": "国家代码",
+            "country_name": "国家名称",
+            "state_abbr": "缩写"
+        },
+        "dialog": {
+            "delete": "您想删除此状态吗？"
+        }
+    },
+    "cities": {
+        "title": "城市",
+        "title-view": "城市",
+        "fields": {
+            "city_code": "代码",
+            "city_name": "名称",
+            "state_code": "状态代码",
+            "state_name": "名称 国家"
+        },
+        "dialog": {
+            "delete": "您想移除这座城市吗？"
+        }
+    },
+    "currencies": {
+        "title": "硬币",
+        "title-view": "货币",
+        "fields": {
+            "currency_code": "代码",
+            "currency_description": "说明",
+            "currency_symbol": "符号"
+        },
+        "dialog": {
+            "delete": "您想删除这种货币吗？"
+        }
+    },
+    "exchangeratehistory": {
+        "title": "汇率历史",
+        "title-view": "费率",
+        "fields": {
+            "rate": "价值",
+            "rate_date": "日期"
+        },
+        "dialog": {
+            "delete": "您想取消这项税收吗？"
+        }
+    },
+    "taxes": {
+        "title": "税收",
+        "title-view": "税收",
+        "fields": {
+            "tax_name": "名称",
+            "tax_code": "代码",
+            "tax_percent": "百分比",
+            "tax_description": "说明",
+            "is_transferred": "转让",
+            "is_whithheld": "保留"
+        },
+        "dialog": {
+            "delete": "您想取消这项税收吗？"
+        }
+    },
+    "retentions": {
+        "title": "预留款",
+        "title-view": "保留",
+        "fields": {
+            "retention_code": "预扣代码",
+            "retention_name": "名称",
+            "retention_percent": "百分比"
+        },
+        "dialog": {
+            "delete": "您想消除这种滞留现象吗？"
+        }
+    },
+    "incoterms": {
+        "title": "国际贸易术语",
+        "title-view": "INCOTERM (国际商业条款)",
+        "fields": {
+            "incoterm_code": "INCOTERM (国际商业条款) 代码",
+            "incoterm_description": "名称"
+        },
+        "dialog": {
+            "delete": "您想删除这个 INCOTERM (国际商业条款) 吗？"
+        }
+    },
+    "bankaccounts": {
+        "title": "银行账户",
+        "title-view": "银行账户",
+        "fields": {
+            "account_alias": "账户别名",
+            "bank_name": "银行名称",
+            "card_number": "卡号",
+            "account_number": "账号",
+            "interbank_key": "银行同业代码",
+            "swift_code": "SWIFT 代码",
+            "phone_number": "电话号码",
+            "bank_references": "银行编号"
+        },
+        "dialog": {
+            "delete": "您想删除这个银行账户吗？"
+        }
+    },
+    "groups": {
+        "title": "组别",
+        "title-view": "组别",
+        "fields": {
+            "group_name": "名称",
+            "option_name": "菜单"
+        },
+        "dialog": {
+            "delete": "您想删除该组吗？"
+        }
+    },
+    "customertaxes": {
+        "relation": "客户与税务关系"
+    },
+    "paymentconditions": {
+        "title": "付款条款",
+        "title-view": "付款条件",
+        "fields": {
+            "payment_condition_days": "迪亚斯",
+            "payment_condition_name": "名称",
+            "payment_condition_description": "说明"
+        },
+        "dialog": {
+            "delete": "您想取消这一付款条件吗？"
+        }
+    },
+    "paymentmethods": {
+        "title": "付款方式",
+        "title-view": "付款方式",
+        "fields": {
+            "code": "代码",
+            "name": "名称",
+            "description": "说明"
+        },
+        "dialog": {
+            "delete": "您想删除这种付款方式吗？"
+        }
+    },
+    "paymentmodes": {
+        "title": "付款方式",
+        "title-view": "付款方式",
+        "fields": {
+            "code": "代码",
+            "description": "说明"
+        },
+        "dialog": {
+            "delete": "您想取消这种付款方式吗？"
+        }
+    },
+    "cfdis": {
+        "title": "CFDIs (通过互联网获得数字税务收据)",
+        "title-view": "CFDI (通过互联网进行数字收税)",
+        "fields": {
+            "code": "代码",
+            "description": "说明",
+            "physical_person": "自然人",
+            "moral_person": "法人"
+        },
+        "dialog": {
+            "delete": "您想删除此 CFDI (通过互联网进行数字收税) 吗？"
+        }
+    },
+    "salesinvoices": {
+        "title": "销售发票",
+        "title-view": "销售发票",
+        "fields": {
+            "sales_invoice_date": "日期",
+            "customer_business_name": "公司名称",
+            "subtotal_amount": "小计",
+            "total_amount": "总计",
+            "address": "财政地址",
+            "discount": "贴现率 (%)",
+            "sales_invoice_name": "发票号码",
+            "purchase_order": "采购订单",
+            "invoice_doc_status_name": "现状",
+            "retention_rate": "保留率 (%)",
+            "original_string_SAT": "SAT (税务管理处) 数字认证原链补充",
+            "certificate_number_SAT": "SAT (税务管理处) 证书序列号",
+            "certificate_number_CFDI": "CFDI (通过互联网进行数字收税) 证书序列号",
+            "uuid": "财政对页",
+            "signing_date": "认证日期和时间",
+            "seal_SAT": "SAT (税务管理处) 数字印章",
+            "seal_CFDI": "CFDI (通过互联网进行数字收税) 数字印章",
+            "cancellation_date": "取消日期",
+            "cancellation_reason": "取消原因",
+            "cancellation_response_code": "取消响应代码",
+            "includes_exterior_complement": "外贸补充",
+            "includes_transportation_document": "提货单",
+            "notes": "说明",
+            "tax_amount": "税金小计",
+            "retention_amount": "扣除额小计",
+            "discount_amount": "折扣小计",
+            "is_accounted": "已发布",
+            "date_mail_send": "发送电子邮件的用户",
+            "user_mail_send": "邮件发送日期"
+        },
+        "dialog": {
+            "delete": "您想删除这张发票吗？",
+            "cancel": {
+                "title": "取消原因",
+                "content": "选择一个选项",
+                "cancellation-reason": ""
+            },
+            "fiscal": {
+                "title": "您想在这张发票上盖章吗？"
+            },
+            "send_email": {
+                "title": "发送电子邮件",
+                "default_content": "将向以下发票的财务邮件发送电子邮件：",
+                "singular_content": "将发送具有以下特征的电子邮件：",
+                "no_email": "无邮件",
+                "waiting": "准备发送",
+                "sent": "已发送",
+                "processing": "处理中",
+                "nofiscal": "未盖章",
+                "attachments": "附件：",
+                "xml": ".XML",
+                "pdf": ".PDF",
+                "qr": "QR",
+                "emails": "致：",
+                "subject": "主题：",
+                "content": "内容",
+                "email_no_valid": "无效电子邮件",
+                "no_messages": "此类发票没有主要信息",
+                "no_pdf": "未找到 PDF",
+                "no_xml": "未找到 XML"
+            }
+        },
+        "tabs": {
+            "general": "详细信息",
+            "invoicing": "盖章",
+            "transportation-document": "提货单",
+            "annotations": "说明",
+            "exterior-complement": "对外贸易",
+            "shipping-trackings": "航运跟踪",
+            "related-invoices": "相关发票"
+        },
+        "actions": {
+            "fiscalsignature": "印章",
+            "cancel-fiscalsignature": "取消",
+            "pay": "薪酬",
+            "copy": "复制",
+            "sendemail": "发送邮件",
+            "accounted": "职位",
+            "deaccount": "消除污染"
+        },
+        "reports": {
+            "pdf": "下载",
+            "save-PDF": "PDF 保存",
+            "generated-PDF": "生成 PDF",
+            "downloaded-PDF": "下载 PDF",
+            "error-getting-PDF": "获取 PDF 文件出错"
+        },
+        "info": {
+            "already-stamped": "本发票已盖章",
+            "stamped": "盖章发票",
+            "less-fields": "缺少盖章字段",
+            "need-save-before-stamped": "盖章前需要保存更改",
+            "no-stamped": "未盖章发票",
+            "no-data": "缺失字段",
+            "already-canceled": "取消发票",
+            "no_details": "不含项目的发票",
+            "add-exchangeratehistory": "添加货币的最新汇率",
+            "required-doc-type": "选择文件类型",
+            "no-cancelled": "没有取消"
+        },
+        "buttons": {
+            "xml": "下载 XML (可扩展标记语言)"
+        }
+    },
+    "invoicedocumenttypes": {
+        "title-view": "文件"
+    },
+    "companies": {
+        "title": "公司",
+        "title-view": "公司信息",
+        "tabs": {
+            "general": "一般情况",
+            "invoice": "发票",
+            "locations": "地点",
+            "bank_accounts": "银行账户",
+            "desing": "设计",
+            "configuration": "配置"
+        },
+        "upload": {
+            "key": "上传 .key",
+            "cer": "上传 .cer",
+            "certificate": "证书 ",
+            "keyprivate": "私钥 "
+        },
+        "desing": {
+            "limit_size": "尺寸"
+        },
+        "configuration": {
+            "email": "邮件配置",
+            "time_zone": "时区设置",
+            "fields": {
+                "host_mail": "主持人",
+                "port_mail": "港口",
+                "username_mail": "电子邮件服务邮件",
+                "password_mail": "服务密码",
+                "time_zone": "时区"
+            }
+        },
+        "fields": {
+            "company_name": "公司名称",
+            "address": "地址",
+            "rfc": "RFC (联邦纳税人登记册)",
+            "business_name": "公司名称",
+            "comercial_name": "商品名称",
+            "country": "国家",
+            "state": "国家",
+            "city_name": "城市",
+            "street": "街道",
+            "postal_code": "邮编",
+            "contact_name": "联系电话",
+            "phone_number": "手机号码",
+            "email": "电子邮件",
+            "schema_name": "计划",
+            "fiscal_password": "财政密码",
+            "rpt_image": "图像记者",
+            "top_bar_image": "顶栏图片",
+            "icon_image": "图标",
+            "primary_bank_account": "主要银行账户",
+            "secondary_bank_account": "二级银行账户"
+        },
+        "dialog": {
+            "delete": "您想删除这家公司吗？",
+            "nofile": "图像无效"
+        }
+    },
+    "consecutives": {
+        "title": "连续",
+        "title-view": "连续",
+        "fields": {
+            "name": "名称",
+            "description": "说明",
+            "prefix": "前缀",
+            "resource_id": "资源",
+            "resource_name": "资源",
+            "view_name": "查看",
+            "length": "尺寸",
+            "consecutive": "连续"
+        },
+        "dialog": {
+            "delete": "您想连续删除此内容吗？"
+        }
+    },
+    "salesinvoicedetails": {
+        "fields": {
+            "quantity": "数量",
+            "concept": "概念",
+            "price": "价格",
+            "total_amount": "总计",
+            "unit_code": "单位",
+            "discount": "贴现率(%)",
+            "subtotal_amount": "小计"
+        },
+        "snackbar": {
+            "warning": "检查字段",
+            "update": "文章已成功更新",
+            "delete": "成功删除文章",
+            "tarifffraction": "加上关税分数"
+        },
+        "dialog": {
+            "delete": "您想删除这篇文章吗？"
+        }
+    },
+    "productservicekeys": {
+        "title": "关键产品服务",
+        "title-view": "关键产品服务",
+        "fields": {
+            "product_service_key": "钥匙",
+            "description": "说明",
+            "tarifffraction": "关税比例",
+            "includes_transportation_document": "包括提单",
+            "is_dangerous_material": "属于危险品"
+        },
+        "dialog": {
+            "delete": "您想删除此产品服务密钥吗？"
+        }
+    },
+    "units": {
+        "title": "测量单位",
+        "title-view": "测量单位",
+        "fields": {
+            "unit_code": "代码",
+            "unit_description": "说明",
+            "unit_symbol": "符号",
+            "international_unit_symbol": "国际符号"
+        },
+        "dialog": {
+            "delete": "您想取消这个计量单位吗？"
+        }
+    },
+    "taxobjects": {
+        "title": "征税目的",
+        "title-view": "征税目的",
+        "fields": {
+            "tax_object": "身份证税的征收对象",
+            "description": "说明"
+        },
+        "dialog": {
+            "delete": "您想删除此税收对象吗？"
+        }
+    },
+    "tarifffractions": {
+        "title": "关税分数",
+        "title-view": "关税分数",
+        "fields": {
+            "tariff_fraction_code": "代码",
+            "tariff_fraction_general_description": "一般说明",
+            "tariff_fraction_specific_description": "具体说明",
+            "unit_description": "单位"
+        },
+        "dialog": {
+            "delete": "您想删除此关税部分吗？"
+        }
+    },
+    "cancellationreasons": {
+        "title": "取消的原因",
+        "title-view": "取消的原因",
+        "fields": {
+            "cancellation_reason_key": "钥匙",
+            "description": "说明"
+        },
+        "dialog": {
+            "delete": "您是否希望删除此取消理由？"
+        }
+    },
+    "taxregimes": {
+        "title": "税收制度",
+        "title-view": "税收制度",
+        "fields": {
+            "tax_regime_code": "代码",
+            "description": "说明",
+            "is_person_entity": "自然人",
+            "is_legal_entity": "法律实体"
+        },
+        "dialog": {
+            "delete": "你想取消这种税制吗？"
+        }
+    },
+    "trailertypes": {
+        "title": "拖车类型",
+        "title-view": "拖车类型",
+        "fields": {
+            "trailer_type_code": "代码",
+            "trailer_type_name": "名称"
+        },
+        "dialog": {
+            "delete": "您想拆除这种拖车吗？"
+        }
+    },
+    "chassis": {
+        "title": "底盘",
+        "title-view": "底盘",
+        "fields": {
+            "chassis_plate": "板材",
+            "chassis_description": "说明"
+        },
+        "dialog": {
+            "delete": "你想移除这个机箱吗？"
+        }
+    },
+    "cancelledsalesinvoices": {
+        "title": "取消销售发票",
+        "title-view": "作废的销售发票"
+    },
+    "companylocations": {
+        "title-view": "公司与地点的关系",
+        "fields": {
+            "country_name": "国家",
+            "state_name": "国家",
+            "city_name": "城市",
+            "street_name": "街道",
+            "postal_code": "邮编",
+            "contact_name": "联系人姓名",
+            "phone_number": "电话",
+            "email": "电子邮件地址",
+            "main_location": "主要地址",
+            "address": "地址"
+        },
+        "dialog": {
+            "delete": "您想删除此位置吗？"
+        }
+    },
+    "companybankaccounts": {
+        "title-view": "公司 - 银行账户关系",
+        "fields": {},
+        "dialog": {
+            "delete": "您想删除这个银行账户吗？"
+        }
+    },
+    "vehicleconfigurations": {
+        "title": "车辆配置",
+        "title-view": "车辆配置",
+        "fields": {
+            "vehicle_config_code": "钥匙",
+            "vehicle_config_description": "钥匙"
+        },
+        "dialog": {
+            "delete": "您想删除此车辆配置吗？"
+        }
+    },
+    "drivertypes": {
+        "title": "司机类型",
+        "title-view": "司机类型",
+        "fields": {
+            "driver_type_code": "代码",
+            "driver_type_name": "名称"
+        },
+        "dialog": {
+            "delete": "您想删除此驱动程序类型吗？"
+        }
+    },
+    "transportations": {
+        "title": "运输",
+        "title-view": "运输",
+        "fields": {
+            "vehicle_configuration_id": "车辆配置",
+            "transportation_code": "卡车名称",
+            "plate_number": "印版数量",
+            "vin": "VIN (车辆识别号)",
+            "model_name": "型号名称",
+            "model_year": "车型年份",
+            "motor_number": "发动机编号",
+            "permission_sct": "许可证 sct",
+            "permission_number_sct": "SCT 许可证号",
+            "transportation_weight": "运输重量（吨）",
+            "insurance_company": "保险公司",
+            "insurance_policy": "保险单",
+            "insurance_expiration_date": "保险到期日"
+        },
+        "dialog": {
+            "delete": "您想移除此运输工具吗？"
+        }
+    },
+    "drivers": {
+        "title": "驾驶员",
+        "title-view": "司机",
+        "fields": {
+            "driver_type_id": "驱动程序类型",
+            "driver_name": "名称",
+            "driver_curp": "CURP (唯一人口登记代码)",
+            "driver_rfc": "RFC (联邦纳税人登记册)",
+            "driver_license": "许可证",
+            "nss": "NSS",
+            "country_id": "国家",
+            "state_id": "国家",
+            "city_id": "城市",
+            "postal_code": "邮编",
+            "street": "街道",
+            "phone": "细胞",
+            "email": "电子邮件"
+        },
+        "dialog": {
+            "delete": "您想移除此驱动程序吗？"
+        }
+    },
+    "transportationdocuments": {
+        "locations": {
+            "source": "起源",
+            "target": "目的地",
+            "addlocation": "添加地点",
+            "deleteLocation": "删除位置"
+        },
+        "fields": {
+            "total_distance": "总距离",
+            "weight_unit": "重量单位",
+            "total_merchandise": "货物共计",
+            "total_gross_weight": "总毛重",
+            "environmental_insurance_policy": "环境保险政策",
+            "environmental_insurance_company": "环境保险公司"
+        },
+        "info": {
+            "missing_data": "托运单中的缺失数据"
+        }
+    },
+    "transportationdocumentlocations": {
+        "fields": {
+            "date_hour_departure": "出发日期",
+            "date_hour_arrival": "抵达日期",
+            "location": "地址",
+            "distance": "距离（千米）"
+        },
+        "snackbar": {
+            "errorlocations": "原产地日期不能长于目的地日期。"
+        }
+    },
+    "transportationdocumentchassis": {
+        "buttons": {
+            "add": "添加底盘",
+            "delete": "拆除底盘"
+        }
+    },
+    "merchandisedetails": {
+        "title-view": "货物",
+        "fields": {
+            "product_service_key": "货物",
+            "concept": "概念",
+            "quantity": "数量",
+            "unit_code": "单位代码",
+            "weight_in_kg": "重量（千克",
+            "hazardous_material_key": "危险品关键字",
+            "packaging_type_code": "包装类型代码"
+        },
+        "dialog": {
+            "delete": "您想删除此商品吗？"
+        },
+        "snackbar": {
+            "warning": "检查字段"
+        }
+    },
+    "customskeycodes": {
+        "title": "订购钥匙",
+        "title-view": "订购代码",
+        "fields": {
+            "customs_key_code": "代码",
+            "customs_key_code_description": "说明"
+        },
+        "dialog": {
+            "delete": "您想删除此订单密钥吗？"
+        }
+    },
+    "measureunitconversions": {
+        "title": "计量单位的换算",
+        "title-view": "计量单位换算",
+        "fields": {
+            "unit_source": "发起单位",
+            "unit_target": "单位 目的地",
+            "conversion_rate": "转换率"
+        },
+        "dialog": {
+            "delete": "您想移除此测量单位转换吗？"
+        }
+    },
+    "packagingtypes": {
+        "title": "包装类型",
+        "title-view": "包装类型",
+        "fields": {
+            "packaging_type_code": "代码",
+            "packaging_type_description": "说明"
+        },
+        "dialog": {
+            "delete": "您想消除这种包装吗？"
+        }
+    },
+    "hazardousmaterialskeys": {
+        "title": "危险品钥匙",
+        "title-view": "危险品钥匙",
+        "fields": {
+            "hazardous_material_key": "危险品钥匙",
+            "hazardous_material_description": "说明"
+        },
+        "dialog": {
+            "delete": "您想移除这把危险材料钥匙吗？"
+        }
+    },
+    "foreigntrades": {
+        "fields": {
+            "exchange_rate_USD": "美元汇率",
+            "total_USD": "美元共计"
+        },
+        "info": {
+            "missing_data": "外贸选项卡中的缺失数据",
+            "missing_tariff_fraction_in_details": "缺失关税分数的详细情况"
+        }
+    },
+    "foreigntrademerchandises": {
+        "fields": {
+            "customs_quantity": "海关数量",
+            "customs_unit_value": "海关单位价值",
+            "dolars_total_value": "美元价值",
+            "identification_number": "身份证号码",
+            "tariff_fraction_international_unit_symbol": "国际单位",
+            "tariff_fraction_unit_code": "单位代码"
+        }
+    },
+    "shippingtrackings": {
+        "fields": {
+            "track_id": "跟踪编号",
+            "gross_weight": "毛重",
+            "real_gross_weight": "实际总重",
+            "net_weight": "净重",
+            "real_net_weight": "实际净重",
+            "packages_quantity": "包装数量",
+            "containers_quantity": "容器数量",
+            "pallets_quantity": "托盘数量",
+            "dimensions": "尺寸"
+        },
+        "info": {
+            "missing_data": "运输跟踪中的数据缺失"
+        }
+    },
+    "salesinvoicerelationshiptypes": {
+        "title": "销售发票关系类型",
+        "title-view": "销售发票关系类型",
+        "fields": {
+            "sales_invoice_relationship_type_code": "代码",
+            "sales_invoice_relationship_type_description": "说明"
+        },
+        "dialog": {
+            "delete": "您想删除这类销售发票关系吗？"
+        }
+    },
+    "relatedsalesinvoices": {
+        "title": "相关销售发票",
+        "title-view": "相关销售发票",
+        "fields": {
+            "related_sales_invoice_name": "相关发票号码",
+            "related_sales_invoice_uuid": "相关发票的财政编号",
+            "sales_invoice_relationship_type_code": "关系代码",
+            "sales_invoice_relationship_type_description": "关系描述"
+        },
+        "dialog": {
+            "delete": "您想删除这张相关的销售发票吗？"
+        }
+    },
+    "customerbankaccounts": {
+        "title-view": "关系客户 - 银行账户",
+        "dialog": {
+            "delete": "您想删除这个银行账户吗？"
+        }
+    },
+    "languages": {
+        "title": "语言",
+        "title-view": "语言",
+        "fields": {
+            "language_code": "代码",
+            "language_description": "说明"
+        },
+        "dialog": {
+            "delete": "您想删除该语言吗？"
+        }
+    },
+    "messagesmails": {
+        "title": "电子邮件信息",
+        "title-view": "电子邮件信息",
+        "fields": {
+            "language_code": "语言",
+            "name": "名称",
+            "prefix": "前缀",
+            "main": "主页",
+            "subject": "主题",
+            "body": "身体"
+        },
+        "dialog": {
+            "no_main": "这一连串没有主要信息",
+            "delete": "您想删除这条信息吗？"
+        }
+    },
+    "receiptsdetails": {
+        "title": "收据详情",
+        "title-view": "收据详情",
+        "fields": {
+            "customer_bussines_name": "公司名称",
+            "status_name": "现状",
+            "amount_outstanding": "未付金额",
+            "payment_deadline": "付款期限",
+            "payment_date": "付款日期",
+            "exchange_rate": "汇率",
+            "total_tax_amount": "税金小计",
+            "total_retention_amount": "留存额小计",
+            "subtotal_amount": "小计",
+            "total_amount": "总计",
+            "payment_amount": "支付金额",
+            "previous_amount": "以前的金额"
+        },
+        "buttons": {
+            "apply-receipt": "申请收据"
+        },
+        "tabs": {
+            "relatedreceiptsdetails": "相关文件",
+            "stamping": "冲压",
+            "statuses": "状态历史"
+        }
+    },
+    "relatedreceiptsdetails": {
+        "title-view": "相关文件",
+        "fields": {
+            "equivalence": "等效",
+            "partiality_number": "偏袒编号",
+            "previous_amount": "以前的金额",
+            "payment_amount": "付款金额",
+            "amount_outstanding": "未付金额",
+            "total_tax_amount": "税金小计",
+            "total_retention_amount": "留存额小计"
+        }
+    },
+    "receipts": {
+        "title-view": "付款补充",
+        "fields": {
+            "original_string_SAT": "SAT (税务管理处) 数字认证原链补充",
+            "certificate_number_SAT": "SAT (税务管理处) 证书序列号",
+            "certificate_number_CFDI": "CFDI (通过互联网进行数字收税) 证书序列号",
+            "uuid": "财政对页",
+            "signing_date": "认证日期和时间",
+            "seal_SAT": "SAT (税务管理处) 数字印章",
+            "seal_CFDI": "CFDI (通过互联网进行数字收税) 数字印章",
+            "receipt_name": "补数",
+            "total_amount": "存入金额",
+            "selected_amount": "所选金额",
+            "difference_amount": "差异",
+            "receipt_date": "交存日期",
+            "companybankaccount": "公司银行账户",
+            "customerbankaccount": "客户银行账户",
+            "date_mail_send": "发送电子邮件的用户",
+            "user_mail_send": "邮件发送日期"
+        },
+        "tabs": {
+            "details": "详细信息",
+            "stamping": "冲压"
+        },
+        "buttons": {
+            "xml": "下载 XML"
+        },
+        "info": {
+            "add-details": "选择付款详情",
+            "add-exchangeratehistory": "添加最新货币汇率",
+            "amount-does-not-cover-all-amounts": "存入的金额不包括所有选定的金额",
+            "apply-receipt-filter": "泄露的文件中包括以前盖章或注销的文件",
+            "stamping-error": "申请收据时出错"
+        }
+    },
+    "receiptdetailstatuses": {
+        "fields": {
+            "new_status_name": "新状态",
+            "previous_status_name": "以前的状况"
+        }
+    },
+    "components": "---------------------------------------",
+    "reports": {
+        "salesInvoicePdf": {
+            "header": {
+                "documentType": "文件类型",
+                "folioNumber": "文件夹编号",
+                "taxNumber": "税号",
+                "dateAndTimeCertification": "盖章日期和时间",
+                "taxId": "税号"
+            },
+            "customerData": {
+                "billTo": "计入",
+                "shipTo": "发送至",
+                "email": "邮件",
+                "telephone": "电话"
+            },
+            "shippingData": {
+                "customerPO": "订购单",
+                "shipVia": "交通路线",
+                "trackingNumber": "追踪号码",
+                "dueDate": "有效期"
+            },
+            "paymentData": {
+                "CFDIUse": "使用 CFDI",
+                "methodPayment": "付款方式",
+                "paymentType": "付款方式",
+                "paymentConditions": "付款条件"
+            },
+            "itemsTable": {
+                "concept": "概念",
+                "quantity": "数量",
+                "unit": "单元",
+                "price": "价格",
+                "tax": "税收",
+                "retention": "保留",
+                "discount": "折扣"
+            },
+            "footer": {
+                "notes": "注释",
+                "weights": "重量",
+                "netWeight": "净重",
+                "grossWeight": "总重量",
+                "continueToTheNextPage": "继续下一页"
+            },
+            "lastPageFooter": {
+                "pleaseMakePaymentToTheFollowingAccounts": "请向以下账户付款",
+                "firstAccount": "主账户",
+                "secondaryAccount": "二级账户",
+                "accountAlias": "账户别名",
+                "interbankKey": "银行同业代码",
+                "bankName": "银行名称",
+                "account": "账户",
+                "taxes": "税收",
+                "retentions": "留存",
+                "discounts": "折扣",
+                "subtotal": "小计",
+                "total": "总计"
+            },
+            "satData": {
+                "digitalStamp": "数码印章",
+                "digitalCertification": "数字认证"
+            },
+            "transportationDocumentData": {
+                "transportationDocument": "运输文件",
+                "SCTPermit": "SCT 许可",
+                "SCTPermitNumber": "SCT 许可证编号",
+                "guideNumber": "指南编号",
+                "guideDescription": "指南说明",
+                "guideWeight": "指南重量",
+                "totalMerchandise": "商品共计",
+                "totalGrossWeight": "总毛重",
+                "weightUnit": "重量单位",
+                "weightInKg": "重量（千克",
+                "transportationDocumentDate": "托运单日期",
+                "transportInformation": "运输信息",
+                "vehicleInformation": "车辆信息",
+                "vehicleInsuranceInformation": "车辆保险信息",
+                "driverInformation": "驾驶员信息",
+                "transportationCode": "运输代码",
+                "totalDistance": "总距离",
+                "departureDate": "出发日期",
+                "arrivalDate": "抵达日期",
+                "transportationWeight": "运输重量",
+                "vehicleConfiguration": "车辆配置",
+                "plateNumber": "牌号",
+                "modelAndYear": "型号和年份",
+                "motorNumber": "发动机编号",
+                "insurance": "保险",
+                "insurancePolicy": "保险单",
+                "InsuranceExpirationDate": "保险到期日",
+                "driverType": "司机类型",
+                "driverRFC": "司机的 RFC (联邦纳税人登记册)",
+                "driverName": "司机姓名",
+                "license": "许可证",
+                "vehicleIdentificationNumber": "车辆识别码"
+            },
+            "transportationDocumentLocationsData": {
+                "ORIGIN/DESTINY": "出发地/目的地",
+                "country": "国家",
+                "state": "状态",
+                "city": "城市",
+                "street": "地址",
+                "postalCode": "邮政编码",
+                "date": "日期",
+                "distance": "距离"
+            },
+            "merchandiseDetailsData": {
+                "mechandiseDetails": "货物详情",
+                "productServiceKey": "服务产品密钥",
+                "description": "说明",
+                "quantity": "数量",
+                "unitCode": "单位代码",
+                "weightInKg": "重量（千克"
+            },
+            "relatedCfdis": {
+                "relatedCfdis": "相关 CFDIS"
+            }
+        },
+        "receiptsPdf": {
+            "header": {
+                "taxId": "税号",
+                "zipCode": "邮政编码",
+                "paymentReceipt": "付款收据",
+                "payment": "付款",
+                "paymentNumber": "付款编号",
+                "dateAndTime": "日期和时间"
+            },
+            "customerData": {
+                "customer": "客户",
+                "address": "地址",
+                "city": "城市",
+                "state": "国家",
+                "zipCode": "邮政编码",
+                "taxId": "税号",
+                "taxRegime": "税制"
+            },
+            "paymentData": {
+                "receiverDataCustomer": "接收数据（客户）",
+                "taxId": "税号",
+                "bankName": "银行名称",
+                "bankAccount": "银行账户",
+                "issuerData": "发行者数据"
+            },
+            "firstSection":{
+                "code":"代码",
+                "quantity":"数量",
+                "description":"说明",
+                "unitOfMeasure":"计量单位"
+            },
+            "secondSection":{
+                "relatedInvoices":"相关发票",
+                "fiscalFolio":"财务信息",
+                "taxesTotal":"税款合计",
+                "retentionsTotal":"留存总额",
+                "previousAmount":"先前金额",
+                "paidAmount":"已付金额",
+                "pendingAmount":"待付金额"
+            },
+            "footer": {
+                "paymentMethod": "付款方式",
+                "paymentTotal": "付款总额",
+                "digitalCertification": "数字认证",
+                "digitalStamp": "数码印章",
+                "SATdigitalStamp": "sat 数字印章",
+                "signingDate": "签署日期",
+                "SATCertificate": "SAT 证书",
+                "fiscalFolio": "财务信息"
+            }
+        }
+    },
+    "generic": {
+        "buttons": {
+            "add": "添加",
+            "update": "更新",
+            "delete": "删除",
+            "accept": "接受",
+            "cancel": "取消",
+            "send_email": "发送电子邮件",
+            "goback": "返回",
+            "save": "节省"
+        },
+        "dialog": {
+            "delete": "删除"
+        },
+        "grid-table": {
+            "rows-per-page": "每页行数",
+            "toolbar-export": "出口",
+            "toolbar-export-csv": "下载 CSV (逗号分隔值)",
+            "column-orders": "排序列",
+            "column-menu-unsort": "解题",
+            "column-menu-sort-asc": "升序",
+            "column-menu-sort-desc": "降序排列",
+            "column-menu-filter": "过滤器",
+            "column-menu-hide-column": "隐藏栏",
+            "column-menu-show-columns": "显示列",
+            "column-menu-manage-columns": "管理栏目",
+            "filter-operator-contains": "载有",
+            "filter-operator-equals": "等于",
+            "filter-operator-starts-with": "开头为",
+            "filter-operator-ends-with": "以",
+            "filter-operator-is-empty": "为空",
+            "filter-operator-is-not-empty": "不空",
+            "filter-operator-is-any-of": "是指",
+            "count-rows": "选定行数",
+            "options": "选项"
+        },
+        "snackbar": {
+            "add": "正确添加元素",
+            "update": "项目更新正确",
+            "delete": "项目已成功删除",
+            "update_photo": "照片更新",
+            "select-option": "选择一个选项",
+            "permissions-error": "获取权限出错"
+        },
+        "creation_date": "创建日期",
+        "last_update_user": "最后修改的用户",
+        "last_update_date": "最后更新日期",
+        "yes": "是",
+        "no": "没有",
+        "logOut": "退出登录",
+        "logOutMessage": "您确定要注销吗？",
+        "menu-info": "---------------------------------------",
+        "menu": {
+            "home": "首页",
+            "menu-admin": "管理员",
+            "users": "用户",
+            "groups": "组别",
+            "menu-sales": "销售",
+            "items": "文章",
+            "enty-items": "上市",
+            "enty-item-types": "物品类型",
+            "enty-item-families": "条款家庭",
+            "customers": "客户",
+            "enty-customers": "上市",
+            "customerlocations": "地点",
+            "menu-purchases": "购物",
+            "suppliers": "供应商",
+            "enty-suppliers": "上市",
+            "supplierlocations": "地点",
+            "enty-warehouses": "仓库",
+            "menu-security": "安全",
+            "menu-general": "一般情况",
+            "locations": "地点",
+            "enty-countries": "国家",
+            "enty-states": "国家",
+            "enty-cities": "城市",
+            "enty-currencies": "硬币",
+            "enty-taxes": "税收",
+            "enty-paymentconditions": "付款条款",
+            "enty-paymentmodes": "付款方式",
+            "enty-paymentmethods": "付款方式",
+            "enty-cfdis": "CFDIs (通过互联网获得数字税务收据)",
+            "enty-sales-invoices": "销售发票",
+            "enty-groups": "组别",
+            "companies": "公司",
+            "consecutives": "连续",
+            "doc-sales-invoices": "新销售发票",
+            "productservicekeys": "关键产品服务",
+            "units": "测量单位",
+            "taxobjects": "征税目的",
+            "cancellationreasons": "取消的原因",
+            "enty-taxregimes": "税收制度",
+            "trailertypes": "拖车类型",
+            "chassis": "底盘",
+            "menu-finances": "财务",
+            "menu-transportationdocument": "提货单",
+            "cancelledsalesinvoices": "取消的发票",
+            "drivertypes": "司机类型",
+            "vehicleconfigurations": "车辆配置",
+            "transportations": "运输",
+            "drivers": "驾驶员",
+            "retentions": "预留款",
+            "incoterms": "INCOTERMs (国际商业条款)",
+            "tarifffractions": "关税分数",
+            "bankaccounts": "银行账户",
+            "customskeycodes": "订购钥匙",
+            "measureunitconversions": "计量单位的换算",
+            "packagingtypes": "包装类型",
+            "hazardousmaterialskeys": "主要危险材料",
+            "menu-foreigntrade": "对外贸易",
+            "enty-salesinvoicerelationshiptypes": "销售发票关系类型",
+            "enty-receiptsdetails": "收据",
+            "messagesmails": "电子邮件信息",
+            "languages": "语言"
+        },
+        "forms-errors": {
+            "required": "必须填写",
+            "pattern": "无效字段",
+            "maxLength": "角色过多",
+            "minLength": "缺失的字符",
+            "max": "减少金额",
+            "min": "增加金额"
+        },
+        "dialogschemas": {
+            "title": "公司变更",
+            "content": "你想换一家公司吗？"
+        }
+    }
+}

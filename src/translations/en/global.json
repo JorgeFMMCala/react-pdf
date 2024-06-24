@@ -1,0 +1,1399 @@
+{
+    "screens": "------------------------------------------",
+    "login": {
+        "email": "Email",
+        "password": "Password",
+        "login": "Sign in",
+        "recovery": "Recover account",
+        "errors": {
+            "no_schema": "No company related to the user is found",
+            "incorrect-fields": "Incorrect fields",
+            "ERR_NETWORK": "Network Error"
+        }
+    },
+    "home": {
+        "title": "Home"
+    },
+    "profile": {
+        "title": "Profile",
+        "name": "Name",
+        "email": "Email",
+        "choose-language": "Language",
+        "change-photo": "Edit photo"
+    },
+    "userCompanies": {
+        "title-view": "Company",
+        "fields": {
+            "delete": "Do you want to delete this company?",
+            "duplicate": "Duplicate company"
+        }
+    },
+    "users": {
+        "title": "Users",
+        "title-view": "User",
+        "fields": {
+            "user_name": "Name",
+            "user_email": "Email",
+            "user_phone": "Phone number",
+            "password": "Password",
+            "group_name": "Group",
+            "language": "Language"
+        },
+        "tabs": {
+            "view": "View",
+            "permissions": "Permissions",
+            "companies": "Companies",
+            "bank_accounts": "Bank Accounts"
+        },
+        "snackbar": {
+            "add": "User added successfully",
+            "update": "User updated successfully",
+            "delete": "User deleted successfully"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this user?"
+        }
+    },
+    "customers": {
+        "title": "Customers",
+        "title-view": "Customer",
+        "fields": {
+            "business_name": "Business name",
+            "comercial_name": "Comercial name",
+            "customer_rfc": "RFC",
+            "customer_email": "Email",
+            "customer_phone_number": "Phone number",
+            "customer_web": "Web site",
+            "group_by": "Group client",
+            "group_salesorders_by": "Group sales orders by",
+            "group_backorders_by": "Group back orders by",
+            "group_shippingdocuments_by": "Group shipping documents by",
+            "group_invoices_by": "Group invoice by",
+            "language": "Language",
+            "primary_bank_account": "Main bank account"
+        },
+        "tabs": {
+            "locations": "Locations",
+            "items": "Items",
+            "taxes": "Financial Data",
+            "files": "Files",
+            "bankaccounts": "Bank accounts"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this customer?",
+            "no_fiscal": "Add tax address",
+            "no_locations": "Add a Location",
+            "last_location": "Last location"
+        }
+    },
+    "customerlocations": {
+        "title-view": "Location",
+        "fields": {
+            "Address": "Address",
+            "country": "Country",
+            "state": "State",
+            "city_name": "City",
+            "postal_code": "Postal Code",
+            "street": "Street",
+            "contact_name": "Contact name",
+            "phone_number": "Phone number",
+            "email": "Email",
+            "fiscal_address": "Fiscal address",
+            "delivery_address": "Delivery address",
+            "default_delivery_address": "Default delivery address"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this location?"
+        },
+        "tabs": {
+            "general": "General",
+            "invoicing": "Invoicing"
+        }
+    },
+    "item-types": {
+        "title": "Item Types",
+        "title-view": "Item type",
+        "fields": {
+            "item_type_code": "Code",
+            "item_type_name": "Name",
+            "item_type_description": "Description",
+            "sale": "Sale",
+            "purchase": "Purchase",
+            "stock_management": "Stock management"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this item type?"
+        }
+    },
+    "item-families": {
+        "title": "Item Families",
+        "title-view": "Item Family",
+        "fields": {
+            "item_family_code": "Code",
+            "item_family_name": "Name",
+            "item_family_description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this item family?"
+        }
+    },
+    "items": {
+        "title": "Items",
+        "title-view": "Item",
+        "fields": {
+            "item_code": "Code",
+            "item_description": "Description",
+            "default_item_price": "Default price",
+            "item_type_name": "Item type",
+            "item_family_name": "Item family",
+            "status_name": "Status",
+            "unit_id": "Unit",
+            "tax_object": "Tax Object",
+            "tarifffractions": "Tariff Fraction",
+            "retention": "Retention",
+            "tax": "Tax",
+            "weight": "Weight"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this item?"
+        },
+        "tabs": {
+            "sales": "Sales",
+            "customers": "Customers",
+            "files": "Files",
+            "warehouses": "Warehouses"
+        }
+    },
+    "suppliers": {
+        "title": "Suppliers",
+        "title-view": "Supplier",
+        "fields": {
+            "business_name": "Business name",
+            "comercial_name": "Comercial name",
+            "supplier_rfc": "RFC",
+            "supplier_email": "Email",
+            "supplier_phone_number": "Phone number",
+            "supplier_web": "Web site",
+            "schema_name": "Schema"
+        },
+        "tabs": {
+            "locations": "Locations",
+            "items": "Items",
+            "files": "Files"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this supplier?"
+        }
+    },
+    "supplierlocations": {
+        "title-view": "Location",
+        "fields": {
+            "Address": "Address",
+            "country": "Country",
+            "state": "State",
+            "city_name": "City",
+            "postal_code": "Postal Code",
+            "street": "Street",
+            "contact_name": "Contact name",
+            "phone_number": "Phone number",
+            "email": "Email",
+            "rfc": "RFC",
+            "main_location": "Main location",
+            "invoice_address": "Invoice address",
+            "delivery_address": "Delivery address"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this location?"
+        }
+    },
+    "warehouses": {
+        "title": "Warehouses",
+        "title-view": "Warehouse",
+        "fields": {
+            "warehouse_description": "Description",
+            "warehouse_code": "Code",
+            "stock": "Stock",
+            "country": "Country",
+            "state": "State",
+            "city_name": "City",
+            "postal_code": "Postal Code",
+            "street": "Street"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this warehouse?"
+        },
+        "tabs": {
+            "items": "Items"
+        }
+    },
+    "customeritems": {
+        "relation": "Item-customer relationship",
+        "fields": {
+            "business_name": "Business name",
+            "item_code": "Code",
+            "item_description": "Description",
+            "item_price": "Price",
+            "customer_reference": "Name",
+            "customer_reference_description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this customer?"
+        }
+    },
+    "itemscustomer": {
+        "relation": "Customer-item relationship"
+    },
+    "warehouseitems": {
+        "relation": "Item - warehouse relationship",
+        "fields": {
+            "stock": "Stock"
+        }
+    },
+    "itemwarehouses": {
+        "relation": "Warehouse - item relationship"
+    },
+    "countries": {
+        "title": "Countries",
+        "title-view": "Country",
+        "fields": {
+            "country_code": "Code",
+            "country_name": "Name"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this country?"
+        }
+    },
+    "states": {
+        "title": "States",
+        "title-view": "State",
+        "fields": {
+            "state_code": "Code",
+            "state_name": "Name",
+            "country_code": "Country code",
+            "country_name": "Country name",
+            "state_abbr": "Abbreviation"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this state?"
+        }
+    },
+    "cities": {
+        "title": "Cities",
+        "title-view": "City",
+        "fields": {
+            "city_code": "Code",
+            "city_name": "Name",
+            "state_code": "State code",
+            "state_name": "State name"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this city?"
+        }
+    },
+    "currencies": {
+        "title": "Currencies",
+        "title-view": "Currency",
+        "fields": {
+            "currency_code": "Code",
+            "currency_description": "Description",
+            "currency_symbol": "Symbol"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this currency?"
+        }
+    },
+    "exchangeratehistory": {
+        "title": "Exchange rate history",
+        "title-view": "Rate",
+        "fields": {
+            "rate": "Rate",
+            "rate_date": "Date"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this rate?"
+        }
+    },
+    "taxes": {
+        "title": "Taxes",
+        "title-view": "Tax",
+        "fields": {
+            "tax_name": "Name",
+            "tax_code": "Tax Code",
+            "tax_percent": "Percent",
+            "tax_description": "Description",
+            "is_transferred": "Transferred",
+            "is_whithheld": "Whithheld"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this tax?"
+        }
+    },
+    "retentions": {
+        "title": "Retentions",
+        "title-view": "Retention",
+        "fields": {
+            "retention_code": "Retention code",
+            "retention_name": "Name",
+            "retention_percent": "Percent"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this retention?"
+        }
+    },
+    "incoterms": {
+        "title": "International Commercial Terms",
+        "title-view": "INCOTERM",
+        "fields": {
+            "incoterm_code": "INCOTERM code",
+            "incoterm_description": "Name"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this INCOTERM?"
+        }
+    },
+    "bankaccounts": {
+        "title": "Bank Accounts",
+        "title-view": "Bank Account",
+        "fields": {
+            "account_alias": "Account Alias",
+            "bank_name": "Bank name",
+            "card_number": "Card number",
+            "account_number": "Account number",
+            "interbank_key": "Interbank key",
+            "swift_code": "SWIFT Code",
+            "phone_number": "Phone number",
+            "bank_references": "Bank reference"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this bank account?"
+        }
+    },
+    "groups": {
+        "title": "Groups",
+        "title-view": "Groups",
+        "fields": {
+            "group_name": "Name",
+            "option_name": "Menu"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this group?"
+        }
+    },
+    "customertaxes": {
+        "relation": "Relationship customer - tax"
+    },
+    "paymentconditions": {
+        "title": "Payment Conditions",
+        "title-view": "Payment Condition",
+        "fields": {
+            "payment_condition_days": "Days",
+            "payment_condition_name": "Name",
+            "payment_condition_description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this payment condition?"
+        }
+    },
+    "paymentmethods": {
+        "title": "Payment Methods",
+        "title-view": "Payment Method",
+        "fields": {
+            "code": "Code",
+            "name": "Name",
+            "description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this payment method?"
+        }
+    },
+    "paymentmodes": {
+        "title": "Payment Modes",
+        "title-view": "Payment Mode",
+        "fields": {
+            "code": "Code",
+            "description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this payment mode?"
+        }
+    },
+    "cfdis": {
+        "title": "CFDIs",
+        "title-view": "CFDI",
+        "fields": {
+            "code": "Code",
+            "description": "Description",
+            "physical_person": "Physical person",
+            "moral_person": "Moral person"
+        },
+        "dialog": {
+            "delete": "¿Do you want to delete this CFDI?"
+        }
+    },
+    "companies": {
+        "title": "Companies",
+        "title-view": "Company",
+        "tabs": {
+            "general": "General",
+            "invoice": "Invoicing",
+            "locations": "Locations",
+            "bank_accounts": "Bank Accounts",
+            "desing": "Desing",
+            "configuration": "Configuration"
+        },
+        "upload": {
+            "key": "Upload .key",
+            "cer": "Upload .cer",
+            "certificate": "Certificate: ",
+            "keyprivate": "Private key: "
+        },
+        "desing": {
+            "limit_size": "Sizes"
+        },
+        "configuration": {
+            "email": "Mailing configuration",
+            "time_zone": "Time zone setting",
+            "fields": {
+                "host_mail": "Host",
+                "port_mail": "Port",
+                "username_mail": "Email service mail",
+                "password_mail": "Service password",
+                "time_zone": "Time zone"
+            }
+        },
+        "fields": {
+            "company_name": "Company",
+            "address": "Address",
+            "rfc": "RFC",
+            "business_name": "Company name",
+            "comercial_name": "Comercial name",
+            "country": "Country",
+            "state": "State",
+            "city_name": "City",
+            "street": "Street",
+            "postal_code": "Postal code",
+            "contact_name": "Contact name",
+            "phone_number": "Phone number",
+            "email": "Email",
+            "schema_name": "Esquema",
+            "fiscal_password": "Fiscal Password",
+            "rpt_image": "Report image",
+            "top_bar_image": "Top Bar image",
+            "icon_image": "Icon",
+            "primary_bank_account": "Primary Bank Account",
+            "secondary_bank_account": "Secondary Bank Account"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this Company?",
+            "nofile": "The image is not valid"
+        }
+    },
+    "consecutives": {
+        "title": "Consecutives",
+        "title-view": "Consecutives",
+        "fields": {
+            "name": "Name",
+            "description": "Description",
+            "prefix": "Prefix",
+            "resource_id": "Resource",
+            "resource_name": "Resource",
+            "view_name": "View",
+            "length": "Length",
+            "consecutive": "Consecutive"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this Consecutive?"
+        }
+    },
+    "salesinvoices": {
+        "title": "Sales invoices",
+        "title-view": "Sales invoice",
+        "fields": {
+            "sales_invoice_date": "Date",
+            "customer_business_name": "Business name",
+            "subtotal_amount": "Subtotal",
+            "total_amount": "Total",
+            "address": "Fiscal Address",
+            "discount": "Discount rate (%)",
+            "sales_invoice_name": "Sale",
+            "purchase_order": "Purchase Order",
+            "invoice_doc_status_name": "Status",
+            "retention_rate": "Retention rate (%)",
+            "original_string_SAT": "Original string of the SAT digital certification complement",
+            "certificate_number_SAT": "SAT certificate serial number",
+            "certificate_number_CFDI": "CFDI certificate serial number",
+            "uuid": "Tax Folio",
+            "signing_date": "Date and time of certification",
+            "seal_SAT": "SAT digital stamp",
+            "seal_CFDI": "CFDI digital stamp",
+            "cancellation_date": "Cancellation date",
+            "cancellation_reason": "Cancellation reason",
+            "cancellation_response_code": "Cancellation response code",
+            "includes_exterior_complement": "Exterior trade complement",
+            "includes_transportation_document": "Transportation document",
+            "notes": "Notes",
+            "tax_amount": "Subtotal taxes",
+            "retention_amount": "Subtotal retentions",
+            "discount_amount": "Subtotal discount",
+            "is_accounted": "Is accounted",
+            "date_mail_send": "User that sent the email",
+            "user_mail_send": "Date mail sent"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this sales invoice?",
+            "cancel": {
+                "title": "Cancellation reason",
+                "content": "Select an option",
+                "cancellation-reason": ""
+            },
+            "fiscal": {
+                "title": "Do you want to stamp this invoice?"
+            },
+            "send_email": {
+                "title": "Send emails",
+                "default_content": "An email will be sent to the fiscal mail to the following invoices:",
+                "singular_content": "An email will be sent with the following characteristics:",
+                "no_email": "No mail",
+                "waiting": "Ready to send",
+                "sent": "Sent",
+                "processing": "In process",
+                "nofiscal": "Not stamped",
+                "attachments": "Attachments:",
+                "xml": ".XML",
+                "pdf": ".PDF",
+                "qr": "QR",
+                "emails": "To:",
+                "subject": "Subject:",
+                "content": "Content",
+                "email_no_valid": "Invalid e-mails",
+                "no_messages": "There is no main message for this type of invoice",
+                "no_pdf": "PDF not found",
+                "no_xml": "XML not found"
+            }
+        },
+        "tabs": {
+            "general": "General",
+            "invoicing": "Invoicing",
+            "transportation-document": "Transportation document",
+            "annotations": "Notes",
+            "exterior-complement": "Foreign trade",
+            "shipping-trackings": "Shipping Trackings",
+            "related-invoices": "Related invoices"
+        },
+        "actions": {
+            "fiscalsignature": "Fiscal signature",
+            "cancel-fiscalsignature": "Cancel",
+            "pay": "Pay",
+            "copy": "Copy",
+            "sendemail": "Send email",
+            "accounted": "Account",
+            "deaccount": "Deaccount"
+        },
+        "reports": {
+            "pdf": "PDF",
+            "save-PDF": "Saved PDF",
+            "generated-PDF": "Generated PDF",
+            "downloaded-PDF": "Downloaded PDF",
+            "error-getting-PDF": "Error getting PDF"
+        },
+        "info": {
+            "already-stamped": "Sales invoice already stamped",
+            "no-data": "Fields missing",
+            "stamped": "Sales invoices stamped",
+            "less-fields": "Fields missing for stamping",
+            "need-save-before-stamped": "Need to save changes before stamp",
+            "no-stamped": "Invoice not stamped",
+            "already-canceled": "Invoice already canceled",
+            "no_details": "Invoice without items",
+            "add-exchangeratehistory": "Adds the last exchange rate of the currency",
+            "required-doc-type": "Select the type of document",
+            "no-cancelled": "Not cancelled"
+        },
+        "buttons": {
+            "xml": "Download XML"
+        }
+    },
+    "invoicedocumenttypes": {
+        "title-view": "Document"
+    },
+    "salesinvoicedetails": {
+        "fields": {
+            "quantity": "Quantity",
+            "concept": "Concept",
+            "price": "Price",
+            "total_amount": "Total",
+            "unit_code": "Unit",
+            "discount": "Discount rate(%)",
+            "subtotal_amount": "Subtotal"
+        },
+        "snackbar": {
+            "warning": "Check the fields",
+            "update": "Item updated successfully",
+            "delete": "Item deleted successfully",
+            "tarifffraction": "Add the tariff fraction"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this item"
+        }
+    },
+    "productservicekeys": {
+        "title": "Product Service Keys",
+        "title-view": "Product Service Keys",
+        "fields": {
+            "product_service_key": "Key",
+            "description": "Description",
+            "tarifffraction": "Tariff Fraction",
+            "includes_transportation_document": "Includes transportation document",
+            "is_dangerous_material": "Is dangerous material"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this Product Service Keys?"
+        }
+    },
+    "units": {
+        "title": "Units",
+        "title-view": "Units",
+        "fields": {
+            "unit_code": "Code",
+            "unit_description": "Description",
+            "unit_symbol": "Symbol",
+            "international_unit_symbol": "international Symbol"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this Unit?"
+        }
+    },
+    "taxobjects": {
+        "title": "Tax Objects",
+        "title-view": "Tax Objects",
+        "fields": {
+            "tax_object": "Tax Object",
+            "description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this Tax Object?"
+        }
+    },
+    "tarifffractions": {
+        "title": "Tariff Fractions",
+        "title-view": "Tariff Fraction",
+        "fields": {
+            "tariff_fraction_code": "Code",
+            "tariff_fraction_general_description": "General Description",
+            "tariff_fraction_specific_description": "Specific Description",
+            "unit_description": "Unit"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this tariff fraction?"
+        }
+    },
+    "cancellationreasons": {
+        "title": "Cancellation Reasons",
+        "title-view": "Cancellation Reasons",
+        "fields": {
+            "cancellation_reason_key": "Key",
+            "description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this Cancellation Reason?"
+        }
+    },
+    "taxregimes": {
+        "title": "Tax regimes",
+        "title-view": "Tax regime",
+        "fields": {
+            "tax_regime_code": "Code",
+            "description": "Description",
+            "is_person_entity": "Person entity",
+            "is_legal_entity": "Legal entity"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this tax regime?"
+        }
+    },
+    "trailertypes": {
+        "title": "Trailer types",
+        "title-view": "Trailer type",
+        "fields": {
+            "trailer_type_code": "Code",
+            "trailer_type_name": "Name"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this trailer type?"
+        }
+    },
+    "chassis": {
+        "title": "Chassis",
+        "title-view": "Chassis",
+        "fields": {
+            "chassis_plate": "Plate",
+            "chassis_description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this chassis?"
+        }
+    },
+    "cancelledsalesinvoices": {
+        "title": "Cancelled sales invoices",
+        "title-view": "Cancelled sales invoice"
+    },
+    "companylocations": {
+        "title-view": "Relationship company - locations",
+        "fields": {
+            "country_name": "Country",
+            "state_name": "State",
+            "city_name": "City",
+            "street_name": "Street",
+            "postal_code": "Postal Code",
+            "contact_name": "Contact name",
+            "phone_number": "Phone number",
+            "email": "Email",
+            "main_location": "Main location",
+            "address": "Address"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this location?"
+        }
+    },
+    "companybankaccounts": {
+        "title-view": "Relationship company - Bank Accounts",
+        "fields": {},
+        "dialog": {
+            "delete": "Do you want to delete this bank account?"
+        }
+    },
+    "vehicleconfigurations": {
+        "title": "Vehicle Configurations",
+        "title-view": "Vehicle Configuration",
+        "fields": {
+            "vehicle_config_code": "Code",
+            "vehicle_config_description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this Vehicle Configuration?"
+        }
+    },
+    "drivertypes": {
+        "title": "Driver Types",
+        "title-view": "Driver Type",
+        "fields": {
+            "driver_type_code": "Code",
+            "driver_type_name": "Name"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this Driver Type?"
+        }
+    },
+    "transportations": {
+        "title": "Transportations",
+        "title-view": "Transportation",
+        "fields": {
+            "vehicle_configuration_id": "Vehicle Configurations",
+            "transportation_code": "Transportation name",
+            "plate_number": "Plate number",
+            "vin": "VIN",
+            "model_name": "Model name",
+            "model_year": "Model year",
+            "motor_number": "Motor number",
+            "permission_sct": "Permission sct",
+            "permission_number_sct": "Permission number sct",
+            "transportation_weight": "Transportation Weight",
+            "insurance_company": "Insurance company",
+            "insurance_policy": "Insurance policy",
+            "insurance_expiration_date": "Insurance expiration date"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this transportation?"
+        }
+    },
+    "drivers": {
+        "title": "Drivers",
+        "title-view": "Driver",
+        "fields": {
+            "driver_type_id": "Driver type",
+            "driver_name": "Name",
+            "driver_curp": "CURP",
+            "driver_rfc": "RFC",
+            "driver_license": "License",
+            "nss": "NSS",
+            "country_id": "Country",
+            "state_id": "State",
+            "city_id": "City",
+            "postal_code": "Postal code",
+            "street": "Street",
+            "phone": "Phone",
+            "email": "Email"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this driver?"
+        }
+    },
+    "transportationdocuments": {
+        "locations": {
+            "source": "Origin",
+            "target": "Destination",
+            "addlocation": "Add location",
+            "deleteLocation": "Delete location"
+        },
+        "fields": {
+            "total_distance": "Total distance",
+            "weight_unit": "Weight unit",
+            "total_merchandise": "Total merchandise",
+            "total_gross_weight": "Total gross weight",
+            "environmental_insurance_policy": "Environmental insurance policy",
+            "environmental_insurance_company": "Environmental insurance company"
+        },
+        "info": {
+            "missing_data": "Missing data in transportation document"
+        }
+    },
+    "transportationdocumentlocations": {
+        "fields": {
+            "date_hour_departure": "Date departure",
+            "date_hour_arrival": "Date arrival",
+            "location": "Location",
+            "distance": "Distance(KM)"
+        },
+        "snackbar": {
+            "errorlocations": "The origin date cannot be greater than the destination dates"
+        }
+    },
+    "transportationdocumentchassis": {
+        "buttons": {
+            "add": "Add chassis",
+            "delete": "Delete chassis"
+        }
+    },
+    "customskeycodes": {
+        "title": "Customs Key Codes",
+        "title-view": "Custom Key Code",
+        "fields": {
+            "customs_key_code": "Code",
+            "customs_key_code_description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this custom key code?"
+        }
+    },
+    "measureunitconversions": {
+        "title": "Measure Unit Conversions",
+        "title-view": "Measure Unit Conversion",
+        "fields": {
+            "unit_source": "Origin Unit",
+            "unit_target": "Destination Unit",
+            "conversion_rate": "Conversion Rate"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this Measure Unit Conversion?"
+        }
+    },
+    "merchandisedetails": {
+        "title-view": "Merchandise Details",
+        "fields": {
+            "product_service_key": "Product key",
+            "concept": "Concept",
+            "quantity": "Quantity",
+            "unit_code": "Unit code",
+            "weight_in_kg": "weight in KG",
+            "hazardous_material_key": "Hazardous Material Key",
+            "packaging_type_code": "Packaging Type Code"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this merchandise?"
+        },
+        "snackbar": {
+            "warning": "Check the fields"
+        }
+    },
+    "packagingtypes": {
+        "title": "Packaging Types",
+        "title-view": "Packaging Type",
+        "fields": {
+            "packaging_type_code": "Code",
+            "packaging_type_description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this packaging type?"
+        }
+    },
+    "hazardousmaterialskeys": {
+        "title": "Hazardous Materials Keys",
+        "title-view": "Hazardous Material Key",
+        "fields": {
+            "hazardous_material_key": "Hazardous material key",
+            "hazardous_material_description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this hazardous material key?"
+        }
+    },
+    "foreigntrades": {
+        "fields": {
+            "exchange_rate_USD": "Exchange rate in dollars",
+            "total_USD": "Total in dollars"
+        },
+        "info": {
+            "missing_data": "Missing data in foreign trade tab",
+            "missing_tariff_fraction_in_details": "Missing tariff fraction in details"
+        }
+    },
+    "foreigntrademerchandises": {
+        "fields": {
+            "customs_quantity": "Customs quantity",
+            "customs_unit_value": "Customs unit value",
+            "dolars_total_value": "Value in dollars",
+            "identification_number": "Identification number",
+            "tariff_fraction_international_unit_symbol": "International unit",
+            "tariff_fraction_unit_code": "Unit code"
+        }
+    },
+    "shippingtrackings": {
+        "fields": {
+            "track_id": "Tracking Number",
+            "gross_weight": "Gross weight",
+            "real_gross_weight": "Real gross weight",
+            "net_weight": "Net weight",
+            "real_net_weight": "Real net weight",
+            "packages_quantity": "Packages quantity",
+            "containers_quantity": "Containers quantity",
+            "pallets_quantity": "Pallets quantity",
+            "dimensions": "Dimensions"
+        },
+        "info": {
+            "missing_data": "Missing data in shipping tracking"
+        }
+    },
+    "salesinvoicerelationshiptypes": {
+        "title": "Sales invoice relationship types",
+        "title-view": "Sales invoice relationship type",
+        "fields": {
+            "sales_invoice_relationship_type_code": "Code",
+            "sales_invoice_relationship_type_description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this type of sales invoice relationship?"
+        }
+    },
+    "relatedsalesinvoices": {
+        "title": "Related sales invoices",
+        "title-view": "Related sales invoice",
+        "fields": {
+            "related_sales_invoice_name": "Related invoice number",
+            "related_sales_invoice_uuid": "Fiscal folio of related invoice",
+            "sales_invoice_relationship_type_code": "Relationship code",
+            "sales_invoice_relationship_type_description": "Relationship description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this related sales invoice?"
+        }
+    },
+    "customerbankaccounts": {
+        "title-view": "Relationship customer - bank accounts",
+        "dialog": {
+            "delete": "Do you want to delete this bank account?"
+        }
+    },
+    "languages": {
+        "title": "Languages",
+        "title-view": "Language",
+        "fields": {
+            "language_code": "Code",
+            "language_description": "Description"
+        },
+        "dialog": {
+            "delete": "Do you want to delete this language?"
+        }
+    },
+    "messagesmails": {
+        "title": "E-mail messages",
+        "title-view": "E-mail message",
+        "fields": {
+            "language_code": "language",
+            "name": "Name",
+            "prefix": "Prefix",
+            "main": "Main",
+            "subject": "Subject",
+            "body": "Body"
+        },
+        "dialog": {
+            "no_main": "There is no main message for this consecutive",
+            "delete": "Do you want to delete this message?"
+        }
+    },
+    "receiptsdetails": {
+        "title": "Receipt details",
+        "title-view": "Receipt detail",
+        "fields": {
+            "customer_bussines_name": "bussines_name",
+            "status_name": "Status",
+            "amount_outstanding": "Amount outstanding",
+            "payment_deadline": "Payment deadline",
+            "payment_date": "Payment date",
+            "exchange_rate": "Exchange rate",
+            "total_tax_amount": "Subtotal taxes",
+            "total_retention_amount": "Subtotal retentions",
+            "subtotal_amount": "Subtotal",
+            "total_amount": "Total",
+            "payment_amount": "Amount paid",
+            "previous_amount": "Previous amount"
+        },
+        "buttons": {
+            "apply-receipt": "Apply receipt"
+        },
+        "tabs": {
+            "relatedreceiptsdetails": "Related documents",
+            "stamping": "Stamping",
+            "statuses": "Status history"
+        }
+    },
+    "relatedreceiptsdetails": {
+        "title-view": "Related document",
+        "fields": {
+            "equivalence": "Equivalence",
+            "partiality_number": "Partiality number",
+            "previous_amount": "Previous amount",
+            "payment_amount": "Payment amount",
+            "amount_outstanding": "Amount outstanding",
+            "total_tax_amount": "Subtotal taxes",
+            "total_retention_amount": "Subtotal retentions"
+        }
+    },
+    "receipts": {
+        "title-view": "Payment complement",
+        "fields": {
+            "original_string_SAT": "Original string of the SAT digital certification complement",
+            "certificate_number_SAT": "SAT certificate serial number",
+            "certificate_number_CFDI": "CFDI certificate serial number",
+            "uuid": "Tax Folio",
+            "signing_date": "Date and time of certification",
+            "seal_SAT": "SAT digital stamp",
+            "seal_CFDI": "CFDI digital stamp",
+            "receipt_name": "Complement number",
+            "total_amount": "Amount deposited",
+            "selected_amount": "Amount selected",
+            "difference_amount": "Difference",
+            "receipt_date": "Date of deposit",
+            "companybankaccount": "Company's bank account",
+            "customerbankaccount": "Customer's bank account",
+            "date_mail_send": "User that sent the email",
+            "user_mail_send": "Date mail sent"
+        },
+        "tabs": {
+            "details": "Details",
+            "stamping": "Stamping"
+        },
+        "buttons": {
+            "xml": "Download XML"
+        },
+        "info": {
+            "add-details": "Select payment details",
+            "add-exchangeratehistory": "Adds the latest currency exchange rate",
+            "amount-does-not-cover-all-amounts": "The amount deposited does not cover all the selected amounts",
+            "apply-receipt-filter": "Documents were leaked that include previous stamp or canceled documents",
+            "stamping-error": "Error when applying receipt"
+        }
+    },
+    "receiptdetailstatuses": {
+        "fields": {
+            "new_status_name": "New status",
+            "previous_status_name": "Previous status"
+        }
+    },
+    "components": "---------------------------------------",
+    "reports": {
+        "salesInvoicePdf": {
+            "header": {
+                "documentType": "DOCUMENT TYPE",
+                "folioNumber": "FOLIO NUMBER",
+                "taxNumber": "TAX NUMBER",
+                "dateAndTimeCertification": "DATE AND TIME CERTIFICATION",
+                "taxId": "TAX ID"
+            },
+            "customerData": {
+                "billTo": "BLL TO",
+                "shipTo": "SHIP TO",
+                "email": "EMAIL",
+                "telephone": "TELEPHONE"
+            },
+            "shippingData": {
+                "customerPO": "PURCHASE ORDER",
+                "shipVia": "SHIP VIA",
+                "trackingNumber": "TRACKING NUMBER",
+                "dueDate": "DUE DATE"
+            },
+            "paymentData": {
+                "CFDIUse": "CFDI USE",
+                "methodPayment": "METHOD PAYMENT",
+                "paymentType": "PAYMENT TYPE",
+                "paymentConditions": "PAYMENT CONDITIONS"
+            },
+            "itemsTable": {
+                "concept": "CONCEPT",
+                "quantity": "QUANTITY",
+                "unit": "UNIT",
+                "price": "PRICE",
+                "tax": "TAX",
+                "retention": "RETENTION",
+                "discount": "DISCOUNT"
+            },
+            "footer": {
+                "notes": "NOTES",
+                "weights": "WEIGHTS",
+                "netWeight": "NET WEIGHT",
+                "grossWeight": "GROSS WEIGHT",
+                "continueToTheNextPage": "CONTINUE TO THE NEXT PAGE"
+            },
+            "lastPageFooter": {
+                "pleaseMakePaymentToTheFollowingAccounts": "Please make payments to the following accounts:",
+                "firstAccount": "FIRST ACCOUNT",
+                "secondaryAccount": "SECONDARY ACCOUNT",
+                "accountAlias": "ACCOUNT ALIAS",
+                "interbankKey": "INTERBANK KEY",
+                "bankName": "BANK NAME",
+                "account": "ACCOUNT",
+                "taxes": "TAXES",
+                "retentions": "RETENTIONS",
+                "discounts": "DISCOUNTS",
+                "subtotal": "SUBTOTAL",
+                "total": "TOTAL"
+            },
+            "satData": {
+                "digitalStamp": "DIGITAL STAMP",
+                "digitalCertification": "DIGITAL CERTIFICATION"
+            },
+            "transportationDocumentData": {
+                "transportationDocument": "TRANSPORTATION DOCUMENT",
+                "SCTPermit": "SCT PERMISSION",
+                "SCTPermitNumber": "SCT PERMISSION NUMBER",
+                "guideNumber": "GUIDE NUMBER",
+                "guideDescription": "GUIDE DESCRIPTION",
+                "guideWeight": "GUIDE WEIGHT",
+                "totalMerchandise": "TOTAL MERCHANDISE",
+                "totalGrossWeight": "TOTAL GROSS WEIGHT",
+                "weightUnit": "WEIGHT UNIT",
+                "weightInKg": "WEIGHT IN KG",
+                "transportationDocumentDate": "TRASNPORTATION DOCUMENT DATE",
+                "transportInformation": "TRANSPORT INFORMATION",
+                "vehicleInformation": "VEHICLE INFORMATION",
+                "vehicleInsuranceInformation": "VEHICLE INSURANCE INFORMATION",
+                "driverInformation": "DRIVER INFORMATION",
+                "transportationCode": "TRANSPORTATION CODE",
+                "totalDistance": "TOTAL DISTANCE",
+                "departureDate": "DEPARTURE DATE",
+                "arrivalDate": "ARRIVAL DATE",
+                "transportationWeight": "TRANSPORTATION WEIGHT",
+                "vehicleConfiguration": "VEHICLE CONFIGURATION",
+                "plateNumber": "PLATE NUMBER",
+                "modelAndYear": "MODEL AND YEAR",
+                "motorNumber": "MOTOR NUMBER",
+                "insurance": "INSURANCE",
+                "insurancePolicy": "INSURANCE POLICY",
+                "InsuranceExpirationDate": "INSURANCE EXPIRATION DATE",
+                "driverType": "DRIVER TYPE",
+                "driverRFC": "DRIVER RFC",
+                "driverName": "DRIVER NAME",
+                "license": "LICENSE",
+                "vehicleIdentificationNumber": "Vehicle Identification Number"
+            },
+            "transportationDocumentLocationsData": {
+                "ORIGIN/DESTINY": "ORIGIN/DESTINY",
+                "country": "COUNTRY",
+                "state": "STATE",
+                "city": "CITY",
+                "street": "STREET",
+                "postalCode": "POSTAL CODE",
+                "date": "DATE",
+                "distance": "DISTANCE"
+            },
+            "merchandiseDetailsData": {
+                "mechandiseDetails": "MERCHANDISE DETAILS",
+                "productServiceKey": "PRODUCT SERVICE KEY",
+                "description": "DESCRIPTION",
+                "quantity": "QUANTITY",
+                "unitCode": "UNIT CODE",
+                "weightInKg": "WEIGHT IN KG"
+            },
+            "relatedCfdis": {
+                "relatedCfdis": "RELATED CFDIS"
+            }
+        },
+        "receiptsPdf": {
+            "header": {
+                "taxId": "TAX ID",
+                "zipCode": "POSTAL CODE",
+                "paymentReceipt": "PAYMENT RECEIPTS",
+                "payment": "PAYMENT",
+                "paymentNumber": "PAYMENT NUMBER",
+                "dateAndTime": "DATE AND TIME"
+            },
+            "customerData": {
+                "customer": "CUSTOMER",
+                "address": "ADDRESS",
+                "city": "CITY",
+                "state": "STATE",
+                "zipCode": "ZIP CODE",
+                "taxId": "TAX ID",
+                "taxRegime": "TAX REGIME"
+            },
+            "paymentData": {
+                "receiverDataCustomer": "RECEIVER DATA (CUSTOMER)",
+                "taxId": "RFC",
+                "bankName": "BANK NAME",
+                "bankAccount": "BANK ACCOUNT",
+                "issuerData": "ISSUER DATA"
+            },
+            "firstSection":{
+                "code":"CODE",
+                "quantity":"QUANTITY",
+                "description":"DESCRIPTION",
+                "unitOfMeasure":"UNIT OF MEASURE"
+            },
+            "secondSection":{
+                "relatedInvoices":"RELATED INVOICES",
+                "fiscalFolio":"FISCAL FOLIO",
+                "taxesTotal":"TAXES TOTAL",
+                "retentionsTotal":"RETENTIONS TOTAL",
+                "previousAmount":"PREVIOUS AMOUNT",
+                "paidAmount":"PAID AMOUNT",
+                "pendingAmount":"PENDING AMOUNT"
+            },
+            "footer": {
+                "paymentMethod": "PAYMENT METHOD",
+                "paymentTotal": "PAYMENT TOTAL",
+                "digitalCertification": "DIGITAL CERTIFICATION",
+                "digitalStamp": "DIGITAL STAMP",
+                "SATdigitalStamp": "SAT DIGITAL STAMP",
+                "signingDate": "SIGNING DATE",
+                "SATCertificate": "SAT CERTIFICATE",
+                "fiscalFolio": "FISCAL FOLIO"
+            }
+        }
+    },
+    "generic": {
+        "buttons": {
+            "add": "Add",
+            "update": "Update",
+            "delete": "Delete",
+            "accept": "Accept",
+            "cancel": "Cancel",
+            "goback": "Go back",
+            "send_email": "Send Email",
+            "save": "Save"
+        },
+        "dialog": {
+            "delete": "Delete"
+        },
+        "grid-table": {
+            "rows-per-page": "Rows per page",
+            "toolbar-export": "Export",
+            "toolbar-export-csv": "Download CSV",
+            "column-orders": "Order columns",
+            "column-menu-unsort": "Unsort",
+            "column-menu-sort-asc": "Sort ascending",
+            "column-menu-sort-desc": "Sort descending",
+            "column-menu-filter": "Filter",
+            "column-menu-hide-column": "Hide column",
+            "column-menu-show-columns": "Show columns",
+            "column-menu-manage-columns": "Manage columns",
+            "filter-operator-contains": "contains",
+            "filter-operator-equals": "equals",
+            "filter-operator-starts-with": "starts with",
+            "filter-operator-ends-with": "ends with",
+            "filter-operator-is-empty": "is empty",
+            "filter-operator-is-not-empty": "is not empty",
+            "filter-operator-is-any-of": "is any of",
+            "count-rows": "Rows selected",
+            "options": "Options"
+        },
+        "snackbar": {
+            "add": "Record added successfully",
+            "update": "Record updated successfully",
+            "delete": "Record deleted successfully",
+            "update_photo": "Photo updated",
+            "permissions-error": "Error obtaining permissions"
+        },
+        "creation_date": "Creation date",
+        "last_update_user": "Last update user",
+        "last_update_date": "Last update date",
+        "yes": "Yes",
+        "no": "No",
+        "logOut": "Sign Out",
+        "logOutMessage": "Are you sure you want to sign out?",
+        "menu-info": "---------------------------------------",
+        "menu": {
+            "home": "Home",
+            "menu-admin": "Admin",
+            "users": "Users",
+            "groups": "Groups",
+            "menu-sales": "Sales",
+            "items": "Items",
+            "enty-items": "List",
+            "enty-item-types": "Item types",
+            "enty-item-families": "Item families",
+            "customers": "Customers",
+            "enty-customers": "List",
+            "customerlocations": "Locations",
+            "menu-purchases": "Purchases",
+            "suppliers": "Suppliers",
+            "enty-suppliers": "List",
+            "supplierlocations": "Locations",
+            "enty-warehouses": "Warehouses",
+            "menu-security": "Security",
+            "menu-general": "General",
+            "locations": "Locations",
+            "enty-countries": "Countries",
+            "enty-states": "States",
+            "enty-cities": "Cities",
+            "enty-currencies": "Currencies",
+            "enty-taxes": "Taxes",
+            "enty-paymentconditions": "Payment Conditions",
+            "enty-paymentmodes": "Payment Modes",
+            "enty-paymentmethods": "Payment Methods",
+            "enty-cfdis": "CFDIs",
+            "enty-sales-invoices": "Sales invoice",
+            "enty-groups": "Groups",
+            "companies": "Companies",
+            "consecutives": "Consecutives",
+            "doc-sales-invoices": "New Sales Invoice",
+            "productservicekeys": "Product Service Keys",
+            "units": "Units",
+            "taxobjects": "Tax Objects",
+            "cancellationreasons": "Cancellation Reasons",
+            "enty-taxregimes": "Tax regimes",
+            "trailertypes": "Trailer Types",
+            "chassis": "Chassis",
+            "menu-finances": "Finances",
+            "menu-transportationdocument": "Transportation document",
+            "cancelledsalesinvoices": "Cancelled Sales Invoices",
+            "drivertypes": "Driver Types",
+            "vehicleconfigurations": "Vehicle Configurations",
+            "transportations": "Transportations",
+            "drivers": "Drivers",
+            "retentions": "Retentions",
+            "incoterms": "INCOTERMs",
+            "tarifffractions": "Tariff Fractions",
+            "bankaccounts": "Bank Accounts",
+            "customskeycodes": "Customs Key Codes",
+            "measureunitconversions": "Measure Unit Conversions",
+            "packagingtypes": "Packaging Types",
+            "hazardousmaterialskeys": "Hazardous Materials Keys",
+            "menu-foreigntrade": "Foreign Trade",
+            "enty-salesinvoicerelationshiptypes": "Sales invoice relationship types",
+            "enty-receiptsdetails": "Receipts",
+            "messagesmails": "E-mail messages",
+            "languages": "Languages"
+        },
+        "forms-errors": {
+            "required": "Required field",
+            "pattern": "Invalid field",
+            "maxLength": "Too many characters",
+            "minLength": "Missing characters",
+            "max": "Reduce the amount",
+            "min": "Increase the amount"
+        },
+        "dialogschemas": {
+            "title": "Change of company",
+            "content": "Do you want to change company?"
+        }
+    }
+}

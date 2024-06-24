@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
 import GenericPromises from "../../api/GenericPromises";
 import { Spinner } from "../Spinner/Spinner";
-import { PaymentComplementPDF } from "./PaymentComplementPDF";
+import { ReceiptsPDF } from "./receiptsPDF/ReceiptsPDF";
 
 export const AppPaymentComplement = () => {
     const [pdfData, setPdfData] = useState(null);
     const { GenericGetResource } = GenericPromises();
     const [dataLoaded, setDataLoaded] = useState(false);
-    const { generatePaymentComplementPDF } = PaymentComplementPDF();
+    const { generatePDF } = ReceiptsPDF();
 
 
     useEffect(() => {
         GenericGetResource(`/receipts/pdf/3`)
             .then((response) => {
                 setPdfData(response);
+                console.log(response.data)
                 setDataLoaded(true);
             })
             .catch((error) => {
@@ -41,7 +42,7 @@ export const AppPaymentComplement = () => {
                     >
                         <div className="row">
                             <div className="col text-center">
-                                <button className="btn btn-primary" onClick={()=>generatePaymentComplementPDF(pdfData)}>Generar Complemento de Pago</button>
+                                <button className="btn btn-primary" onClick={()=>generatePDF(pdfData)}>Generar Complemento de Pago</button>
                             </div>
                         </div>
                     </div>
